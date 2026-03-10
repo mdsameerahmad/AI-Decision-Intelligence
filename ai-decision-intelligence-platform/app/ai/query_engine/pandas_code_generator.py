@@ -54,6 +54,7 @@ STRICT RULES:
                 response = requests.post(
                     f"{settings.REMOTE_LLM_URL}/generate_code",
                     json={"schema": schema, "question": question},
+                    headers={"ngrok-skip-browser-warning": "1"},
                     timeout=60
                 )
                 response.raise_for_status()

@@ -43,6 +43,7 @@ class LocalLLM:
                 response = requests.post(
                     f"{settings.REMOTE_LLM_URL}/generate",
                     json={"prompt": prompt},
+                    headers={"ngrok-skip-browser-warning": "1"},
                     timeout=60
                 )
                 response.raise_for_status()
