@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import settings
 
@@ -16,6 +17,16 @@ from app.database.models import Base
 # Create FastAPI app FIRST
 app = FastAPI(
     title=settings.APP_NAME
+)
+
+
+# Hybrid Deployment: Enable CORS for local Flutter frontend access
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # Allow all origins for testing; restrict in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

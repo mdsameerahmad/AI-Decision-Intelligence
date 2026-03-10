@@ -1,11 +1,21 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 import torch
 import os
+import requests
+from app.config import settings
 
 
 class LocalLLM:
 
     def __init__(self):
+
+        # Hybrid Deployment: If mode is remote, skip heavy model loading to save Railway resources
+        if settings.LLM_MODE == "remote":
+            print(f"Hybrid Mode: Using Remote LLM at {settings.REMOTE_LLM_URL}")
+            self.model = None
+            self.tokenizer = None
+            return
+
         print("Initializing LocalLLM with Mistral-7B-Instruct-v0.2...")
         bnb_config = BitsAndBytesConfig(
             load_in_4bit=True,
@@ -26,6 +36,20 @@ class LocalLLM:
         print("LocalLLM initialized.")
 
     def generate(self, prompt: str):
+
+        # Hybrid Deployment: Forward request to Colab API
+        if settings.LLM_MODE == "remote":
+            try:
+                response = requests.post(
+                    f"{settings.REMOTE_LLM_URL}/generate",
+                    json={"prompt": prompt},
+                    timeout=60
+                )
+                response.raise_for_status()
+                return response.json().get("text", "Error: Remote API returned no text")
+            except Exception as e:
+                return f"Remote LLM Error: {str(e)}"
+
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
         outputs = self.model.generate(
             **inputs,

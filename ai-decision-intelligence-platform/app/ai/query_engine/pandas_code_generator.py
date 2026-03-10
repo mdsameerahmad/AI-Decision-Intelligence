@@ -1,10 +1,17 @@
 from transformers import pipeline
 import re
+import requests
+from app.config import settings
 
 
 class PandasCodeGenerator:
 
     def __init__(self):
+
+        # Hybrid Deployment: Skip loading heavy coding model if in remote mode
+        if settings.LLM_MODE == "remote":
+            self.generator = None
+            return
 
         # Better reasoning model for data/code
         self.generator = pipeline(
@@ -40,6 +47,19 @@ STRICT RULES:
 - Ensure the code is syntactically correct and directly executable.
 - Example: `result = df['Weekly_Sales'].sum()`
 """
+
+        # Hybrid Deployment: Call remote Colab API for code generation
+        if settings.LLM_MODE == "remote":
+            try:
+                response = requests.post(
+                    f"{settings.REMOTE_LLM_URL}/generate_code",
+                    json={"schema": schema, "question": question},
+                    timeout=60
+                )
+                response.raise_for_status()
+                return response.json().get("code", "# Error: No code returned")
+            except Exception as e:
+                return f"# Remote Code Gen Error: {str(e)}"
 
         output = self.generator(prompt)[0]["generated_text"]
 
