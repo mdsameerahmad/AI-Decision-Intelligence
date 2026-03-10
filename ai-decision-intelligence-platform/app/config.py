@@ -21,7 +21,9 @@ class Settings(BaseSettings):
     REMOTE_LLM_URL: str = "" # Your Colab Ngrok URL (e.g., https://xyz.ngrok-free.app)
 
     model_config = SettingsConfigDict(
-        env_file=".env"
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore"
     )
 
 
