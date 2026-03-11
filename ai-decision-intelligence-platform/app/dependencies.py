@@ -3,8 +3,23 @@ from sqlalchemy.orm import sessionmaker, Session
 from app.config import settings
 
 
-# Create SQLAlchemy engine
-engine = create_engine(settings.DATABASE_URL, pool_pre_ping=True)
+import os
+
+# Create SQLAlchemy engine with error handling and prefix correction
+db_url = settings.DATABASE_URL
+
+if not db_url:
+    print("CRITICAL ERROR: DATABASE_URL is not set in environment variables.")
+    # Fallback for build phase or early startup
+    db_url = "sqlite:///./temp.db" 
+
+# Ensure the prefix is correct for SQLAlchemy 1.4+ (postgres:// -> postgresql://)
+if db_url.startswith("postgres://"):
+    db_url = db_url.replace("postgres://", "postgresql+psycopg2://", 1)
+elif db_url.startswith("postgresql://"):
+    db_url = db_url.replace("postgresql://", "postgresql+psycopg2://", 1)
+
+engine = create_engine(db_url, pool_pre_ping=True)
 
 # Session factory
 SessionLocal = sessionmaker(
