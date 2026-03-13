@@ -27,11 +27,17 @@ def ask_question(
     response = pipeline.answer_question(file_path, question)
 
     # Save to database
+    # Derive a simple session title based on the first question
+    title_words = question.strip().split()
+    session_title = " ".join(title_words[:8]) if title_words else "Chat Session"
+
     crud.save_chat(
         db=db,
         user_id=db_user.id,
         query=question,
-        response=response["answer"]
+        response=response["answer"],
+        dataset_path=file_path,
+        session_title=session_title
     )
 
     return {
@@ -58,6 +64,8 @@ def get_history(
                 "id": h.id,
                 "query": h.query,
                 "response": h.response,
+                "dataset_path": h.dataset_path,
+                "session_title": h.session_title,
                 "created_at": h.created_at
             } for h in history
         ]

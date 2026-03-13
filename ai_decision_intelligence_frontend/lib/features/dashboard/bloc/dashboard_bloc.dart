@@ -10,6 +10,8 @@ abstract class DashboardEvent {}
 
 class LoadDatasets extends DashboardEvent {}
 
+class LoadChatHistory extends DashboardEvent {}
+
 class DeleteDataset extends DashboardEvent {
   final int datasetId;
   DeleteDataset(this.datasetId);
@@ -63,6 +65,12 @@ class ClearSummary extends DashboardEvent {}
 class ClearCorrelation extends DashboardEvent {}
 
 class ClearChat extends DashboardEvent {}
+
+class SelectChatSession extends DashboardEvent {
+  final String? datasetPath;
+  final String? sessionTitle;
+  SelectChatSession({this.datasetPath, this.sessionTitle});
+}
 
 // --- State ---
 class DashboardState {
@@ -269,17 +277,17 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
     on<AskChatbot>((event, emit) async {
       if (state.lastFilePath == null) return;
       final newHistory = List<Map<String, String>>.from(state.chatHistory)
-        ..add({'sender': 'user', 'message': event.question});
+        ..add({'sender': 'user', 'message': event.question, 'dataset': state.lastFilePath ?? '', 'title': ''});
       emit(state.copyWith(chatHistory: newHistory, isLoading: true));
 
       try {
         final response = await repository.askChatbot(state.lastFilePath!, event.question);
         final botHistory = List<Map<String, String>>.from(state.chatHistory)
-          ..add({'sender': 'bot', 'message': response['answer']});
+          ..add({'sender': 'bot', 'message': response['answer'], 'dataset': state.lastFilePath ?? '', 'title': ''});
         emit(state.copyWith(chatHistory: botHistory, isLoading: false));
       } catch (e) {
         final errorHistory = List<Map<String, String>>.from(state.chatHistory)
-          ..add({'sender': 'bot', 'message': 'Error: ${e.toString()}'});
+          ..add({'sender': 'bot', 'message': 'Error: ${e.toString()}', 'dataset': state.lastFilePath ?? '', 'title': ''});
         emit(state.copyWith(chatHistory: errorHistory, isLoading: false));
       }
     });
@@ -314,6 +322,56 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
 
     on<ClearChat>((event, emit) {
       emit(state.copyWith(clearChat: true));
+    });
+
+    on<LoadChatHistory>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      try {
+        final list = await repository.getChatHistory();
+        final history = <Map<String, String>>[];
+        for (final item in list) {
+          final query = item['query']?.toString() ?? '';
+          final response = item['response']?.toString() ?? '';
+          final dataset = item['dataset_path']?.toString();
+          final title = item['session_title']?.toString();
+          if (query.isNotEmpty) {
+            history.add({'sender': 'user', 'message': query, 'dataset': dataset ?? '', 'title': title ?? ''});
+          }
+          if (response.isNotEmpty) {
+            history.add({'sender': 'bot', 'message': response, 'dataset': dataset ?? '', 'title': title ?? ''});
+          }
+        }
+        emit(state.copyWith(chatHistory: history, isLoading: false));
+      } catch (e) {
+        emit(state.copyWith(errorMessage: e.toString(), isLoading: false));
+      }
+    });
+
+    on<SelectChatSession>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      try {
+        final list = await repository.getChatHistory();
+        final filtered = <Map<String, String>>[];
+        for (final item in list) {
+          final ds = item['dataset_path']?.toString();
+          final title = item['session_title']?.toString();
+          final matchesDs = event.datasetPath == null || event.datasetPath == ds;
+          final matchesTitle = event.sessionTitle == null || event.sessionTitle == title;
+          if (matchesDs && matchesTitle) {
+            final query = item['query']?.toString() ?? '';
+            final response = item['response']?.toString() ?? '';
+            if (query.isNotEmpty) {
+              filtered.add({'sender': 'user', 'message': query});
+            }
+            if (response.isNotEmpty) {
+              filtered.add({'sender': 'bot', 'message': response});
+            }
+          }
+        }
+        emit(state.copyWith(chatHistory: filtered, isLoading: false));
+      } catch (e) {
+        emit(state.copyWith(errorMessage: e.toString(), isLoading: false));
+      }
     });
   }
 }

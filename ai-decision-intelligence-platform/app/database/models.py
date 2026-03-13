@@ -51,6 +51,10 @@ class ChatHistory(Base):
 
     response = Column(String)
 
+    dataset_path = Column(String, nullable=True)
+
+    session_title = Column(String, nullable=True)
+
     created_at = Column(DateTime(timezone=True), server_default=func.now())
 
     user = relationship("User", back_populates="chats")

@@ -77,12 +77,14 @@ def delete_datasets(db: Session, dataset_ids: list[int]):
 
 # ---------- CHAT HISTORY ----------
 
-def save_chat(db: Session, user_id: int, query: str, response: str):
+def save_chat(db: Session, user_id: int, query: str, response: str, dataset_path: str | None = None, session_title: str | None = None):
 
     chat = models.ChatHistory(
         user_id=user_id,
         query=query,
-        response=response
+        response=response,
+        dataset_path=dataset_path,
+        session_title=session_title
     )
 
     db.add(chat)

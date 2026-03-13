@@ -88,4 +88,9 @@ class DatasetRepository {
       {"problem": problem},
     );
   }
+
+  Future<List<dynamic>> getChatHistory() async {
+    final response = await apiService.get(ApiConstants.chatHistoryEndpoint);
+    return response['history'] ?? response;
+  }
 }

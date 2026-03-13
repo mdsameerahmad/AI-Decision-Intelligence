@@ -13,33 +13,54 @@ class AppBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
-      shape: const CircularNotchedRectangle(),
-      notchMargin: 8.0,
-      color: Colors.white,
-      elevation: 10,
-      child: Container(
-        height: 60,
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            // Left Side Icons
-            Row(
-              children: [
-                _buildNavItem(0, LucideIcons.layoutGrid, 'Home'),
-                _buildNavItem(1, LucideIcons.fileText, 'Summary'),
-              ],
-            ),
-            const SizedBox(width: 40), // Space for Floating Action Button
-            // Right Side Icons
-            Row(
-              children: [
-                _buildNavItem(2, LucideIcons.barChart2, 'Correlation'),
-                _buildNavItem(3, LucideIcons.messageSquare, 'Chat'),
-              ],
-            ),
-          ],
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(32),
+          topRight: Radius.circular(32),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.08),
+            blurRadius: 20,
+            offset: const Offset(0, -5),
+          ),
+        ],
+      ),
+      child: BottomAppBar(
+        shape: const CircularNotchedRectangle(),
+        notchMargin: 10.0,
+        color: Colors.transparent, // Use Container's background
+        elevation: 0,
+        child: SizedBox(
+          height: 56, // Fixed height to avoid overflow
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              // Left Side
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _buildNavItem(0, LucideIcons.home, 'Home'),
+                    _buildNavItem(1, LucideIcons.fileText, 'Summary'),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 70), // Space for Floating Action Button
+              // Right Side
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _buildNavItem(2, LucideIcons.barChart3, 'Correlation'),
+                    _buildNavItem(3, LucideIcons.messageCircle, 'Chat'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -47,24 +68,30 @@ class AppBottomNavBar extends StatelessWidget {
 
   Widget _buildNavItem(int index, IconData icon, String label) {
     final isSelected = currentIndex == index;
+    const activeColor = Color(0xFF3B82F6); // Matched with Login Page (Blue)
+    final inactiveColor = Colors.grey[400];
+
     return GestureDetector(
       onTap: () => onTap(index),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+      behavior: HitTestBehavior.opaque,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 4.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
               icon,
-              color: isSelected ? const Color(0xFF3B82F6) : Colors.grey[400],
-              size: 24,
+              color: isSelected ? activeColor : inactiveColor,
+              size: 24, // Slightly reduced to fit
             ),
+            const SizedBox(height: 2),
             Text(
               label,
               style: TextStyle(
-                fontSize: 10,
-                color: isSelected ? const Color(0xFF3B82F6) : Colors.grey[400],
-                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                fontSize: 10, // Slightly reduced to fit
+                color: isSelected ? activeColor : inactiveColor,
+                fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
               ),
             ),
           ],

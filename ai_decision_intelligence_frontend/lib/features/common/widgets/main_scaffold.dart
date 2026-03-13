@@ -86,10 +86,10 @@ class _MainScaffoldState extends State<MainScaffold> {
             }
           }
         },
-        backgroundColor: const Color(0xFF3B82F6),
-        elevation: 8,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        child: const Icon(LucideIcons.plus, color: Colors.white, size: 32),
+        backgroundColor: const Color(0xFF3B82F6), // Updated to Blue (Matched with Login Page)
+        elevation: 6,
+        shape: const CircleBorder(), // Updated to Circle
+        child: const Icon(LucideIcons.plus, color: Colors.white, size: 28),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AppBottomNavBar(

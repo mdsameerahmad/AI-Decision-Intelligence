@@ -53,6 +53,21 @@ class _ChatPageState extends State<ChatPage> {
         ),
         actions: [
           IconButton(
+            icon: const Icon(LucideIcons.history, color: Color(0xFF3B82F6), size: 20),
+            onPressed: () async {
+              final repo = context.read<DashboardBloc>().repository;
+              try {
+                final list = await repo.getChatHistory();
+                _showHistoryModalWithList(context, list);
+              } catch (e) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Failed to load history: $e')),
+                );
+              }
+            },
+            tooltip: 'Chat History',
+          ),
+          IconButton(
             icon: const Icon(LucideIcons.trash2, color: Color(0xFF3B82F6), size: 20),
             onPressed: () {
               context.read<DashboardBloc>().add(ClearChat());
@@ -61,24 +76,36 @@ class _ChatPageState extends State<ChatPage> {
           ),
         ],
       ),
-      body: BlocConsumer<DashboardBloc, DashboardState>(
-        listener: (context, state) {
-          if (state.chatHistory.isNotEmpty) {
-            _scrollToBottom();
-          }
-        },
-        builder: (context, state) {
-          return Column(
-            children: [
-              Expanded(
-                child: state.chatHistory.isEmpty && state.suggestedQuestions.isEmpty
-                    ? _buildEmptyChatView()
-                    : _buildChatView(state),
-              ),
-              _buildInputArea(context, state),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              const Color(0xFF3B82F6).withOpacity(0.08),
+              Colors.white,
             ],
-          );
-        },
+          ),
+        ),
+        child: BlocConsumer<DashboardBloc, DashboardState>(
+          listener: (context, state) {
+            if (state.chatHistory.isNotEmpty) {
+              _scrollToBottom();
+            }
+          },
+          builder: (context, state) {
+            return Column(
+              children: [
+                Expanded(
+                  child: state.chatHistory.isEmpty && state.suggestedQuestions.isEmpty
+                      ? _buildEmptyChatView()
+                      : _buildChatView(state),
+                ),
+                _buildInputArea(context, state),
+              ],
+            );
+          },
+        ),
       ),
     );
   }
@@ -96,6 +123,116 @@ class _ChatPageState extends State<ChatPage> {
           ),
         ],
       ),
+    );
+  }
+
+  void _showHistoryModalWithList(BuildContext context, List<dynamic> list) {
+    // Build session list from history metadata (do not alter current chat view)
+    final sessions = <Map<String, String>>[];
+    for (final item in list) {
+      final ds = item['dataset'] ?? '';
+      final title = (item['session_title']?.toString() ?? '').trim();
+      final datasetPath = (item['dataset_path']?.toString() ?? ds).trim();
+      if (ds.isEmpty && title.isEmpty) continue;
+      final key = '${datasetPath}|$title';
+      if (!sessions.any((s) => s['key'] == key)) {
+        sessions.add({
+          'key': key,
+          'dataset': datasetPath,
+          'title': title.isEmpty ? 'Untitled Chat' : title,
+        });
+      }
+    }
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+      ),
+      builder: (context) {
+        return DraggableScrollableSheet(
+          expand: false,
+          initialChildSize: 0.75,
+          minChildSize: 0.5,
+          maxChildSize: 0.95,
+          builder: (context, controller) {
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 12.0),
+                  child: Container(
+                    height: 4,
+                    width: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Row(
+                    children: [
+                      const Icon(LucideIcons.history, color: Color(0xFF3B82F6)),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Chat History',
+                        style: GoogleFonts.ibmPlexSans(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.black87,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Expanded(
+                  child: ListView.builder(
+                    controller: controller,
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                    itemCount: sessions.length,
+                    itemBuilder: (context, index) {
+                      final item = sessions[index];
+                      final datasetPath = item['dataset'] ?? '';
+                      final datasetName = datasetPath.split('/').isNotEmpty ? datasetPath.split('/').last : datasetPath;
+                      final title = item['title'] ?? 'Untitled Chat';
+                      return Container(
+                        margin: const EdgeInsets.symmetric(vertical: 6),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[50],
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(color: Colors.grey[200]!),
+                        ),
+                        child: ListTile(
+                          leading: const Icon(LucideIcons.folder, color: Color(0xFF3B82F6)),
+                          title: Text(
+                            title,
+                            style: GoogleFonts.ibmPlexSans(fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: Text(
+                            datasetName.isEmpty ? 'General' : datasetName,
+                            style: GoogleFonts.ibmPlexSans(color: Colors.grey[600]),
+                          ),
+                          trailing: const Icon(LucideIcons.chevronRight, color: Colors.grey),
+                          onTap: () {
+                            context.read<DashboardBloc>().add(
+                              SelectChatSession(datasetPath: datasetPath.isEmpty ? null : datasetPath, sessionTitle: title),
+                            );
+                            Navigator.pop(context);
+                          },
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            );
+          },
+        );
+      },
     );
   }
 
