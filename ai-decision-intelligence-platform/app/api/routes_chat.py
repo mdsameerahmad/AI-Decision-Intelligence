@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Body
 from sqlalchemy.orm import Session
 from app.core.security import get_current_user
 from app.dependencies import get_db
@@ -13,8 +13,8 @@ pipeline = ChatPipeline()
 
 @router.post("/ask")
 def ask_question(
-    file_path: str,
-    question: str,
+    file_path: str = Body(..., embed=True),
+    question: str = Body(..., embed=True),
     user: dict = Depends(get_current_user),
     db: Session = Depends(get_db)
 ):
@@ -39,4 +39,26 @@ def ask_question(
         "question": question,
         "generated_code": response["generated_code"],
         "answer": response["answer"]
+    }
+
+
+@router.get("/history")
+def get_history(
+    user: dict = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    db_user = db.query(models.User).filter(models.User.email == user.get("sub")).first()
+    if not db_user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    history = crud.get_chat_history(db, db_user.id)
+    return {
+        "history": [
+            {
+                "id": h.id,
+                "query": h.query,
+                "response": h.response,
+                "created_at": h.created_at
+            } for h in history
+        ]
     }

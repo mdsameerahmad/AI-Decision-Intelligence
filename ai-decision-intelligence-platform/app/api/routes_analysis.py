@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Body
 from app.core.security import get_current_user
 import pandas as pd
 import numpy as np
@@ -9,13 +9,12 @@ router = APIRouter(prefix="/analysis", tags=["Analysis"])
 
 # Initialize LLM and LangChainPipeline for suggested questions
 # This will load the models once when the application starts
-llm_instance_for_suggestions = LocalLLM()
-langchain_pipeline_for_suggestions = LangChainPipeline(llm_instance_for_suggestions)
+langchain_pipeline_for_suggestions = LangChainPipeline()
 
 
 @router.post("/summary")
 def dataset_summary(
-    file_path: str,
+    file_path: str = Body(..., embed=True),
     user: dict = Depends(get_current_user)
 ):
     """
@@ -38,9 +37,19 @@ def dataset_summary(
     descriptive_stats_df = df.describe(include='all')
 
     # Replace NaN values with None for JSON compliance
-    descriptive_stats_df = descriptive_stats_df.fillna(value=None)
+    # We use .where(pd.notnull(descriptive_stats_df), None) to handle all types properly
+    descriptive_stats_df = descriptive_stats_df.replace({np.nan: None})
+    
+    # Reorient to be by column for easier frontend parsing
+    descriptive_stats = descriptive_stats_df.to_dict(orient='dict')
+    
+    # Final cleanup of the dictionary to ensure JSON compliance
+    def clean_dict(d):
+        if not isinstance(d, dict):
+            return d
+        return {k: (None if isinstance(v, float) and (np.isnan(v) or np.isinf(v)) else clean_dict(v)) for k, v in d.items()}
 
-    descriptive_stats = descriptive_stats_df.to_dict(orient='index')
+    descriptive_stats = clean_dict(descriptive_stats)
 
     return {
         "user": user.get("sub"),
@@ -54,7 +63,7 @@ def dataset_summary(
 
 @router.post("/correlation")
 def dataset_correlation(
-    file_path: str,
+    file_path: str = Body(..., embed=True),
     user: dict = Depends(get_current_user)
 ):
     """
@@ -68,6 +77,8 @@ def dataset_correlation(
             df = pd.read_csv(file_path, encoding="latin1")
 
         correlation = df.corr(numeric_only=True)
+        # Handle NaN values in correlation matrix for JSON compliance
+        correlation = correlation.replace({np.nan: None})
 
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -80,7 +91,7 @@ def dataset_correlation(
 
 @router.post("/suggested-questions")
 def get_suggested_questions(
-    file_path: str,
+    file_path: str = Body(..., embed=True),
     user: dict = Depends(get_current_user)
 ):
     """

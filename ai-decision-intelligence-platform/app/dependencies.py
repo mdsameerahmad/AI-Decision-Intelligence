@@ -6,12 +6,15 @@ from app.config import settings
 import os
 
 # Create SQLAlchemy engine with error handling and prefix correction
-db_url = settings.DATABASE_URL
+db_url = settings.DATABASE_URL.strip() if settings.DATABASE_URL else None
 
 if not db_url:
     print("CRITICAL ERROR: DATABASE_URL is not set in environment variables.")
     # Fallback for build phase or early startup
     db_url = "sqlite:///./temp.db" 
+
+# Clean up common copy-paste artifacts like dashes or quotes
+db_url = db_url.lstrip("- ").strip("'\"")
 
 # Ensure the prefix is correct for SQLAlchemy 1.4+ (postgres:// -> postgresql://)
 if db_url.startswith("postgres://"):

@@ -9,6 +9,7 @@ from datetime import datetime, timedelta
 from app.dependencies import get_db
 from app.config import settings
 from app.database import models
+from app.core.security import get_current_user
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])
 
@@ -109,5 +110,22 @@ def login(
 
     return {
         "access_token": access_token,
-        "token_type": "bearer"
+        "token_type": "bearer",
+        "email": db_user.email
+    }
+
+
+@router.get("/profile")
+def get_profile(
+    user: dict = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    db_user = db.query(models.User).filter(models.User.email == user.get("sub")).first()
+    if not db_user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    return {
+        "id": db_user.id,
+        "email": db_user.email,
+        "created_at": db_user.created_at
     }

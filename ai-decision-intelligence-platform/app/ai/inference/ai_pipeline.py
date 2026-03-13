@@ -20,6 +20,13 @@ Question:
 {question}
 
 Provide a clear data analysis answer.
-"""
+Use appropriate emojis in your response.
 
-        return self.llm.generate(prompt)
+Answer:"""
+
+        response = self.llm.generate(prompt)
+        
+        if "Answer:" in response:
+            return response.split("Answer:")[-1].strip()
+            
+        return response

@@ -50,6 +50,31 @@ def get_user_datasets(db: Session, user_id: int):
     ).all()
 
 
+def get_dataset(db: Session, dataset_id: int):
+    return db.query(models.Dataset).filter(models.Dataset.id == dataset_id).first()
+
+
+def get_datasets_by_ids(db: Session, dataset_ids: list[int]):
+    return db.query(models.Dataset).filter(models.Dataset.id.in_(dataset_ids)).all()
+
+
+def delete_dataset(db: Session, dataset_id: int):
+    dataset = db.query(models.Dataset).filter(models.Dataset.id == dataset_id).first()
+    if dataset:
+        db.delete(dataset)
+        db.commit()
+    return dataset
+
+
+def delete_datasets(db: Session, dataset_ids: list[int]):
+    datasets = db.query(models.Dataset).filter(models.Dataset.id.in_(dataset_ids)).all()
+    if datasets:
+        for dataset in datasets:
+            db.delete(dataset)
+        db.commit()
+    return datasets
+
+
 # ---------- CHAT HISTORY ----------
 
 def save_chat(db: Session, user_id: int, query: str, response: str):

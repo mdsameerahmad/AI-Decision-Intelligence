@@ -19,3 +19,7 @@ class DatasetResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+
+class BulkDeleteRequest(BaseModel):
+    dataset_ids: list[int]

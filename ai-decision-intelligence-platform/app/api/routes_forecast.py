@@ -1,11 +1,16 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends, Body
 import pandas as pd
+from app.core.security import get_current_user
 
 router = APIRouter(prefix="/forecast", tags=["Forecast"])
 
 
 @router.post("/predict")
-def forecast(file_path: str, column: str):
+def forecast(
+    file_path: str = Body(..., embed=True),
+    column: str = Body(..., embed=True),
+    user: dict = Depends(get_current_user)
+):
     try:
         df = pd.read_csv(file_path)
     except FileNotFoundError:

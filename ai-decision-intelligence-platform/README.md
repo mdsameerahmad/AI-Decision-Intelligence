@@ -47,37 +47,209 @@ The platform uses a hybrid approach, combining high-performance Python libraries
 | **Trend Prediction** | **Pandas (Rolling Mean)** | Statistical forecasting of future numeric values. |
 | **Strategy Planner** | **Mistral-7B-Instruct-v0.2** | Generates business action plans based on data insights. |
 
-### **2. Detailed Model Specifications**
-- **Mistral-7B-Instruct-v0.2 (4-bit Quantized)**:
-    - **Optimization**: Uses `bitsandbytes` for 4-bit precision, reducing memory usage while maintaining high reasoning quality.
-    - **Hardware**: Optimized for NVIDIA T4 (Colab) and consumer GPUs using `float16`.
-- **Qwen2.5-Coder-3B**:
-    - **Optimization**: Lightweight and extremely accurate for generating Python/Pandas syntax.
-    - **Role**: Ensures that the code generated during "Chat" is syntactically perfect.
+---
+
+## 🛣 Detailed API Documentation
+
+All routes (except `/auth/signup` and `/auth/login`) require a **JWT Bearer Token** in the header:
+`Authorization: Bearer <your_token>`
+
+### **1. Authentication (`/auth`)**
+
+#### **POST `/auth/signup`**
+- **Request Body**:
+  ```json
+  {
+    "email": "user@example.com",
+    "password": "strongpassword"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "message": "User created successfully"
+  }
+  ```
+
+#### **POST `/auth/login`**
+- **Request (Form Data)**: `username=email&password=password`
+- **Response (200 OK)**:
+  ```json
+  {
+    "access_token": "eyJhbG...",
+    "token_type": "bearer"
+  }
+  ```
 
 ---
 
-## 🛣 API Routes
+### **2. Dataset Management (`/dataset`)**
 
-### **Authentication (`/auth`)**
-- `POST /signup`: Register a new user.
-- `POST /login`: Authenticate and receive a JWT token.
+#### **POST `/dataset/upload`**
+- **Request (Multipart/Form-Data)**: `file=@yourdata.csv`
+- **Response (200 OK)**:
+  ```json
+  {
+    "message": "Dataset uploaded successfully",
+    "uploaded_by": "user@example.com",
+    "file_path": "app/storage/datasets/uuid_yourdata.csv",
+    "rows": 1000,
+    "columns": 15
+  }
+  ```
 
-### **Dataset Management (`/dataset`)**
-- `POST /upload`: Securely upload CSV files (restricted to authenticated users).
-- `GET /list`: Retrieve a list of your personal uploaded datasets.
+#### **GET `/dataset/list`**
+- **Response (200 OK)**:
+  ```json
+  {
+    "user": "user@example.com",
+    "datasets": [
+      {
+        "id": 1,
+        "file_name": "sales_data.csv",
+        "file_path": "app/storage/datasets/uuid_sales_data.csv",
+        "uploaded_at": "2024-03-21T10:00:00"
+      }
+    ]
+  }
+  ```
 
-### **Data Analysis (`/analysis`)**
-- `POST /summary`: Detailed descriptive statistics (mean, std, min, max, etc.).
-- `POST /correlation`: Generate a correlation matrix for numeric columns.
-- `POST /suggested-questions`: AI-generated list of insights to explore.
+---
 
-### **Intelligent Chat (`/chat`)**
-- `POST /ask`: Ask any question about your data. The system generates code, executes it, and provides a natural language answer.
+### **3. Data Analysis (`/analysis`)**
 
-### **Forecasting & Strategy (`/forecast` & `/action-plan`)**
-- `POST /predict`: Predict future trends for a specific numeric column.
-- `POST /generate`: Generate a 3-5 step actionable strategy based on data insights.
+#### **POST `/analysis/summary`**
+- **Request Body**:
+  ```json
+  {
+    "file_path": "app/storage/datasets/uuid_sales_data.csv"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "user": "user@example.com",
+    "rows": 1000,
+    "columns": 15,
+    "column_names": ["date", "sales", "category"],
+    "missing_values": { "date": 0, "sales": 5 },
+    "descriptive_statistics": {
+      "sales": { "count": 995, "mean": 150.5, "std": 45.2, "min": 10, "max": 500 }
+    }
+  }
+  ```
+
+#### **POST `/analysis/correlation`**
+- **Request Body**:
+  ```json
+  {
+    "file_path": "app/storage/datasets/uuid_sales_data.csv"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "user": "user@example.com",
+    "correlation_matrix": {
+      "sales": { "sales": 1.0, "profit": 0.85 },
+      "profit": { "sales": 0.85, "profit": 1.0 }
+    }
+  }
+  ```
+
+#### **POST `/analysis/suggested-questions`**
+- **Request Body**:
+  ```json
+  {
+    "file_path": "app/storage/datasets/uuid_sales_data.csv"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "user": "user@example.com",
+    "suggested_questions": [
+      "What is the total sales for the last quarter?",
+      "Which product category has the highest profit margin?"
+    ]
+  }
+  ```
+
+---
+
+### **4. Intelligent Chat (`/chat`)**
+
+#### **POST `/chat/ask`**
+- **Request Body**:
+  ```json
+  {
+    "file_path": "app/storage/datasets/uuid_sales_data.csv",
+    "question": "Show me total sales by category"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "user": "user@example.com",
+    "question": "Show me total sales by category",
+    "generated_code": "df.groupby('category')['sales'].sum()",
+    "answer": "The total sales by category are: Electronics: $50,000, Clothing: $30,000..."
+  }
+  ```
+
+#### **GET `/chat/history`**
+- **Response (200 OK)**:
+  ```json
+  {
+    "history": [
+      {
+        "id": 1,
+        "query": "Show me total sales by category",
+        "response": "The total sales by category are...",
+        "created_at": "2024-03-21T11:00:00"
+      }
+    ]
+  }
+  ```
+
+---
+
+### **5. Forecasting & Strategy (`/forecast` & `/action-plan`)**
+
+#### **POST `/forecast/predict`**
+- **Request Body**:
+  ```json
+  {
+    "file_path": "app/storage/datasets/uuid_sales_data.csv",
+    "column": "sales"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "column": "sales",
+    "forecast": 155.2
+  }
+  ```
+
+#### **POST `/action-plan/generate`**
+- **Request Body**:
+  ```json
+  {
+    "problem": "Sales are declining in the Electronics category"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "problem": "Sales are declining in the Electronics category",
+    "recommended_tasks": [
+      "Strategy #1 Analyze customer feedback to identify quality issues.",
+      "Strategy #2 Launch a targeted promotional campaign for best-sellers.",
+      "Strategy #3 Review pricing strategy compared to competitors."
+    ]
+  }
+  ```
 
 ---
 

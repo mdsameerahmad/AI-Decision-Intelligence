@@ -14,7 +14,9 @@ User Question:
 
 Provide a clear explanation based on the dataset insights.
 Explain the possible causes and patterns.
-"""
+Use appropriate emojis in your response to make it more engaging.
+
+Answer:"""
 )
 
 
@@ -28,6 +30,7 @@ Based on the following insight:
 {insight}
 
 Generate a list of actionable steps a team should take to resolve or improve the situation.
-Provide the output as a list of tasks.
-"""
+Provide the output as a list of tasks, starting each task with an appropriate emoji.
+
+Answer:"""
 )

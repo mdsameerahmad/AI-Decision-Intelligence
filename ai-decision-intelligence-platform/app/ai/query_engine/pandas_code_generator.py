@@ -58,7 +58,8 @@ STRICT RULES:
                     timeout=60
                 )
                 response.raise_for_status()
-                return response.json().get("code", "# Error: No code returned")
+                code = response.json().get("code", "# Error: No code returned")
+                return self._clean_generated_code(code)
             except Exception as e:
                 return f"# Remote Code Gen Error: {str(e)}"
 
@@ -70,116 +71,50 @@ STRICT RULES:
 
 
     def _clean_generated_code(self, code):
-
-        # remove tokenizer artifacts
+        # Remove tokenizer artifacts and non-ASCII characters
         code = code.replace("Ġ", "").replace("Ċ", "")
         code = "".join(ch for ch in code if ord(ch) < 128)
 
-        extracted_code = ""
-
-        # extract python blocks
+        # Split the code into lines
+        lines = code.split('\n')
+        
+        # Look for the first line that starts with "result ="
+        for line in lines:
+            stripped_line = line.strip()
+            if stripped_line.startswith("result ="):
+                # Remove any trailing markdown fences (```) or comments (#) from this line
+                cleaned_line = re.sub(r'```.*', '', stripped_line).strip()
+                cleaned_line = re.sub(r'#.*', '', cleaned_line).strip()
+                return cleaned_line
+        
+        # If no line starting with "result =" is found, try to extract from code blocks
+        # This is a fallback for cases where the LLM might wrap the code differently
+        extracted_code_block = ""
         if "```python" in code:
             parts = code.split("```python")
             for part in parts[1:]:
                 if "```" in part:
-                    extracted_code += part.split("```")[0] + "\n"
-
+                    extracted_code_block += part.split("```")[0] + "\n"
         elif "```" in code:
             parts = code.split("```")
             for i in range(1, len(parts), 2):
-                extracted_code += parts[i] + "\n"
-
-        else:
-            extracted_code = code
-
-        code = extracted_code.strip()
-
-        # remove hallucinated text
-        garbage_prefix = [
-            "You are",
-            "Dataset columns",
-            "Question",
-            "STRICT RULES",
-            "Rules",
-            "-"
-        ]
-
-        lines = code.split("\n")
-        cleaned = []
-
-        for line in lines:
-
-            stripped = line.strip()
-
-            if not stripped:
-                continue
-
-            skip = False
-            for g in garbage_prefix:
-                if stripped.startswith(g):
-                    skip = True
-                    break
-
-            if skip:
-                continue
-
-            cleaned.append(stripped)
-
-        code = "\n".join(cleaned)
-
-        # remove dangerous imports
-        blocked = [
-            "import os",
-            "import sys",
-            "subprocess",
-            "eval(",
-            "exec("
-        ]
-
-        safe_lines = []
-
-        for line in code.split("\n"):
-
-            block = False
-
-            for b in blocked:
-                if b in line:
-                    block = True
-                    break
-
-            if not block:
-                safe_lines.append(line)
-
-        code = "\n".join(safe_lines)
-
-        # fix duplicated result tokens
-        code = re.sub(r"\)\s*result$", ")", code)
-        code = re.sub(r"(result\s*=.*)\s+result", r"\1", code)
-
-        # ensure result exists
-        if "result" not in code:
-
-            lines = code.split("\n")
-
-            if lines:
-                last_line = lines[-1]
-
-                if last_line and not last_line.startswith("result"):
-                    code += f"\nresult = {last_line}"
-
-        # remove lone result tokens
-        final_lines = []
-
-        for line in code.split("\n"):
-
-            if line.strip() == "result":
-                continue
-
-            final_lines.append(line)
-
-        code = "\n".join(final_lines)
-
-        # collapse blank lines
-        code = "\n".join([l for l in code.split("\n") if l.strip()])
-
-        return code.strip()
+                extracted_code_block += parts[i] + "\n"
+        
+        # If a code block was extracted, process it
+        if extracted_code_block:
+            block_lines = extracted_code_block.strip().split('\n')
+            for line in block_lines:
+                stripped_line = line.strip()
+                if stripped_line.startswith("result ="):
+                    # Clean the line from the block
+                    cleaned_line = re.sub(r'```.*', '', stripped_line).strip()
+                    cleaned_line = re.sub(r'#.*', '', cleaned_line).strip()
+                    return cleaned_line
+            # If "result =" not found in block, return the whole block after stripping
+            return extracted_code_block.strip()
+        
+        # If no "result =" line and no code block, return the original code after basic cleaning
+        # and removing any trailing markdown fences or comments
+        cleaned_code = re.sub(r'```.*', '', code).strip()
+        cleaned_code = re.sub(r'#.*', '', cleaned_code).strip()
+        return cleaned_code
