@@ -93,4 +93,11 @@ class DatasetRepository {
     final response = await apiService.get(ApiConstants.chatHistoryEndpoint);
     return response['history'] ?? response;
   }
+
+  Future<Map<String, dynamic>> getForecast(String filePath, String column) async {
+    return await apiService.post(
+      ApiConstants.forecastPredict,
+      {"file_path": filePath, "column": column},
+    );
+  }
 }

@@ -15,14 +15,10 @@ class AppBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(32),
-          topRight: Radius.circular(32),
-        ),
+        color: Colors.transparent,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 20,
             offset: const Offset(0, -5),
           ),
@@ -30,35 +26,20 @@ class AppBottomNavBar extends StatelessWidget {
       ),
       child: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        notchMargin: 10.0,
-        color: Colors.transparent, // Use Container's background
+        notchMargin: 12.0,
+        color: Colors.white,
         elevation: 0,
+        clipBehavior: Clip.antiAlias,
         child: SizedBox(
-          height: 56, // Fixed height to avoid overflow
+          height: 64,
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              // Left Side
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    _buildNavItem(0, LucideIcons.home, 'Home'),
-                    _buildNavItem(1, LucideIcons.fileText, 'Summary'),
-                  ],
-                ),
-              ),
-              const SizedBox(width: 70), // Space for Floating Action Button
-              // Right Side
-              Expanded(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    _buildNavItem(2, LucideIcons.barChart3, 'Correlation'),
-                    _buildNavItem(3, LucideIcons.messageCircle, 'Chat'),
-                  ],
-                ),
-              ),
+              _buildNavItem(0, LucideIcons.home, 'Home'),
+              _buildNavItem(1, LucideIcons.fileText, 'Summary'),
+              const SizedBox(width: 80), // Increased space for the bigger FAB
+              _buildNavItem(2, LucideIcons.barChart3, 'Correlation'),
+              _buildNavItem(3, LucideIcons.messageCircle, 'Chat'),
             ],
           ),
         ),

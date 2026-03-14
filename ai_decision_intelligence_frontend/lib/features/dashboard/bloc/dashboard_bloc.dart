@@ -72,6 +72,12 @@ class SelectChatSession extends DashboardEvent {
   SelectChatSession({this.datasetPath, this.sessionTitle});
 }
 
+class GetForecast extends DashboardEvent {
+  final String filePath;
+  final String column;
+  GetForecast(this.filePath, this.column);
+}
+
 // --- State ---
 class DashboardState {
   final List<DatasetModel> datasets;
@@ -83,6 +89,7 @@ class DashboardState {
   final bool isLoading;
   final String? errorMessage;
   final String? lastFilePath;
+  final Map<String, dynamic>? forecastResult;
 
   DashboardState({
     this.datasets = const [],
@@ -94,6 +101,7 @@ class DashboardState {
     this.isLoading = false,
     this.errorMessage,
     this.lastFilePath,
+    this.forecastResult,
   });
 
   DashboardState copyWith({
@@ -106,6 +114,7 @@ class DashboardState {
     bool? isLoading,
     String? errorMessage,
     String? lastFilePath,
+    Map<String, dynamic>? forecastResult,
     bool clearSummary = false,
     bool clearCorrelation = false,
     bool clearChat = false,
@@ -121,6 +130,7 @@ class DashboardState {
       isLoading: isLoading ?? this.isLoading,
       errorMessage: errorMessage,
       lastFilePath: lastFilePath ?? this.lastFilePath,
+      forecastResult: forecastResult ?? this.forecastResult,
     );
   }
 }
@@ -369,6 +379,16 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
           }
         }
         emit(state.copyWith(chatHistory: filtered, isLoading: false));
+      } catch (e) {
+        emit(state.copyWith(errorMessage: e.toString(), isLoading: false));
+      }
+    });
+
+    on<GetForecast>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      try {
+        final forecast = await repository.getForecast(event.filePath, event.column);
+        emit(state.copyWith(forecastResult: forecast, isLoading: false));
       } catch (e) {
         emit(state.copyWith(errorMessage: e.toString(), isLoading: false));
       }

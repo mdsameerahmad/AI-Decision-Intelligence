@@ -41,40 +41,119 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: Text(
-          'AI Chatbot',
-          style: GoogleFonts.ibmPlexSans(
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(70),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF3B82F6).withOpacity(0.05),
+                blurRadius: 15,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: false,
+            toolbarHeight: 70,
+            title: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF3B82F6).withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(LucideIcons.bot,
+                      color: Color(0xFF3B82F6), size: 24),
+                ),
+                const SizedBox(width: 12),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'AI Chatbot',
+                      style: GoogleFonts.ibmPlexSans(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      'Smart AI Assistant',
+                      style: GoogleFonts.ibmPlexSans(
+                        fontSize: 12,
+                        color: Colors.grey[600],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 8),
+                child: Tooltip(
+                  message: 'Chat History',
+                  child: InkWell(
+                    onTap: () async {
+                      final repo = context.read<DashboardBloc>().repository;
+                      try {
+                        final list = await repo.getChatHistory();
+                        _showHistoryModalWithList(context, list);
+                      } catch (e) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Failed to load history: $e')),
+                        );
+                      }
+                    },
+                    borderRadius: BorderRadius.circular(12),
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF3B82F6).withOpacity(0.05),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: const Color(0xFF3B82F6).withOpacity(0.1)),
+                      ),
+                      child: const Icon(
+                        LucideIcons.history,
+                        color: Color(0xFF3B82F6),
+                        size: 18,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Tooltip(
+                  message: 'Clear Chat',
+                  child: InkWell(
+                    onTap: () => context.read<DashboardBloc>().add(ClearChat()),
+                    borderRadius: BorderRadius.circular(12),
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.redAccent.withOpacity(0.05),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.redAccent.withOpacity(0.1)),
+                      ),
+                      child: const Icon(
+                        LucideIcons.trash2,
+                        color: Colors.redAccent,
+                        size: 18,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
-        actions: [
-          IconButton(
-            icon: const Icon(LucideIcons.history, color: Color(0xFF3B82F6), size: 20),
-            onPressed: () async {
-              final repo = context.read<DashboardBloc>().repository;
-              try {
-                final list = await repo.getChatHistory();
-                _showHistoryModalWithList(context, list);
-              } catch (e) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Failed to load history: $e')),
-                );
-              }
-            },
-            tooltip: 'Chat History',
-          ),
-          IconButton(
-            icon: const Icon(LucideIcons.trash2, color: Color(0xFF3B82F6), size: 20),
-            onPressed: () {
-              context.read<DashboardBloc>().add(ClearChat());
-            },
-            tooltip: 'Clear Chat',
-          ),
-        ],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -239,7 +318,7 @@ class _ChatPageState extends State<ChatPage> {
   Widget _buildChatView(DashboardState state) {
     return ListView.builder(
       controller: _scrollController,
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0, bottom: 180.0),
       itemCount: state.chatHistory.length + (state.suggestedQuestions.isNotEmpty ? 1 : 0),
       itemBuilder: (context, index) {
         if (state.suggestedQuestions.isNotEmpty && index == 0) {
@@ -351,68 +430,80 @@ class _ChatPageState extends State<ChatPage> {
 
   Widget _buildInputArea(BuildContext context, DashboardState state) {
     return Container(
-      padding: const EdgeInsets.all(12.0),
+      margin: const EdgeInsets.fromLTRB(16, 0, 16, 100),
       decoration: BoxDecoration(
         color: Colors.white,
-        border: Border(top: BorderSide(color: Colors.grey[200]!)),
-      ),
-      child: Row(
-        children: [
-          IconButton(
-            icon: Icon(
-              LucideIcons.lightbulb,
-              color: _isStrategyMode ? const Color(0xFF3B82F6) : Colors.grey[400],
-            ),
-            onPressed: () {
-              setState(() {
-                _isStrategyMode = !_isStrategyMode;
-              });
-            },
-            tooltip: 'Strategy Planner Mode',
+        borderRadius: BorderRadius.circular(28),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 20,
+            offset: const Offset(0, 5),
           ),
-          Expanded(
-            child: TextField(
-              controller: _textController,
-              decoration: InputDecoration(
-                hintText: _isStrategyMode ? 'Describe your problem for a strategy plan...' : 'Type your question...',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(24),
-                  borderSide: _isStrategyMode 
-                    ? const BorderSide(color: Color(0xFF3B82F6), width: 1)
-                    : BorderSide.none,
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+        child: Row(
+          children: [
+            IconButton(
+              icon: Icon(
+                LucideIcons.lightbulb,
+                color: _isStrategyMode ? const Color(0xFF3B82F6) : Colors.grey[400],
+              ),
+              onPressed: () {
+                setState(() {
+                  _isStrategyMode = !_isStrategyMode;
+                });
+              },
+              tooltip: 'Strategy Planner Mode',
+            ),
+            Expanded(
+              child: TextField(
+                controller: _textController,
+                style: GoogleFonts.ibmPlexSans(fontSize: 15),
+                decoration: InputDecoration(
+                  hintText: _isStrategyMode ? 'Describe problem for strategy...' : 'Type your question...',
+                  hintStyle: GoogleFonts.ibmPlexSans(color: Colors.grey[400], fontSize: 14),
+                  border: InputBorder.none,
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 12),
                 ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(24),
-                  borderSide: _isStrategyMode 
-                    ? const BorderSide(color: Color(0xFF3B82F6), width: 1)
-                    : BorderSide.none,
-                ),
-                filled: true,
-                fillColor: _isStrategyMode ? const Color(0xFF3B82F6).withOpacity(0.05) : Colors.grey[100],
-                contentPadding: const EdgeInsets.symmetric(horizontal: 16),
               ),
             ),
-          ),
-          const SizedBox(width: 8),
-          state.isLoading
-              ? const CircularProgressIndicator(color: Color(0xFF3B82F6))
-              : IconButton(
-                  icon: const Icon(LucideIcons.send, color: Color(0xFF3B82F6)),
-                  onPressed: () {
-                    if (_textController.text.isNotEmpty) {
-                      if (_isStrategyMode) {
-                        context.read<DashboardBloc>().add(GenerateActionPlan(_textController.text));
-                        setState(() {
-                          _isStrategyMode = false;
-                        });
-                      } else {
-                        context.read<DashboardBloc>().add(AskChatbot(_textController.text));
-                      }
-                      _textController.clear();
-                    }
-                  },
-                ),
-        ],
+            state.isLoading
+                ? const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      width: 24,
+                      height: 24,
+                      child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF3B82F6)),
+                    ),
+                  )
+                : Container(
+                    margin: const EdgeInsets.all(4),
+                    decoration: const BoxDecoration(
+                      color: Color(0xFF3B82F6),
+                      shape: BoxShape.circle,
+                    ),
+                    child: IconButton(
+                      icon: const Icon(LucideIcons.send, color: Colors.white, size: 18),
+                      onPressed: () {
+                        if (_textController.text.isNotEmpty) {
+                          if (_isStrategyMode) {
+                            context.read<DashboardBloc>().add(GenerateActionPlan(_textController.text));
+                            setState(() {
+                              _isStrategyMode = false;
+                            });
+                          } else {
+                            context.read<DashboardBloc>().add(AskChatbot(_textController.text));
+                          }
+                          _textController.clear();
+                        }
+                      },
+                    ),
+                  ),
+          ],
+        ),
       ),
     );
   }

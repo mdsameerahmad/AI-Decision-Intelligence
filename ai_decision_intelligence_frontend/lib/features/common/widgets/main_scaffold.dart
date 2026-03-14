@@ -63,33 +63,62 @@ class _MainScaffoldState extends State<MainScaffold> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () async {
-          FilePickerResult? result = await FilePicker.platform.pickFiles(
-            type: FileType.custom,
-            allowedExtensions: ['csv'],
+      body: AnimatedSwitcher(
+        duration: const Duration(milliseconds: 300),
+        transitionBuilder: (Widget child, Animation<double> animation) {
+          return FadeTransition(
+            opacity: animation,
+            child: SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(0.05, 0),
+                end: Offset.zero,
+              ).animate(animation),
+              child: child,
+            ),
           );
+        },
+        child: KeyedSubtree(
+          key: ValueKey<int>(_currentIndex),
+          child: _screens[_currentIndex],
+        ),
+      ),
+      floatingActionButton: Container(
+        height: 72,
+        width: 72,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF3B82F6).withOpacity(0.3),
+              blurRadius: 15,
+              offset: const Offset(0, 8),
+            ),
+          ],
+        ),
+        child: FloatingActionButton(
+          onPressed: () async {
+            FilePickerResult? result = await FilePicker.platform.pickFiles(
+              type: FileType.custom,
+              allowedExtensions: ['csv'],
+            );
 
-          if (result != null) {
-            final file = result.files.first;
-            if (file.bytes != null && mounted) {
-              context.read<DashboardBloc>().add(
-                UploadDataset(file.bytes!, file.name),
-              );
-              if (_currentIndex != 0) {
-                _onNavigate(0);
+            if (result != null) {
+              final file = result.files.first;
+              if (file.bytes != null && mounted) {
+                context.read<DashboardBloc>().add(
+                  UploadDataset(file.bytes!, file.name),
+                );
+                if (_currentIndex != 0) {
+                  _onNavigate(0);
+                }
               }
             }
-          }
-        },
-        backgroundColor: const Color(0xFF3B82F6), // Updated to Blue (Matched with Login Page)
-        elevation: 6,
-        shape: const CircleBorder(), // Updated to Circle
-        child: const Icon(LucideIcons.plus, color: Colors.white, size: 28),
+          },
+          backgroundColor: const Color(0xFF3B82F6),
+          elevation: 0, // Elevation handled by Container shadow
+          shape: const CircleBorder(),
+          child: const Icon(LucideIcons.plus, color: Colors.white, size: 36),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AppBottomNavBar(

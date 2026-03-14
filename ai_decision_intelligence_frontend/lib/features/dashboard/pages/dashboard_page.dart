@@ -34,30 +34,86 @@ class DashboardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: false,
-        title: Text(
-          'AI Decision Intelligence',
-          style: GoogleFonts.ibmPlexSans(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-            color: Colors.black,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(70),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF3B82F6).withOpacity(0.05),
+                blurRadius: 15,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: false,
+            toolbarHeight: 70,
+            title: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF3B82F6).withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(LucideIcons.brainCircuit,
+                      color: Color(0xFF3B82F6), size: 24),
+                ),
+                const SizedBox(width: 12),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'AI Decision Intelligence',
+                      style: GoogleFonts.ibmPlexSans(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      'Smart Data Insights',
+                      style: GoogleFonts.ibmPlexSans(
+                        fontSize: 12,
+                        color: Colors.grey[600],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Tooltip(
+                  message: 'Logout',
+                  child: InkWell(
+                    onTap: () => context.read<AuthBloc>().add(LogoutEvent()),
+                    borderRadius: BorderRadius.circular(12),
+                    child: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.redAccent.withOpacity(0.05),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.redAccent.withOpacity(0.1)),
+                      ),
+                      child: const Icon(
+                        LucideIcons.logOut,
+                        color: Colors.redAccent,
+                        size: 18,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
-        actions: [
-          Container(
-            margin: const EdgeInsets.only(right: 16),
-            child: IconButton(
-              icon: const Icon(LucideIcons.logOut, color: Colors.black54),
-              onPressed: () {
-                context.read<AuthBloc>().add(LogoutEvent());
-              },
-              tooltip: 'Logout',
-            ),
-          ),
-        ],
       ),
       body: BlocConsumer<DashboardBloc, DashboardState>(
         listenWhen: (previous, current) =>

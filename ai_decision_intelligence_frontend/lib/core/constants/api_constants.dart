@@ -18,7 +18,7 @@ static const String suggestedQuestionsEndpoint = "/analysis/suggested-questions"
 static const String chatAsk = "/chat/ask";
 static const String chatHistoryEndpoint = "/chat/history";
 
-static const String forecastPredict = "/forecast/predict"; // Specific endpoint for prediction
+static const String forecastPredict = "/forecast/predict";
 static const String actionPlan = "/action-plan/generate";
 
 }

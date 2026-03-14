@@ -13,31 +13,87 @@ class SummaryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        centerTitle: false,
-        title: Text(
-          'Data Summary',
-          style: GoogleFonts.ibmPlexSans(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-            color: Colors.black,
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(70),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF3B82F6).withOpacity(0.05),
+                blurRadius: 15,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
+          child: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            centerTitle: false,
+            toolbarHeight: 70,
+            title: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF3B82F6).withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: const Icon(LucideIcons.fileText,
+                      color: Color(0xFF3B82F6), size: 24),
+                ),
+                const SizedBox(width: 12),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Data Summary',
+                      style: GoogleFonts.ibmPlexSans(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                    ),
+                    Text(
+                      'Dataset Overview',
+                      style: GoogleFonts.ibmPlexSans(
+                        fontSize: 12,
+                        color: Colors.grey[600],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            actions: [
+              if (context.watch<DashboardBloc>().state.activeSummary != null)
+                Padding(
+                  padding: const EdgeInsets.only(right: 16),
+                  child: Tooltip(
+                    message: 'Clear Results',
+                    child: InkWell(
+                      onTap: () => context.read<DashboardBloc>().add(ClearSummary()),
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: Colors.redAccent.withOpacity(0.05),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.redAccent.withOpacity(0.1)),
+                        ),
+                        child: const Icon(
+                          LucideIcons.refreshCw,
+                          color: Colors.redAccent,
+                          size: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+            ],
           ),
         ),
-        actions: [
-          if (context.watch<DashboardBloc>().state.activeSummary != null)
-            Container(
-              margin: const EdgeInsets.only(right: 8),
-              child: IconButton(
-                icon: const Icon(LucideIcons.refreshCw, color: Color(0xFF3B82F6), size: 20),
-                onPressed: () {
-                  context.read<DashboardBloc>().add(ClearSummary());
-                },
-                tooltip: 'Clear Results',
-              ),
-            ),
-        ],
       ),
       body: Container(
         decoration: BoxDecoration(
