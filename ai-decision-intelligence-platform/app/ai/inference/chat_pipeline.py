@@ -3,6 +3,7 @@ import pandas as pd
 from app.ai.query_engine.pandas_code_generator import PandasCodeGenerator
 from app.ai.query_engine.code_executor import execute_generated_code
 from app.ai.models.local_llm import LocalLLM
+from app.utils.data_utils import load_dataframe
 
 
 class ChatPipeline:
@@ -13,11 +14,7 @@ class ChatPipeline:
         self.interpreter = LocalLLM()
 
     def load_dataset(self, file_path):
-
-        try:
-            return pd.read_csv(file_path, encoding="utf-8")
-        except:
-            return pd.read_csv(file_path, encoding="latin1")
+        return load_dataframe(file_path)
 
     def extract_schema(self, df):
 

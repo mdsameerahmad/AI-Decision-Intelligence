@@ -15,10 +15,22 @@ class Settings(BaseSettings):
 
     DATASET_STORAGE_PATH: str = "app/storage/datasets"
 
-    # Hybrid Deployment Settings: Switch between local and remote LLM (e.g., Colab)
-    # LLM_MODE: 'local' (runs on machine) or 'remote' (calls Colab/API)
-    LLM_MODE: str = "local" 
-    REMOTE_LLM_URL: str = "" # Your Colab Ngrok URL (e.g., https://xyz.ngrok-free.app)
+    # =========================================================================
+    # HYBRID LLM SETTINGS
+    # =========================================================================
+    # Choose between:
+    # 1. 'groq'   - Fast, accurate reasoning via Groq API (Recommended for Cloud/Mobile)
+    # 2. 'remote' - Uses temporary Colab/Ngrok model endpoint
+    # 3. 'local'  - Runs heavy Mistral/Qwen models directly on your RAM/GPU
+    LLM_MODE: str = "groq" 
+
+    # --- Mode 1: Groq API Settings ---
+    GROQ_API_KEY: str
+    GROQ_MODEL_REASONING: str = "llama-3.3-70b-versatile"
+    GROQ_MODEL_CODE: str = "llama-3.3-70b-versatile"
+
+    # --- Mode 2: Remote/Colab Settings ---
+    REMOTE_LLM_URL: str = "" # e.g., https://xyz.ngrok-free.app
 
     model_config = SettingsConfigDict(
         env_file=".env",

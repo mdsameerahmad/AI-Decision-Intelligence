@@ -1,27 +1,45 @@
-from transformers import pipeline
 import re
 import requests
+from groq import Groq
 from app.config import settings
 
 
 class PandasCodeGenerator:
 
     def __init__(self):
-
-        # Hybrid Deployment: Skip loading heavy coding model if in remote mode
-        if settings.LLM_MODE == "remote":
+        # =====================================================================
+        # MODE 1: GROQ API (Recommended)
+        # =====================================================================
+        if settings.LLM_MODE == "groq":
+            print("Code Engine: Using Groq API for Pandas generation.")
+            self.groq_client = Groq(api_key=settings.GROQ_API_KEY)
             self.generator = None
             return
 
-        # Better reasoning model for data/code
-        self.generator = pipeline(
-            "text-generation",
-            model="Qwen/Qwen2.5-Coder-3B-Instruct",
-            max_new_tokens=200,
-            temperature=0.1,
-            do_sample=False,
-            device=-1 # Force to CPU
-        )
+        # =====================================================================
+        # MODE 2: REMOTE COLAB
+        # =====================================================================
+        if settings.LLM_MODE == "remote":
+            print("Code Engine: Using Remote Colab for Pandas generation.")
+            self.generator = None
+            return
+
+        # =====================================================================
+        # MODE 3: LOCAL QWEN (Commented out for reference)
+        # =====================================================================
+        # if settings.LLM_MODE == "local":
+        #     print("Code Engine: Loading Local Qwen-Coder-3B...")
+        #     from transformers import pipeline
+        #     self.generator = pipeline(
+        #         "text-generation",
+        #         model="Qwen/Qwen2.5-Coder-3B-Instruct",
+        #         max_new_tokens=200,
+        #         temperature=0.1,
+        #         do_sample=False,
+        #         device=-1 # Force to CPU
+        #     )
+        
+        self.generator = None
 
     def generate_code(self, schema, question):
 
@@ -32,23 +50,31 @@ Dataset columns:
 {schema}
 
 A pandas dataframe named `df` is already loaded.
+The pandas library is available as `pd`.
 
 Write Python pandas code to answer the following question.
-If the question implies a derived metric (e.g., 'profit', 'loss', 'revenue', 'discount'), infer the calculation based on common business logic and available columns. For example, if 'profit' is asked and 'Weekly_Sales' and 'Fuel_Price' are available, assume profit might be related to their difference.
-
 Question:
 {question}
 
 STRICT RULES:
 - Return ONLY a single line of Python code that assigns the final calculated value to a variable named `result`.
-- Use pandas operations only.
-- Do NOT explain anything.
-- Do NOT print anything.
-- Ensure the code is syntactically correct and directly executable.
 - Example: `result = df['Weekly_Sales'].sum()`
 """
 
-        # Hybrid Deployment: Call remote Colab API for code generation
+        # 1. Groq Logic
+        if settings.LLM_MODE == "groq":
+            try:
+                completion = self.groq_client.chat.completions.create(
+                    model=settings.GROQ_MODEL_CODE,
+                    messages=[{"role": "user", "content": prompt}],
+                    temperature=0.1
+                )
+                code_raw = completion.choices[0].message.content
+                return self._clean_generated_code(code_raw)
+            except Exception as e:
+                return f"# Groq Code Gen Error: {str(e)}"
+
+        # 2. Remote Logic
         if settings.LLM_MODE == "remote":
             try:
                 response = requests.post(
@@ -63,11 +89,12 @@ STRICT RULES:
             except Exception as e:
                 return f"# Remote Code Gen Error: {str(e)}"
 
-        output = self.generator(prompt)[0]["generated_text"]
+        # 3. Local Logic (Reference)
+        # if self.generator is not None:
+        #     output = self.generator(prompt)[0]["generated_text"]
+        #     return self._clean_generated_code(output)
 
-        code = self._clean_generated_code(output)
-
-        return code
+        return "# Error: No Code Engine mode selected."
 
 
     def _clean_generated_code(self, code):

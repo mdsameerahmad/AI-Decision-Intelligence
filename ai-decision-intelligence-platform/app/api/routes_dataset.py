@@ -1,13 +1,14 @@
-from fastapi import APIRouter, UploadFile, File, Depends, HTTPException
+from fastapi import APIRouter, UploadFile, File, Depends, HTTPException, Body
 from sqlalchemy.orm import Session
 from app.core.security import get_current_user
 from app.dependencies import get_db
 from app.database import crud, models
 from app.schemas.dataset_schema import BulkDeleteRequest
+from app.utils.data_utils import load_dataframe, import_from_google_sheet
 import pandas as pd
 import os
 import uuid
-import io # Import io module
+import io
 
 router = APIRouter(prefix="/dataset", tags=["Dataset"])
 
@@ -23,11 +24,12 @@ async def upload_dataset(
     db: Session = Depends(get_db)
 ):
 
-    # Only allow CSV files
-    if not file.filename.endswith(".csv"):
+    # Allow CSV and Excel files
+    allowed_extensions = (".csv", ".xlsx", ".xls")
+    if not file.filename.lower().endswith(allowed_extensions):
         raise HTTPException(
             status_code=400,
-            detail="Only CSV files are allowed"
+            detail="Only CSV and Excel files are allowed"
         )
 
     # Get user from DB to get the ID
@@ -53,44 +55,55 @@ async def upload_dataset(
         user_id=db_user.id
     )
 
-    # Read CSV safely (handle encoding issues and common delimiters)
-    df = None
-    
-    # Try common encodings and delimiters
-    encodings = ["utf-8", "latin1"]
-    delimiters = [",", ";", "\t"] # Comma, semicolon, tab
-    
-    last_exception = None
-    for encoding in encodings:
-        for delimiter in delimiters:
-            try:
-                # Use io.BytesIO to read from bytes in pandas
-                df = pd.read_csv(io.BytesIO(raw_data), encoding=encoding, delimiter=delimiter)
-                # Ensure it actually parsed columns (if only 1 column, it might be the wrong delimiter)
-                if df.shape[1] > 1:
-                    break
-            except Exception as e:
-                # Store the error for debugging if all attempts fail
-                last_exception = e
-        if df is not None and df.shape[1] > 1:
-            break
-            
-    # Fallback if no delimiter produced multiple columns, try first successful one
-    if df is None or df.shape[1] <= 1:
-        # One last try with default comma if everything failed or produced 1 col
-        try:
-            df = pd.read_csv(io.BytesIO(raw_data), encoding="utf-8")
-        except:
-            pass
-
-    if df is None:
-        raise HTTPException(
-            status_code=400,
-            detail=f"Could not parse CSV file. Last error: {last_exception}"
-        )
+    # Validate file can be read
+    try:
+        df = load_dataframe(file_path)
+    except Exception as e:
+        # Cleanup file if invalid
+        if os.path.exists(file_path):
+            os.remove(file_path)
+        raise HTTPException(status_code=400, detail=f"Invalid file format: {str(e)}")
 
     return {
         "message": "Dataset uploaded successfully",
+        "uploaded_by": user.get("sub"),
+        "file_path": file_path,
+        "rows": df.shape[0],
+        "columns": df.shape[1]
+    }
+
+
+@router.post("/import-google-sheet")
+async def import_sheet(
+    url: str = Body(..., embed=True),
+    user: dict = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    # Get user
+    db_user = db.query(models.User).filter(models.User.email == user.get("sub")).first()
+    if not db_user:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    # Import from URL
+    df = import_from_google_sheet(url)
+    
+    # Save as CSV locally for consistent analysis
+    file_id = str(uuid.uuid4())
+    file_name = f"Google_Sheet_{file_id[:8]}.csv"
+    file_path = f"{DATASET_DIR}/{file_id}_{file_name}"
+    
+    df.to_csv(file_path, index=False)
+
+    # Save record to DB
+    crud.create_dataset(
+        db=db,
+        file_name=file_name,
+        file_path=file_path,
+        user_id=db_user.id
+    )
+
+    return {
+        "message": "Google Sheet imported successfully",
         "uploaded_by": user.get("sub"),
         "file_path": file_path,
         "rows": df.shape[0],

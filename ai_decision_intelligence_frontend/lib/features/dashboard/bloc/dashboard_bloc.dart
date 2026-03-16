@@ -35,6 +35,11 @@ class UploadDataset extends DashboardEvent {
   UploadDataset(this.fileBytes, this.fileName);
 }
 
+class ImportGoogleSheet extends DashboardEvent {
+  final String url;
+  ImportGoogleSheet(this.url);
+}
+
 class GetSummary extends DashboardEvent {
   final String filePath;
   GetSummary(this.filePath);
@@ -155,6 +160,18 @@ class DashboardBloc extends Bloc<DashboardEvent, DashboardState> {
       emit(state.copyWith(isLoading: true));
       try {
         await repository.uploadDataset(event.fileBytes, event.fileName);
+        final List<dynamic> rawDatasets = await repository.listDatasets();
+        final datasets = rawDatasets.map((e) => DatasetModel.fromJson(e)).toList();
+        emit(state.copyWith(datasets: datasets, isLoading: false));
+      } catch (e) {
+        emit(state.copyWith(errorMessage: e.toString(), isLoading: false));
+      }
+    });
+
+    on<ImportGoogleSheet>((event, emit) async {
+      emit(state.copyWith(isLoading: true));
+      try {
+        await repository.importGoogleSheet(event.url);
         final List<dynamic> rawDatasets = await repository.listDatasets();
         final datasets = rawDatasets.map((e) => DatasetModel.fromJson(e)).toList();
         emit(state.copyWith(datasets: datasets, isLoading: false));

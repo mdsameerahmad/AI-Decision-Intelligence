@@ -49,5 +49,6 @@ flutter:
 
   assets:
     - assets/images/illustration.jpg
+    - assets/images/logo.png
 
   

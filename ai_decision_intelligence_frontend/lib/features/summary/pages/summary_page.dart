@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 
+import '../../../core/theme/app_theme.dart';
+import '../../../core/utils/responsive_helper.dart';
 import '../../dashboard/bloc/dashboard_bloc.dart';
 
 class SummaryPage extends StatelessWidget {
@@ -159,128 +161,97 @@ class SummaryPage extends StatelessWidget {
     );
   }
 
-  Widget _buildAnalysisOverview() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Analysis Insights 📊',
-          style: GoogleFonts.ibmPlexSans(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
-        ),
-        const SizedBox(height: 8),
-        Container(
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: const Color(0xFF3B82F6).withOpacity(0.05),
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: const Color(0xFF3B82F6).withOpacity(0.1)),
-          ),
-          child: Row(
-            children: [
-              const Icon(LucideIcons.info, color: Color(0xFF3B82F6), size: 20),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Text(
-                  'This summary provides a comprehensive look at your dataset, including row/column counts, missing value alerts, and key statistical markers like mean, min, and max for each column.',
-                  style: GoogleFonts.ibmPlexSans(
-                    fontSize: 14,
-                    color: Colors.grey[700],
-                    height: 1.5,
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
   Widget _buildSummaryView(BuildContext context, Map<String, dynamic> summary, String? filePath) {
     final descriptiveStats = summary['descriptive_statistics'] as Map<String, dynamic>;
     final missingValues = summary['missing_values'] as Map<String, dynamic>;
     final columnNames = summary['column_names'] as List<dynamic>;
+    final bool isMobile = ResponsiveHelper.isMobile(context);
 
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildAnalysisOverview(),
-          const SizedBox(height: 24),
-          TweenAnimationBuilder<double>(
-            tween: Tween(begin: 0.0, end: 1.0),
-            duration: const Duration(milliseconds: 600),
-            builder: (context, value, child) {
-              return Opacity(
-                opacity: value,
-                child: Transform.translate(
-                  offset: Offset(0, 20 * (1 - value)),
-                  child: child,
-                ),
-              );
-            },
-            child: _buildQuickStats(summary),
-          ),
-          const SizedBox(height: 24),
-          if (filePath != null) 
-            TweenAnimationBuilder<double>(
-              tween: Tween(begin: 0.0, end: 1.0),
-              duration: const Duration(milliseconds: 600),
-              curve: const Interval(0.2, 1.0, curve: Curves.easeOut),
-              builder: (context, value, child) {
-                return Opacity(
-                  opacity: value,
-                  child: Transform.scale(
-                    scale: 0.95 + (0.05 * value),
-                    child: child,
-                  ),
-                );
-              },
-              child: _buildCorrelationAction(),
-            ),
-          const SizedBox(height: 32),
-          Text(
-            'Column Details',
-            style: GoogleFonts.ibmPlexSans(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.black87,
-            ),
-          ),
-          const SizedBox(height: 16),
-          ...columnNames.asMap().entries.map((entry) {
-            final index = entry.key;
-            final columnName = entry.value as String;
-            final stats = descriptiveStats[columnName] as Map<String, dynamic>?;
-            final missing = missingValues[columnName] as int? ?? 0;
-            
-            return TweenAnimationBuilder<double>(
-              tween: Tween(begin: 0.0, end: 1.0),
-              duration: Duration(milliseconds: 400 + (index * 100).clamp(0, 600)),
-              curve: Curves.easeOut,
-              builder: (context, value, child) {
-                return Opacity(
-                  opacity: value,
-                  child: Transform.translate(
-                    offset: Offset(0, 30 * (1 - value)),
-                    child: child,
-                  ),
-                );
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 16.0),
-                child: _buildColumnDetailCard(columnName, stats, missing),
+      child: ResponsiveHelper.constrainedContent(
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _buildPremiumHeader(),
+            const SizedBox(height: 32),
+            _buildQuickStatsGrid(summary, isMobile),
+            const SizedBox(height: 32),
+            if (filePath != null) _buildCorrelationAction(),
+            const SizedBox(height: 40),
+            Text(
+              'Column Deep-Dive',
+              style: GoogleFonts.inter(
+                fontSize: 20,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.5,
+                color: AppTheme.textMain,
               ),
-            );
-          }),
-          const SizedBox(height: 80), // Bottom padding
-        ],
+            ),
+            const SizedBox(height: 20),
+            if (isMobile)
+              ListView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: columnNames.length,
+                itemBuilder: (context, index) {
+                  final columnName = columnNames[index] as String;
+                  final stats = descriptiveStats[columnName] as Map<String, dynamic>?;
+                  final missing = missingValues[columnName] as int? ?? 0;
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 16.0),
+                    child: _buildColumnDetailCard(columnName, stats, missing),
+                  );
+                },
+              )
+            else
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  final width = (constraints.maxWidth - 16) / 2; // 2 columns
+                  return Wrap(
+                    spacing: 16,
+                    runSpacing: 16,
+                    children: columnNames.map((name) {
+                      final columnName = name as String;
+                      final stats = descriptiveStats[columnName] as Map<String, dynamic>?;
+                      final missing = missingValues[columnName] as int? ?? 0;
+                      return SizedBox(
+                        width: width,
+                        child: _buildColumnDetailCard(columnName, stats, missing),
+                      );
+                    }).toList(),
+                  );
+                },
+              ),
+            const SizedBox(height: 100),
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget _buildPremiumHeader() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Data Profiling 📊',
+          style: GoogleFonts.inter(
+            fontSize: 28,
+            fontWeight: FontWeight.w800,
+            letterSpacing: -1,
+            color: AppTheme.textMain,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          'Deep statistical insights into your dataset columns.',
+          style: GoogleFonts.inter(
+            color: AppTheme.textSecondary,
+            fontSize: 16,
+          ),
+        ),
+      ],
     );
   }
 
@@ -424,13 +395,68 @@ class SummaryPage extends StatelessWidget {
     );
   }
 
-  Widget _buildQuickStats(Map<String, dynamic> summary) {
+  Widget _buildQuickStatsGrid(Map<String, dynamic> summary, bool isMobile) {
     return Row(
       children: [
-        _statCard('Total Rows', summary['rows'].toString(), LucideIcons.database, const Color(0xFF3B82F6)),
+        Expanded(
+          child: _premiumStatCard(
+            'Total Records',
+            summary['rows'].toString(),
+            LucideIcons.database,
+            AppTheme.primaryBlue,
+          ),
+        ),
         const SizedBox(width: 16),
-        _statCard('Total Columns', summary['columns'].toString(), LucideIcons.columns, const Color(0xFF10B981)),
+        Expanded(
+          child: _premiumStatCard(
+            'Variables',
+            summary['columns'].toString(),
+            LucideIcons.columns,
+            AppTheme.successGreen,
+          ),
+        ),
       ],
+    );
+  }
+
+  Widget _premiumStatCard(String label, String value, IconData icon, Color color) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.05),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: color.withOpacity(0.1)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: color.withOpacity(0.1),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(icon, color: color, size: 20),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            value,
+            style: GoogleFonts.inter(
+              fontSize: 24,
+              fontWeight: FontWeight.w800,
+              color: AppTheme.textMain,
+            ),
+          ),
+          Text(
+            label,
+            style: GoogleFonts.inter(
+              color: AppTheme.textSecondary,
+              fontWeight: FontWeight.w600,
+              fontSize: 12,
+            ),
+          ),
+        ],
+      ),
     );
   }
 

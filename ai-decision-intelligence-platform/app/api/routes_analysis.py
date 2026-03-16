@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, Body
 from app.core.security import get_current_user
+from app.utils.data_utils import load_dataframe
 import pandas as pd
 import numpy as np
 from app.ai.models.local_llm import LocalLLM
@@ -22,16 +23,12 @@ def dataset_summary(
     """
 
     try:
-        # handle encoding issues
-        try:
-            df = pd.read_csv(file_path, encoding="utf-8")
-        except UnicodeDecodeError:
-            df = pd.read_csv(file_path, encoding="latin1")
+        df = load_dataframe(file_path)
 
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail=f"File not found at {file_path}")
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Error reading CSV file: {e}")
+        raise HTTPException(status_code=400, detail=f"Error reading file: {e}")
 
     # Generate descriptive statistics for all columns
     descriptive_stats_df = df.describe(include='all')
@@ -71,10 +68,7 @@ def dataset_correlation(
     """
 
     try:
-        try:
-            df = pd.read_csv(file_path, encoding="utf-8")
-        except UnicodeDecodeError:
-            df = pd.read_csv(file_path, encoding="latin1")
+        df = load_dataframe(file_path)
 
         correlation = df.corr(numeric_only=True)
         # Handle NaN values in correlation matrix for JSON compliance

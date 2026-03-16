@@ -273,3 +273,25 @@ All routes (except `/auth/signup` and `/auth/login`) require a **JWT Bearer Toke
 
 ---
 
+## 🔮 Future-Proofing: How to Switch AI Engines
+
+The platform is designed with a **Hybrid LLM Strategy**, allowing you to switch between different AI providers or local models easily.
+
+### **How to Use This in the Future**
+If you ever want to switch back to your Colab model or Local model:
+
+- **To use Groq (Current Default)**:
+  - Ensure `LLM_MODE: str = "groq"` in [config.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/config.py).
+  - This provides the fastest and most accurate reasoning for cloud deployment.
+
+- **To use Colab (Remote Mode)**:
+  - Change `LLM_MODE: str = "remote"` in [config.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/config.py).
+  - Ensure your Colab script is running and update `REMOTE_LLM_URL` with your new Ngrok address.
+
+- **To use Local (No Internet Mode)**:
+  - Change `LLM_MODE: str = "local"` in [config.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/config.py).
+  - **Uncomment** the "Mode 3" sections in [local_llm.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/ai/models/local_llm.py) and [pandas_code_generator.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/ai/query_engine/pandas_code_generator.py).
+  - *Note: Requires 16GB+ RAM and a CUDA-capable GPU.*
+
+---
+

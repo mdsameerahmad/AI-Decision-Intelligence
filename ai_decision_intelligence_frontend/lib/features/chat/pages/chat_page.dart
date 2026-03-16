@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 
+import '../../../core/theme/app_theme.dart';
+import '../../../core/utils/responsive_helper.dart';
 import '../../dashboard/bloc/dashboard_bloc.dart';
 
 class ChatPage extends StatefulWidget {
@@ -46,13 +47,7 @@ class _ChatPageState extends State<ChatPage> {
         child: Container(
           decoration: BoxDecoration(
             color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFF3B82F6).withOpacity(0.05),
-                blurRadius: 15,
-                offset: const Offset(0, 5),
-              ),
-            ],
+            boxShadow: AppTheme.softShadow,
           ),
           child: AppBar(
             backgroundColor: Colors.transparent,
@@ -61,110 +56,86 @@ class _ChatPageState extends State<ChatPage> {
             toolbarHeight: 70,
             title: Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF3B82F6).withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(12),
+                if (ResponsiveHelper.isMobile(context)) ...[
+                  Image.asset(
+                    'assets/images/logo.png',
+                    height: 32,
+                    errorBuilder: (context, e, s) => const Icon(
+                      LucideIcons.bot,
+                      color: AppTheme.primaryBlue,
+                      size: 24,
+                    ),
                   ),
-                  child: const Icon(LucideIcons.bot,
-                      color: Color(0xFF3B82F6), size: 24),
-                ),
-                const SizedBox(width: 12),
+                  const SizedBox(width: 12),
+                ],
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'AI Chatbot',
-                      style: GoogleFonts.ibmPlexSans(
-                        fontWeight: FontWeight.bold,
+                      'Data Assistant',
+                      style: GoogleFonts.inter(
+                        fontWeight: FontWeight.w800,
                         fontSize: 18,
-                        color: Colors.black,
+                        letterSpacing: -0.5,
+                        color: AppTheme.textMain,
                       ),
                     ),
-                    Text(
-                      'Smart AI Assistant',
-                      style: GoogleFonts.ibmPlexSans(
-                        fontSize: 12,
-                        color: Colors.grey[600],
-                        fontWeight: FontWeight.w500,
-                      ),
+                    Row(
+                      children: [
+                        Container(
+                          width: 8,
+                          height: 8,
+                          decoration: const BoxDecoration(
+                            color: AppTheme.successGreen,
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        const SizedBox(width: 6),
+                        Text(
+                          'Online & Ready',
+                          style: GoogleFonts.inter(
+                            fontSize: 12,
+                            color: AppTheme.textSecondary,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ],
             ),
             actions: [
-              Padding(
-                padding: const EdgeInsets.only(right: 8),
-                child: Tooltip(
-                  message: 'Chat History',
-                  child: InkWell(
-                    onTap: () async {
-                      final repo = context.read<DashboardBloc>().repository;
-                      try {
-                        final list = await repo.getChatHistory();
-                        _showHistoryModalWithList(context, list);
-                      } catch (e) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Failed to load history: $e')),
-                        );
-                      }
-                    },
-                    borderRadius: BorderRadius.circular(12),
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF3B82F6).withOpacity(0.05),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: const Color(0xFF3B82F6).withOpacity(0.1)),
-                      ),
-                      child: const Icon(
-                        LucideIcons.history,
-                        color: Color(0xFF3B82F6),
-                        size: 18,
-                      ),
-                    ),
-                  ),
-                ),
+              _buildAppBarAction(
+                LucideIcons.history,
+                AppTheme.primaryBlue,
+                'History',
+                () async {
+                  final repo = context.read<DashboardBloc>().repository;
+                  try {
+                    final list = await repo.getChatHistory();
+                    _showHistoryModalWithList(context, list);
+                  } catch (e) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text('Failed to load history: $e')),
+                    );
+                  }
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Tooltip(
-                  message: 'Clear Chat',
-                  child: InkWell(
-                    onTap: () => context.read<DashboardBloc>().add(ClearChat()),
-                    borderRadius: BorderRadius.circular(12),
-                    child: Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.redAccent.withOpacity(0.05),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.redAccent.withOpacity(0.1)),
-                      ),
-                      child: const Icon(
-                        LucideIcons.trash2,
-                        color: Colors.redAccent,
-                        size: 18,
-                      ),
-                    ),
-                  ),
-                ),
+              _buildAppBarAction(
+                LucideIcons.trash2,
+                AppTheme.errorRed,
+                'Clear',
+                () => context.read<DashboardBloc>().add(ClearChat()),
               ),
+              const SizedBox(width: 8),
             ],
           ),
         ),
       ),
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              const Color(0xFF3B82F6).withOpacity(0.08),
-              Colors.white,
-            ],
-          ),
+          color: AppTheme.backgroundLight,
         ),
         child: BlocConsumer<DashboardBloc, DashboardState>(
           listener: (context, state) {
@@ -173,17 +144,43 @@ class _ChatPageState extends State<ChatPage> {
             }
           },
           builder: (context, state) {
-            return Column(
-              children: [
-                Expanded(
-                  child: state.chatHistory.isEmpty && state.suggestedQuestions.isEmpty
-                      ? _buildEmptyChatView()
-                      : _buildChatView(state),
-                ),
-                _buildInputArea(context, state),
-              ],
+            return ResponsiveHelper.constrainedContent(
+              Column(
+                children: [
+                  Expanded(
+                    child: state.chatHistory.isEmpty &&
+                            state.suggestedQuestions.isEmpty
+                        ? _buildEmptyChatView()
+                        : _buildChatView(state),
+                  ),
+                  _buildInputArea(context, state),
+                ],
+              ),
             );
           },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAppBarAction(
+      IconData icon, Color color, String tooltip, VoidCallback onTap) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 8),
+      child: Tooltip(
+        message: tooltip,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(12),
+          child: Container(
+            padding: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: color.withOpacity(0.05),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: color.withOpacity(0.1)),
+            ),
+            child: Icon(icon, color: color, size: 18),
+          ),
         ),
       ),
     );
@@ -361,70 +358,67 @@ class _ChatPageState extends State<ChatPage> {
 
   Widget _buildChatMessage(BuildContext context, String sender, String message) {
     final isUser = sender == 'user';
-    return Align(
-      alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Row(
-        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment:
+            isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (!isUser)
-            IconButton(
-              icon: Icon(LucideIcons.copy, size: 14, color: Colors.grey[400]),
-              onPressed: () {
-                Clipboard.setData(ClipboardData(text: message));
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Copied to clipboard')),
-                );
-              },
-            ),
+          if (!isUser) _buildAssistantAvatar(),
+          const SizedBox(width: 12),
           Flexible(
             child: Container(
-              margin: const EdgeInsets.symmetric(vertical: 4),
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
               decoration: BoxDecoration(
-                color: isUser ? const Color(0xFF3B82F6) : Colors.grey[100],
-                borderRadius: BorderRadius.circular(20),
+                color: isUser ? AppTheme.primaryBlue : Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: const Radius.circular(20),
+                  topRight: const Radius.circular(20),
+                  bottomLeft: Radius.circular(isUser ? 20 : 0),
+                  bottomRight: Radius.circular(isUser ? 0 : 20),
+                ),
+                boxShadow: AppTheme.softShadow,
+                border: isUser ? null : Border.all(color: Colors.grey[100]!),
               ),
               child: SelectableText(
                 message,
-                style: GoogleFonts.ibmPlexSans(
-                  color: isUser ? Colors.white : Colors.black87,
+                style: GoogleFonts.inter(
+                  color: isUser ? Colors.white : AppTheme.textMain,
+                  fontSize: 15,
                   height: 1.5,
                 ),
               ),
             ),
           ),
-          if (isUser)
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                IconButton(
-                  icon: Icon(LucideIcons.copy, size: 14, color: Colors.grey[400]),
-                  onPressed: () {
-                    Clipboard.setData(ClipboardData(text: message));
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Copied to clipboard')),
-                    );
-                  },
-                  tooltip: 'Copy',
-                ),
-                IconButton(
-                  icon: Icon(LucideIcons.rotateCw, size: 14, color: Colors.grey[400]),
-                  onPressed: () {
-                    // Determine if this was a strategy request or a regular chat question
-                    // Simple heuristic: check if it starts with "Generate a strategic plan for:"
-                    if (message.startsWith('Generate a strategic plan for: ')) {
-                      final problem = message.replaceFirst('Generate a strategic plan for: ', '');
-                      context.read<DashboardBloc>().add(GenerateActionPlan(problem));
-                    } else {
-                      context.read<DashboardBloc>().add(AskChatbot(message));
-                    }
-                  },
-                  tooltip: 'Retry',
-                ),
-              ],
-            ),
+          const SizedBox(width: 12),
+          if (isUser) _buildUserAvatar(),
         ],
       ),
+    );
+  }
+
+  Widget _buildAssistantAvatar() {
+    return Container(
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        gradient: AppTheme.primaryGradient,
+        shape: BoxShape.circle,
+        boxShadow: AppTheme.softShadow,
+      ),
+      child: const Icon(LucideIcons.bot, color: Colors.white, size: 16),
+    );
+  }
+
+  Widget _buildUserAvatar() {
+    return Container(
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        color: AppTheme.backgroundLight,
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.grey[200]!),
+      ),
+      child: const Icon(LucideIcons.user, color: AppTheme.primaryBlue, size: 16),
     );
   }
 

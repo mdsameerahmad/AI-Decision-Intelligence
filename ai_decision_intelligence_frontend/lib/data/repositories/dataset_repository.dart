@@ -36,11 +36,23 @@ class DatasetRepository {
       request.headers['Authorization'] = 'Bearer $token';
     }
 
+    // Determine content type based on file extension
+    String? contentType;
+    if (fileName.endsWith('.csv')) {
+      contentType = 'text/csv';
+    } else if (fileName.endsWith('.xlsx')) {
+      contentType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    } else if (fileName.endsWith('.xls')) {
+      contentType = 'application/vnd.ms-excel';
+    } else {
+      contentType = 'application/octet-stream';
+    }
+
     request.files.add(http.MultipartFile.fromBytes(
       'file',
       fileBytes,
       filename: fileName,
-      contentType: MediaType('text', 'csv'),
+      contentType: MediaType.parse(contentType),
     ));
 
     var response = await request.send();
@@ -49,8 +61,15 @@ class DatasetRepository {
     if (response.statusCode == 200) {
       return apiService.jsonDecode(responseBody.body);
     } else {
-      throw Exception('Failed to upload dataset: ${responseBody.body}');
+      throw Exception('Upload failed: ${responseBody.body}');
     }
+  }
+
+  Future<Map<String, dynamic>> importGoogleSheet(String url) async {
+    return await apiService.post(
+      "/dataset/import-google-sheet",
+      {"url": url},
+    );
   }
 
   Future<Map<String, dynamic>> getSummary(String filePath) async {
