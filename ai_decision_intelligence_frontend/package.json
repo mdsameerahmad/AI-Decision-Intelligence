@@ -4,7 +4,7 @@
   "description": "Flutter web frontend for AI Decision Intelligence Platform",
   "main": "index.html",
   "scripts": {
-    "start": "serve build/web -l 80"
+    "start": "serve build/web -l $PORT"
   },
   "dependencies": {
     "serve": "^14.2.1"
