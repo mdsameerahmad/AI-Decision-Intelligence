@@ -1,5 +1,10 @@
+import os
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+# Get the absolute path to the .env file in the project root
+# config.py is in app/, so we go up one level
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ENV_FILE = os.path.join(BASE_DIR, ".env")
 
 class Settings(BaseSettings):
 
@@ -33,7 +38,7 @@ class Settings(BaseSettings):
     REMOTE_LLM_URL: str = "" # e.g., https://xyz.ngrok-free.app
 
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=ENV_FILE,
         env_file_encoding="utf-8",
         extra="ignore"
     )
