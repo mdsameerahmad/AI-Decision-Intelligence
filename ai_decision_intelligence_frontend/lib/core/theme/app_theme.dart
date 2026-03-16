@@ -58,7 +58,7 @@ class AppTheme {
         error: errorRed,
       ),
       textTheme: GoogleFonts.interTextTheme(),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: cardWhite,
         elevation: 0,
         shape: RoundedRectangleBorder(
