@@ -1,0 +1,15 @@
+{
+  "name": "ai-decision-intelligence-frontend",
+  "version": "1.0.0",
+  "description": "Flutter web frontend for AI Decision Intelligence Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve build/web -l 80"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
