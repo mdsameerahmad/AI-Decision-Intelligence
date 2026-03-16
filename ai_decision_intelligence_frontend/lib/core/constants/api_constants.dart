@@ -4,12 +4,12 @@ class ApiConstants {
   static String get baseUrl {
     if (kIsWeb) {
       return kReleaseMode 
-          ? "https://ai-decision-intelligence-jpms.onrender.com" 
+          ? "https://ai-decision-intelligence-production.up.railway.app" 
           : "http://localhost:8000";
     } else {
       // For Android Emulator/iOS Simulator
       return kReleaseMode 
-          ? "https://ai-decision-intelligence-jpms.onrender.com" 
+          ? "https://ai-decision-intelligence-production.up.railway.app" 
           : "http://10.0.2.2:8000";
     }
   }
