@@ -1,6 +1,8 @@
 class ApiConstants {
 
-static const String baseUrl = "http://localhost:8000";
+// static const String baseUrl = "http://localhost:8000";  //---->Local Server URL 
+
+static const String baseUrl = "https://ai-decision-intelligence-jpms.onrender.com";  //-->Render Server URL
 
 static const String signup = "/auth/signup";
 static const String login = "/auth/login";
