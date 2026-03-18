@@ -23,6 +23,11 @@ class UserSignup(BaseModel):
     password: str
 
 
+class ResetPasswordRequest(BaseModel):
+    email: str
+    new_password: str
+
+
 # ----------- Helper Functions -----------
 
 def hash_password(password: str):
@@ -129,3 +134,20 @@ def get_profile(
         "email": db_user.email,
         "created_at": db_user.created_at
     }
+
+
+
+
+
+@router.post("/reset-password")
+def reset_password(request: ResetPasswordRequest, db: Session = Depends(get_db)):
+    db_user = db.query(models.User).filter(models.User.email == request.email).first()
+    
+    if not db_user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    # Update the password
+    db_user.password_hash = hash_password(request.new_password)
+    db.commit()
+    
+    return {"message": "Password updated successfully"}
