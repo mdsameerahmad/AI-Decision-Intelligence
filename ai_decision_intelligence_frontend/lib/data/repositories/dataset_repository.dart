@@ -55,13 +55,19 @@ class DatasetRepository {
       contentType: MediaType.parse(contentType),
     ));
 
-    var response = await request.send();
-    var responseBody = await http.Response.fromStream(response);
+    try {
+      var response = await request.send();
+      var responseBody = await http.Response.fromStream(response);
 
-    if (response.statusCode == 200) {
-      return apiService.jsonDecode(responseBody.body);
-    } else {
-      throw Exception('Upload failed: ${responseBody.body}');
+      if (response.statusCode == 200) {
+        return apiService.jsonDecode(responseBody.body);
+      } else {
+        apiService.publicHandleError('Upload failed: ${responseBody.body}', statusCode: response.statusCode);
+        throw Exception('Unexpected error during upload');
+      }
+    } catch (e) {
+      apiService.publicHandleError(e);
+      rethrow;
     }
   }
 

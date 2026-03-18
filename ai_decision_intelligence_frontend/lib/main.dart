@@ -35,29 +35,36 @@ class MyApp extends StatelessWidget {
     final authRepository = AuthRepository(apiService);
     final datasetRepository = DatasetRepository(apiService);
 
-    return MultiBlocProvider(
+    return MultiRepositoryProvider(
       providers: [
-        BlocProvider(
-          create: (context) => AuthBloc(
-            authRepository,
-            apiService,
-          )..add(AppStarted()),
-        ),
-        BlocProvider(
-          create: (context) => DashboardBloc(datasetRepository)..add(LoadDatasets()),
-        ),
+        RepositoryProvider.value(value: authRepository),
+        RepositoryProvider.value(value: datasetRepository),
       ],
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'AI Data Analysts',
-        theme: AppTheme.lightTheme,
-        home: BlocBuilder<AuthBloc, AuthState>(
-          builder: (context, state) {
-            if (state is AuthSuccess || state is ProfileLoaded) {
-              return const MainScaffold();
-            }
-            return const WelcomePage();
-          },
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => AuthBloc(
+              authRepository,
+              apiService,
+            )..add(AppStarted()),
+          ),
+          BlocProvider(
+            create: (context) =>
+                DashboardBloc(datasetRepository)..add(LoadDatasets()),
+          ),
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'AI Data Analysts',
+          theme: AppTheme.lightTheme,
+          home: BlocBuilder<AuthBloc, AuthState>(
+            builder: (context, state) {
+              if (state is AuthSuccess || state is ProfileLoaded) {
+                return const MainScaffold();
+              }
+              return const WelcomePage();
+            },
+          ),
         ),
       ),
     );

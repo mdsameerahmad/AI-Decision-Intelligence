@@ -7,8 +7,7 @@ import 'package:lucide_icons/lucide_icons.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/utils/responsive_helper.dart';
 import '../../../data/models/app_models.dart';
-import '../../auth/bloc/auth_bloc.dart';
-import '../../auth/bloc/auth_event.dart';
+import '../../auth/pages/profile_page.dart';
 import '../bloc/dashboard_bloc.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -108,22 +107,27 @@ class DashboardPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 16),
                 child: Tooltip(
-                  message: 'Logout',
+                  message: 'Profile',
                   child: InkWell(
-                    onTap: () => context.read<AuthBloc>().add(LogoutEvent()),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const ProfilePage()),
+                      );
+                    },
                     borderRadius: BorderRadius.circular(12),
                     child: Container(
                       padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Colors.redAccent.withOpacity(0.05),
+                        color: const Color(0xFF3B82F6).withOpacity(0.05),
                         borderRadius: BorderRadius.circular(12),
                         border:
-                            Border.all(color: Colors.redAccent.withOpacity(0.1)),
+                            Border.all(color: const Color(0xFF3B82F6).withOpacity(0.1)),
                       ),
                       child: const Icon(
-                        LucideIcons.logOut,
-                        color: Colors.redAccent,
-                        size: 18,
+                        LucideIcons.user,
+                        color: Color(0xFF3B82F6),
+                        size: 20,
                       ),
                     ),
                   ),
@@ -572,6 +576,8 @@ class DashboardPage extends StatelessWidget {
   }
 
   Widget _buildDatasetItem(BuildContext context, DatasetModel dataset, bool isSelected) {
+    final bool isMobile = ResponsiveHelper.isMobile(context);
+    
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
       decoration: BoxDecoration(
@@ -600,11 +606,15 @@ class DashboardPage extends StatelessWidget {
               context.read<DashboardBloc>().add(ToggleDatasetSelection(dataset.id));
             },
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              padding: EdgeInsets.symmetric(
+                horizontal: isMobile ? 12 : 16, 
+                vertical: 14,
+              ),
               child: Row(
                 children: [
+                  // 1. Selection Checkbox
                   Transform.scale(
-                    scale: 0.9,
+                    scale: isMobile ? 0.8 : 0.9,
                     child: Checkbox(
                       value: isSelected,
                       activeColor: const Color(0xFF3B82F6),
@@ -614,25 +624,35 @@ class DashboardPage extends StatelessWidget {
                       },
                     ),
                   ),
-                  const SizedBox(width: 8),
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          const Color(0xFF3B82F6).withOpacity(0.12),
-                          const Color(0xFF3B82F6).withOpacity(0.06),
-                        ],
+                  SizedBox(width: isMobile ? 4 : 8),
+
+                  // 2. Icon Container (Hidden on very small screens to save space)
+                  if (!isMobile || MediaQuery.of(context).size.width > 350) ...[
+                    Container(
+                      padding: EdgeInsets.all(isMobile ? 8 : 12),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color(0xFF3B82F6).withOpacity(0.12),
+                            const Color(0xFF3B82F6).withOpacity(0.06),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      borderRadius: BorderRadius.circular(14),
+                      child: Icon(
+                        LucideIcons.fileSpreadsheet,
+                        color: const Color(0xFF3B82F6), 
+                        size: isMobile ? 20 : 24,
+                      ),
                     ),
-                    child: const Icon(LucideIcons.fileSpreadsheet,
-                        color: Color(0xFF3B82F6), size: 24),
-                  ),
-                  const SizedBox(width: 16),
+                    SizedBox(width: isMobile ? 10 : 16),
+                  ],
+
+                  // 3. Name and Info
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
                           dataset.fileName,
@@ -640,14 +660,14 @@ class DashboardPage extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.ibmPlexSans(
                             fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                            fontSize: isMobile ? 14 : 16,
                             color: Colors.black87,
                           ),
                         ),
-                        const SizedBox(height: 4),
+                        const SizedBox(height: 2),
                         Row(
                           children: [
-                            Icon(LucideIcons.calendar, size: 12, color: Colors.grey[400]),
+                            Icon(LucideIcons.calendar, size: 10, color: Colors.grey[400]),
                             const SizedBox(width: 4),
                             Expanded(
                               child: Text(
@@ -655,7 +675,7 @@ class DashboardPage extends StatelessWidget {
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,
                                 style: GoogleFonts.ibmPlexSans(
-                                  fontSize: 11,
+                                  fontSize: 10,
                                   color: Colors.grey[500],
                                   fontWeight: FontWeight.w500,
                                 ),
@@ -666,6 +686,9 @@ class DashboardPage extends StatelessWidget {
                       ],
                     ),
                   ),
+                  SizedBox(width: isMobile ? 8 : 12),
+
+                  // 4. Action Buttons
                   _buildActionButtons(context, dataset),
                 ],
               ),
@@ -677,19 +700,24 @@ class DashboardPage extends StatelessWidget {
   }
 
   Widget _buildActionButtons(BuildContext context, DatasetModel dataset) {
+    final bool isMobile = ResponsiveHelper.isMobile(context);
+    
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        // Glassmorphism Analyze Button
+        // Analyze Button
         Material(
           color: Colors.transparent,
           child: InkWell(
             onTap: () {
               context.read<DashboardBloc>().add(GetSummary(dataset.filePath));
             },
-            borderRadius: BorderRadius.circular(12),
+            borderRadius: BorderRadius.circular(10),
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              padding: EdgeInsets.symmetric(
+                horizontal: isMobile ? 10 : 14, 
+                vertical: isMobile ? 6 : 8,
+              ),
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -697,23 +725,16 @@ class DashboardPage extends StatelessWidget {
                     const Color(0xFF3B82F6).withOpacity(0.7),
                   ],
                 ),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(10),
                 border: Border.all(
                   color: Colors.white.withOpacity(0.2),
                   width: 1,
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0xFF3B82F6).withOpacity(0.2),
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
               ),
               child: Text(
                 'Analyze',
                 style: GoogleFonts.ibmPlexSans(
-                  fontSize: 12,
+                  fontSize: isMobile ? 11 : 12,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
                   letterSpacing: 0.5,
@@ -722,7 +743,8 @@ class DashboardPage extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(width: 6),
+        SizedBox(width: isMobile ? 2 : 6),
+        // Delete Icon
         _actionIconButton(
           onPressed: () {
             _showDeleteConfirmation(context, dataset);
@@ -730,6 +752,7 @@ class DashboardPage extends StatelessWidget {
           icon: LucideIcons.trash2,
           color: Colors.redAccent.withOpacity(0.7),
           tooltip: 'Delete',
+          size: isMobile ? 18 : 22,
         ),
       ],
     );
@@ -740,6 +763,7 @@ class DashboardPage extends StatelessWidget {
     required IconData icon,
     required Color color,
     required String tooltip,
+    double size = 22,
   }) {
     return Tooltip(
       message: tooltip,
@@ -748,9 +772,9 @@ class DashboardPage extends StatelessWidget {
         child: InkWell(
           onTap: onPressed,
           borderRadius: BorderRadius.circular(10),
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            child: Icon(icon, color: color, size: 22),
+          child: Padding(
+            padding: const EdgeInsets.all(4),
+            child: Icon(icon, color: color, size: size),
           ),
         ),
       ),

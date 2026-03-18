@@ -44,4 +44,21 @@ Future signup(String email, String password) async {
   Future getProfile() async {
     return await apiService.get(ApiConstants.profile);
   }
+
+  Future<void> forgotPassword(String email) async {
+    await apiService.post(
+      ApiConstants.forgotPassword,
+      {"email": email},
+    );
+  }
+
+  Future<void> resetPassword(String email, String newPassword) async {
+    await apiService.post(
+      ApiConstants.resetPassword,
+      {
+        "email": email,
+        "new_password": newPassword,
+      },
+    );
+  }
 }

@@ -1,17 +1,25 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../core/utils/responsive_helper.dart';
 import '../bloc/auth_bloc.dart';
 import '../bloc/auth_event.dart';
 import '../bloc/auth_state.dart';
 import 'signup_page.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-
-  LoginPage({super.key});
+  String? emailError;
+  String? passwordError;
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +32,33 @@ class LoginPage extends StatelessWidget {
               const SnackBar(content: Text("Login Success")),
             );
             Navigator.of(context).popUntil((route) => route.isFirst);
-          }
-          if (state is AuthFailure) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text(state.message)),
-            );
+          } else if (state is AuthFailure) {
+            String errorMessage = state.message;
+            if (errorMessage.startsWith('Error: ')) {
+              try {
+                final jsonString = errorMessage.substring(7); // Remove "Error: "
+                final Map<String, dynamic> errorMap = jsonDecode(jsonString);
+                if (errorMap.containsKey('detail')) {
+                  errorMessage = errorMap['detail'];
+                }
+              } catch (e) {
+                // Fallback if JSON parsing fails
+                errorMessage = "An unexpected error occurred.";
+              }
+            }
+
+            setState(() {
+              if (errorMessage.contains('email')) {
+                emailError = errorMessage;
+                passwordError = null;
+              } else if (errorMessage.contains('password')) {
+                passwordError = errorMessage;
+                emailError = null;
+              } else {
+                emailError = errorMessage;
+                passwordError = errorMessage;
+              }
+            });
           }
         },
         builder: (context, state) {
@@ -111,6 +141,7 @@ class LoginPage extends StatelessWidget {
                         controller: emailController,
                         decoration: InputDecoration(
                           hintText: 'Email Address',
+                          errorText: emailError,
                           filled: true,
                           fillColor: Colors.grey[50],
                           border: OutlineInputBorder(
@@ -132,6 +163,7 @@ class LoginPage extends StatelessWidget {
                         obscureText: true,
                         decoration: InputDecoration(
                           hintText: 'Enter Password',
+                          errorText: passwordError,
                           filled: true,
                           fillColor: Colors.grey[50],
                           border: OutlineInputBorder(
@@ -146,6 +178,7 @@ class LoginPage extends StatelessWidget {
                               horizontal: 24, vertical: 18),
                         ),
                       ),
+                      const SizedBox(height: 12),
                       const SizedBox(height: 30),
                       // Sign In Button
                       SizedBox(
