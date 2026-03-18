@@ -20,6 +20,7 @@ class DashboardPage extends StatelessWidget {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['csv', 'xlsx', 'xls'],
+      withData: true,
     );
 
     if (result != null) {
@@ -28,6 +29,11 @@ class DashboardPage extends StatelessWidget {
         context.read<DashboardBloc>().add(
               UploadDataset(file.bytes!, file.name),
             );
+      } else {
+        // Fallback for mobile if bytes are still null (shouldn't happen with withData: true)
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Could not read file data. Please try again.')),
+        );
       }
     }
   }

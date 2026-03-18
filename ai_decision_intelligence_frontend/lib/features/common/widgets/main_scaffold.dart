@@ -58,7 +58,7 @@ class _MainScaffoldState extends State<MainScaffold> {
       DashboardPage(onNavigateToSummary: _onNavigate),
       SummaryPage(onNavigateToCorrelation: () => _onNavigate(2)),
       CorrelationPage(onNavigateToChat: () => _onNavigate(3)),
-      const ChatPage(),
+      ChatPage(onBack: () => _onNavigate(0)),
     ];
   }
 
@@ -152,9 +152,9 @@ class _MainScaffoldState extends State<MainScaffold> {
           ),
         ],
       ),
-      floatingActionButton: isMobile ? _buildBottomFab() : null,
+      floatingActionButton: (isMobile && _currentIndex != 3) ? _buildBottomFab() : null,
       floatingActionButtonLocation: isMobile ? FloatingActionButtonLocation.centerDocked : null,
-      bottomNavigationBar: isMobile
+      bottomNavigationBar: (isMobile && _currentIndex != 3)
           ? AppBottomNavBar(
               currentIndex: _currentIndex,
               onTap: _onNavigate,
@@ -219,6 +219,7 @@ class _MainScaffoldState extends State<MainScaffold> {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['csv', 'xlsx', 'xls'],
+      withData: true,
     );
 
     if (result != null) {
@@ -230,6 +231,10 @@ class _MainScaffoldState extends State<MainScaffold> {
         if (_currentIndex != 0) {
           _onNavigate(0);
         }
+      } else if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Could not read file data. Please try again.')),
+        );
       }
     }
   }

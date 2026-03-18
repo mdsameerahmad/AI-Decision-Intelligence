@@ -8,7 +8,8 @@ import '../../../core/utils/responsive_helper.dart';
 import '../../dashboard/bloc/dashboard_bloc.dart';
 
 class ChatPage extends StatefulWidget {
-  const ChatPage({super.key});
+  final VoidCallback? onBack;
+  const ChatPage({super.key, this.onBack});
 
   @override
   State<ChatPage> createState() => _ChatPageState();
@@ -56,7 +57,15 @@ class _ChatPageState extends State<ChatPage> {
             toolbarHeight: 70,
             title: Row(
               children: [
-                if (ResponsiveHelper.isMobile(context)) ...[
+                if (widget.onBack != null)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8),
+                    child: IconButton(
+                      onPressed: widget.onBack,
+                      icon: const Icon(LucideIcons.arrowLeft, color: AppTheme.textMain),
+                    ),
+                  ),
+                if (ResponsiveHelper.isMobile(context) && widget.onBack == null) ...[
                   Image.asset(
                     'assets/images/logo.png',
                     height: 32,
@@ -315,12 +324,13 @@ class _ChatPageState extends State<ChatPage> {
   Widget _buildChatView(DashboardState state) {
     return ListView.builder(
       controller: _scrollController,
-      padding: const EdgeInsets.only(left: 16.0, right: 16.0, top: 16.0, bottom: 180.0),
-      itemCount: state.chatHistory.length + (state.suggestedQuestions.isNotEmpty ? 1 : 0),
+      padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 20.0),
+      itemCount: (state.suggestedQuestions.isNotEmpty ? 1 : 0) + state.chatHistory.length,
       itemBuilder: (context, index) {
         if (state.suggestedQuestions.isNotEmpty && index == 0) {
           return _buildSuggestedQuestions(context, state.suggestedQuestions);
         }
+        
         final chatIndex = state.suggestedQuestions.isNotEmpty ? index - 1 : index;
         final message = state.chatHistory[chatIndex];
         return _buildChatMessage(context, message['sender']!, message['message']!);
@@ -330,27 +340,69 @@ class _ChatPageState extends State<ChatPage> {
 
   Widget _buildSuggestedQuestions(BuildContext context, List<String> questions) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 16),
+      margin: const EdgeInsets.only(bottom: 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Suggested Questions',
-            style: GoogleFonts.ibmPlexSans(fontWeight: FontWeight.bold, color: Colors.black87),
+          Padding(
+            padding: const EdgeInsets.only(left: 4, bottom: 12),
+            child: Text(
+              'Suggested Questions',
+              style: GoogleFonts.inter(
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+                color: AppTheme.textMain,
+                letterSpacing: -0.3,
+              ),
+            ),
           ),
-          const SizedBox(height: 8),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: questions.map((q) => ActionChip(
-              label: Text(q, style: const TextStyle(fontSize: 12)),
-              onPressed: () {
-                context.read<DashboardBloc>().add(AskChatbot(q));
-              },
-              backgroundColor: Colors.grey[100],
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            )).toList(),
-          ),
+          ...questions.map((q) => Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: InkWell(
+              onTap: () => context.read<DashboardBloc>().add(AskChatbot(q)),
+              borderRadius: BorderRadius.circular(16),
+              child: Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: const Color(0xFF3B82F6).withOpacity(0.1)),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.02),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF3B82F6).withOpacity(0.05),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(LucideIcons.sparkles, size: 14, color: Color(0xFF3B82F6)),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        q,
+                        style: GoogleFonts.inter(
+                          fontSize: 13,
+                          color: AppTheme.textMain.withOpacity(0.8),
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    Icon(LucideIcons.chevronRight, size: 16, color: Colors.grey[400]),
+                  ],
+                ),
+              ),
+            ),
+          )).toList(),
         ],
       ),
     );
@@ -359,40 +411,70 @@ class _ChatPageState extends State<ChatPage> {
   Widget _buildChatMessage(BuildContext context, String sender, String message) {
     final isUser = sender == 'user';
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
-      child: Row(
-        mainAxisAlignment:
-            isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Column(
+        crossAxisAlignment: isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
-          if (!isUser) _buildAssistantAvatar(),
-          const SizedBox(width: 12),
-          Flexible(
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-              decoration: BoxDecoration(
-                color: isUser ? AppTheme.primaryBlue : Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: const Radius.circular(20),
-                  topRight: const Radius.circular(20),
-                  bottomLeft: Radius.circular(isUser ? 20 : 0),
-                  bottomRight: Radius.circular(isUser ? 0 : 20),
+          Row(
+            mainAxisAlignment: isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              if (!isUser) ...[
+                _buildAssistantAvatar(),
+                const SizedBox(width: 8),
+              ],
+              Flexible(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+                  decoration: BoxDecoration(
+                    color: isUser ? AppTheme.primaryBlue : Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: const Radius.circular(20),
+                      topRight: const Radius.circular(20),
+                      bottomLeft: Radius.circular(isUser ? 20 : 4),
+                      bottomRight: Radius.circular(isUser ? 4 : 20),
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(isUser ? 0.1 : 0.03),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                    border: isUser ? null : Border.all(color: Colors.grey[100]!),
+                  ),
+                  child: SelectableText(
+                    message,
+                    style: GoogleFonts.inter(
+                      color: isUser ? Colors.white : AppTheme.textMain,
+                      fontSize: 14,
+                      height: 1.5,
+                      fontWeight: isUser ? FontWeight.w500 : FontWeight.w400,
+                    ),
+                  ),
                 ),
-                boxShadow: AppTheme.softShadow,
-                border: isUser ? null : Border.all(color: Colors.grey[100]!),
               ),
-              child: SelectableText(
-                message,
-                style: GoogleFonts.inter(
-                  color: isUser ? Colors.white : AppTheme.textMain,
-                  fontSize: 15,
-                  height: 1.5,
-                ),
+              if (isUser) ...[
+                const SizedBox(width: 8),
+                _buildUserAvatar(),
+              ],
+            ],
+          ),
+          const SizedBox(height: 4),
+          Padding(
+            padding: EdgeInsets.only(
+              left: isUser ? 0 : 48,
+              right: isUser ? 48 : 0,
+            ),
+            child: Text(
+              isUser ? 'You' : 'AI Assistant',
+              style: GoogleFonts.inter(
+                fontSize: 10,
+                color: Colors.grey[400],
+                fontWeight: FontWeight.w600,
               ),
             ),
           ),
-          const SizedBox(width: 12),
-          if (isUser) _buildUserAvatar(),
         ],
       ),
     );
@@ -402,11 +484,24 @@ class _ChatPageState extends State<ChatPage> {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        gradient: AppTheme.primaryGradient,
+        gradient: LinearGradient(
+          colors: [
+            const Color(0xFF3B82F6),
+            const Color(0xFF3B82F6).withOpacity(0.8),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
         shape: BoxShape.circle,
-        boxShadow: AppTheme.softShadow,
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF3B82F6).withOpacity(0.2),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
-      child: const Icon(LucideIcons.bot, color: Colors.white, size: 16),
+      child: const Icon(LucideIcons.bot, color: Colors.white, size: 14),
     );
   }
 
@@ -414,35 +509,47 @@ class _ChatPageState extends State<ChatPage> {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: AppTheme.backgroundLight,
+        color: Colors.white,
         shape: BoxShape.circle,
-        border: Border.all(color: Colors.grey[200]!),
+        border: Border.all(color: const Color(0xFF3B82F6).withOpacity(0.2)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.03),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
-      child: const Icon(LucideIcons.user, color: AppTheme.primaryBlue, size: 16),
+      child: const Icon(LucideIcons.user, color: Color(0xFF3B82F6), size: 14),
     );
   }
 
   Widget _buildInputArea(BuildContext context, DashboardState state) {
     return Container(
-      margin: const EdgeInsets.fromLTRB(16, 0, 16, 100),
+      padding: EdgeInsets.fromLTRB(16, 12, 16, MediaQuery.of(context).padding.bottom + 12),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(28),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 20,
-            offset: const Offset(0, 5),
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 15,
+            offset: const Offset(0, -5),
           ),
         ],
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        decoration: BoxDecoration(
+          color: const Color(0xFFF8FAFC),
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(color: Colors.grey[200]!),
+        ),
         child: Row(
           children: [
             IconButton(
               icon: Icon(
                 LucideIcons.lightbulb,
+                size: 20,
                 color: _isStrategyMode ? const Color(0xFF3B82F6) : Colors.grey[400],
               ),
               onPressed: () {
@@ -450,52 +557,52 @@ class _ChatPageState extends State<ChatPage> {
                   _isStrategyMode = !_isStrategyMode;
                 });
               },
-              tooltip: 'Strategy Planner Mode',
             ),
             Expanded(
               child: TextField(
                 controller: _textController,
-                style: GoogleFonts.ibmPlexSans(fontSize: 15),
+                style: GoogleFonts.inter(fontSize: 14, color: AppTheme.textMain),
                 decoration: InputDecoration(
-                  hintText: _isStrategyMode ? 'Describe problem for strategy...' : 'Type your question...',
-                  hintStyle: GoogleFonts.ibmPlexSans(color: Colors.grey[400], fontSize: 14),
+                  hintText: _isStrategyMode ? 'Strategy mode...' : 'Ask your data...',
+                  hintStyle: GoogleFonts.inter(color: Colors.grey[400], fontSize: 14),
                   border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 8),
                 ),
               ),
             ),
-            state.isLoading
-                ? const Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      width: 24,
-                      height: 24,
-                      child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF3B82F6)),
-                    ),
-                  )
-                : Container(
-                    margin: const EdgeInsets.all(4),
-                    decoration: const BoxDecoration(
-                      color: Color(0xFF3B82F6),
-                      shape: BoxShape.circle,
-                    ),
-                    child: IconButton(
-                      icon: const Icon(LucideIcons.send, color: Colors.white, size: 18),
-                      onPressed: () {
-                        if (_textController.text.isNotEmpty) {
-                          if (_isStrategyMode) {
-                            context.read<DashboardBloc>().add(GenerateActionPlan(_textController.text));
-                            setState(() {
-                              _isStrategyMode = false;
-                            });
-                          } else {
-                            context.read<DashboardBloc>().add(AskChatbot(_textController.text));
-                          }
-                          _textController.clear();
-                        }
-                      },
-                    ),
+            if (state.isLoading)
+              const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF3B82F6)),
+                ),
+              )
+            else
+              IconButton(
+                icon: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF3B82F6),
+                    shape: BoxShape.circle,
                   ),
+                  child: const Icon(LucideIcons.send, color: Colors.white, size: 16),
+                ),
+                onPressed: () {
+                  if (_textController.text.isNotEmpty) {
+                    if (_isStrategyMode) {
+                      context.read<DashboardBloc>().add(GenerateActionPlan(_textController.text));
+                      setState(() {
+                        _isStrategyMode = false;
+                      });
+                    } else {
+                      context.read<DashboardBloc>().add(AskChatbot(_textController.text));
+                    }
+                    _textController.clear();
+                  }
+                },
+              ),
           ],
         ),
       ),
