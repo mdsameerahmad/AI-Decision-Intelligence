@@ -30,58 +30,72 @@ The **AI Decision Intelligence** frontend is designed to be a professional, high
 
 ---
 
-## **Folder Structure & File Analysis**
+## **Detailed Frontend Architecture**
 
-The project follows a feature-driven architecture within the `lib/` directory:
+The project follows a feature-driven architecture within the `lib/` directory, ensuring modularity and maintainability.
 
 ### **1. Core (`lib/core/`)**
-Contains global constants, themes, and utility functions used across the entire app.
-- [api_constants.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/core/constants/api_constants.dart): API endpoints and base URL configuration.
-- [app_theme.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/core/theme/app_theme.dart): Global styling, colors, and font configurations.
+Contains global configurations, constants, themes, and utility functions used across the entire app.
+- `constants/`:
+    - [api_constants.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/core/constants/api_constants.dart): API endpoints, base URL configuration, and a toggle (`useRailwayBackendInDebug`) to switch between local and Railway backend URLs in debug mode.
+- `theme/`:
+    - [app_theme.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/core/theme/app_theme.dart): Global styling, colors, and font configurations.
+- `utils/`:
+    - `responsive_helper.dart`, `validator.dart`: General utility functions.
 
 ### **2. Data (`lib/data/`)**
-The data layer responsible for API communication and data modeling.
-- **Services**: [api_service.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/data/services/api_service.dart) - Wrapper for HTTP requests and JWT token management.
-- **Repositories**: [auth_repository.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/data/repositories/auth_repository.dart), [dataset_repository.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/data/repositories/dataset_repository.dart) - High-level abstractions for fetching and sending data.
-- **Models**: [app_models.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/data/models/app_models.dart), [user_model.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/data/models/user_model.dart) - Type-safe definitions for API responses.
+The data layer responsible for API communication, data modeling, and business logic.
+- `services/`:
+    - [api_service.dart](file:///d:\Project WOrk\ai_analyser\ai_decision_intelligence_frontend\lib\data\services\api_service.dart): Low-level wrapper for HTTP requests and JWT token management.
+- `repositories/`:
+    - [auth_repository.dart](file:///d:\Project WOrk\ai_analyser\ai_decision_intelligence_frontend\lib\data\repositories\auth_repository.dart), [dataset_repository.dart](file:///d:\Project WOrk\ai_analyser\ai_decision_intelligence_frontend\lib\data\repositories\dataset_repository.dart): High-level abstractions for fetching and sending data, encapsulating business logic.
+- `models/`:
+    - [app_models.dart](file:///d:\Project WOrk\ai_analyser\ai_decision_intelligence_frontend\lib\data\models\app_models.dart), [user_model.dart](file:///d:\Project WOrk\ai_analyser\ai_decision_intelligence_frontend\lib\data\models\user_model.dart): Type-safe definitions for API request/response data.
 
 ### **3. Features (`lib/features/`)**
-Each directory represents a specific functional area of the app.
-- **Auth**: [welcome_page.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/features/auth/pages/welcome_page.dart), [login_page.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/features/auth/pages/login_page.dart) - Onboarding and authentication flows with staggered entry animations.
-- **Dashboard**: [dashboard_page.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/features/dashboard/pages/dashboard_page.dart) - Main landing page for dataset management and upload.
-- **Summary**: [summary_page.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/features/summary/pages/summary_page.dart) - Statistical visualization of datasets.
-- **Correlation**: [correlation_page.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/features/correlation/pages/correlation_page.dart) - Bar charts and matrices for variable relationships.
-- **Chat**: [chat_page.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/features/chat/pages/chat_page.dart) - Floating chat interface with strategy mode.
-- **Common**: [main_scaffold.dart](file:///d:/Project%20WOrk/ai_analyser/ai_decision_intelligence_frontend/lib/features/common/widgets/main_scaffold.dart) - The root layout wrapper managing bottom navigation and page transitions.
+Each directory represents a specific, modular functional area of the app, typically containing its own BLoC for state management and `pages/` for UI components.
+- `auth/`: Authentication and user management flows (welcome, login, signup, profile, reset password).
+- `chat/`: AI Chatbot interface and strategy mode.
+- `common/`: Shared widgets and layouts used across multiple features (e.g., `main_scaffold.dart`, `app_bottom_nav_bar.dart`).
+- `correlation/`: Data correlation visualization and analysis.
+- `dashboard/`: Main landing page for dataset management, upload, and overview.
+- `summary/`: Statistical summaries and visualizations of datasets.
+
+### **4. Other Key Files/Folders**
+- `main.dart`: The application's entry point, responsible for initializing the app, setting up Bloc providers, and defining the root widget tree.
+- `assets/`: Stores static assets like images (`illustration.jpg`, `logo.png`).
+- `web/`: Contains files specific to Flutter web builds, including `index.html`, `manifest.json`, and icons. This directory is crucial for web deployment.
+- `android/`, `ios/`, `linux/`, `macos/`, `windows/`: Platform-specific project files for native builds.
+- `pubspec.yaml`: Dependency management file.
+- `firebase.json`, `.firebaserc`: Firebase configuration files for hosting.
 
 ---
 
-## **Directory Structure**
+## **Deployment Strategies**
 
-```text
-ai_decision_intelligence_frontend/
-├── assets/
-│   └── images/                 # App illustrations and static assets
-├── lib/
-│   ├── core/                   # Global configuration and themes
-│   │   ├── constants/          # API endpoints and app constants
-│   │   └── theme/              # Global UI styling
-│   ├── data/                   # Data layer (API & Models)
-│   │   ├── models/             # Data models (JSON parsing)
-│   │   ├── repositories/       # Business logic for data fetching
-│   │   └── services/           # Low-level network services (HTTP/JWT)
-│   ├── features/               # Modular feature implementations
-│   │   ├── auth/               # Authentication & Welcome flow
-│   │   ├── chat/               # AI Chatbot & Strategy Mode
-│   │   ├── common/             # Shared widgets (Nav Bar, Scaffold)
-│   │   ├── correlation/        # Data correlation visualization
-│   │   ├── dashboard/          # Dataset management & Upload
-│   │   └── summary/            # Statistical summaries
-│   └── main.dart               # App entry point & Bloc providers
-├── test/                       # Unit and widget tests
-├── pubspec.yaml                # Dependency management
-└── README.md                   # Project documentation
-```
+The frontend application supports deployment to multiple platforms, leveraging Flutter's cross-platform capabilities.
+
+### **1. Web Deployment (Firebase Hosting)**
+*   **Process**:
+    1.  **Build Web Assets**: Run `flutter build web` to compile your Flutter app into static web files (HTML, CSS, JavaScript) located in the `build/web` directory.
+    2.  **Deploy to Firebase**: Use the Firebase CLI command `firebase deploy --only hosting` to upload the contents of `build/web` to Firebase Hosting.
+*   **Configuration**:
+    *   `firebase.json`: Defines hosting rules, including the `public` directory (`build/web`) and `rewrites` for single-page application routing (e.g., redirecting all paths to `index.html`).
+    *   `.firebaserc`: Stores Firebase project aliases.
+*   **Benefits**: Fast content delivery via CDN, automatic SSL, custom domain support, and seamless integration with other Firebase services.
+
+### **2. Mobile App Deployment (Android)**
+*   **Build Commands**:
+    *   `flutter build apk --release`: Generates a release-optimized Android Package Kit (`.apk`) file, suitable for direct installation on devices or distribution outside of Google Play. Output is typically in `build/app/outputs/apk/release/`.
+    *   `flutter build appbundle --release`: Generates an Android App Bundle (`.aab`) file, the recommended format for publishing to the Google Play Store. Output is typically in `build/app/outputs/bundle/release/`.
+*   **Installation/Distribution**:
+    *   For testing on a connected device: `flutter run --release` (builds and installs a release-optimized version).
+    *   For wider distribution: Upload the `.aab` file to the Google Play Console.
+
+### **3. Mobile App Deployment (iOS)**
+*   **Build Command**: `flutter build ios --release`
+*   **Output**: Generates an iOS application archive (`.ipa` file) suitable for distribution. This command requires a macOS machine with Xcode.
+*   **Installation/Distribution**: The `.ipa` file can be distributed via TestFlight for beta testing or uploaded to the Apple App Store Connect for official release.
 
 ---
 
@@ -91,6 +105,7 @@ ai_decision_intelligence_frontend/
 - [Flutter SDK](https://docs.flutter.dev/get-started/install) (latest stable version recommended)
 - [Dart SDK](https://dart.dev/get-dart)
 - An active backend instance (FastAPI)
+- [Firebase CLI](https://firebase.google.com/docs/cli) (for web deployment)
 
 ### **Installation**
 1. **Clone the repository**
@@ -99,11 +114,26 @@ ai_decision_intelligence_frontend/
    flutter pub get
    ```
 3. **Configure the API**:
-   Update `lib/core/constants/api_constants.dart` with your backend's base URL.
+   Update `lib/core/constants/api_constants.dart` with your backend's base URL. Use the `useRailwayBackendInDebug` toggle to switch between local and Railway backend URLs in debug mode.
 4. **Run the app**:
    ```bash
    flutter run
    ```
+
+### Deployment Quick Reference
+
+*   **For Web Deployment (Firebase Hosting)**:
+    ```bash
+    flutter build web
+    firebase deploy
+    ```
+
+*   **For Mobile App Deployment (Android)**:
+    ```bash
+    flutter build apk --release
+    # Or to install directly on a connected device:
+    flutter install
+    ```
 
 ---
 
@@ -121,3 +151,5 @@ The project evolved from a basic Flutter prototype into a polished intelligence 
 - **AI Polishing**: Refined LLM prompts for symbol-free, emoji-rich responses.
 - **Interactive Visuals**: Integration of `fl_chart` for data-driven storytelling.
 - **Technical Stability**: Pinned dependencies for `vector_math` and `fl_chart` to resolve SDK conflicts.
+
+---

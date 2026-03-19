@@ -55,7 +55,7 @@ class ApiService {
   Future<dynamic> get(String endpoint) async {
     try {
       final response = await http.get(
-        Uri.parse(ApiConstants.baseUrl + endpoint),
+        Uri.parse(ApiConstants.baseUrl).resolve(endpoint),
         headers: await _getHeaders("application/json"),
       );
 
@@ -88,7 +88,7 @@ class ApiService {
       }
 
       final response = await http.post(
-        Uri.parse(ApiConstants.baseUrl + endpoint),
+        Uri.parse(ApiConstants.baseUrl).resolve(endpoint),
         headers: headers,
         body: body,
       );
@@ -110,7 +110,7 @@ class ApiService {
   Future<dynamic> delete(String endpoint) async {
     try {
       final response = await http.delete(
-        Uri.parse(ApiConstants.baseUrl + endpoint),
+        Uri.parse(ApiConstants.baseUrl).resolve(endpoint),
         headers: await _getHeaders("application/json"),
       );
 
