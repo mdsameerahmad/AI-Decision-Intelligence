@@ -1,15 +1,18 @@
 import 'package:flutter/foundation.dart';
 
 class ApiConstants {
+  // Set this to true to use the Railway backend URL even in debug mode
+  static const bool useRailwayBackendInDebug = true;
+
   static String get baseUrl {
     if (kIsWeb) {
-      return kReleaseMode 
-          ? "https://ai-decision-intelligence-production.up.railway.app" 
+      return kReleaseMode || useRailwayBackendInDebug
+          ? "https://ai-decision-intelligence-production.up.railway.app"
           : "http://localhost:8000";
     } else {
       // For Android Emulator/iOS Simulator
-      return kReleaseMode 
-          ? "https://ai-decision-intelligence-production.up.railway.app" 
+      return kReleaseMode || useRailwayBackendInDebug
+          ? "https://ai-decision-intelligence-production.up.railway.app"
           : "http://10.0.2.2:8000";
     }
   }
