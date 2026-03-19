@@ -200,20 +200,41 @@ class CorrelationPage extends HookWidget {
     final bool isMobile = ResponsiveHelper.isMobile(context);
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 24),
+      padding: EdgeInsets.symmetric(
+        horizontal: ResponsiveHelper.isDesktop(context) ? 40.0 : 20.0,
+        vertical: 24,
+      ),
       child: ResponsiveHelper.constrainedContent(
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _buildCorrelationOverview(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: _buildCorrelationOverview()),
+                if (!isMobile && filePath != null)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: SizedBox(
+                      width: 200, // Fixed width for the button on desktop
+                      child: _buildChatAction(),
+                    ),
+                  ),
+              ],
+            ),
             const SizedBox(height: 24),
             if (!isMobile)
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(child: _buildCorrelationCharts(matrix, columns)),
+                  Flexible(
+                    flex: 3,
+                    child: _buildCorrelationCharts(matrix, columns),
+                  ),
                   const SizedBox(width: 24),
-                  Expanded(
+                  Flexible(
+                    flex: 2,
                     child: _buildForecastSection(
                         context, columns, filePath, selectedColumn, forecastResult),
                   ),
@@ -224,9 +245,9 @@ class CorrelationPage extends HookWidget {
               const SizedBox(height: 32),
               _buildForecastSection(
                   context, columns, filePath, selectedColumn, forecastResult),
+              const SizedBox(height: 32),
+              if (filePath != null) _buildChatAction(), // Keep for mobile
             ],
-            const SizedBox(height: 32),
-            if (filePath != null) _buildChatAction(),
             const SizedBox(height: 32),
             _buildMatrixSection(matrix, columns),
             const SizedBox(height: 80),
@@ -522,26 +543,24 @@ class CorrelationPage extends HookWidget {
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: DataTable(
-                columnSpacing: 12,
-                horizontalMargin: 12,
-                headingRowHeight: 50,
-                dataRowHeight: 50,
+                columnSpacing: 16, // Increased spacing
+                horizontalMargin: 16, // Increased margin
+                headingRowHeight: 56, // Slightly taller heading row
+                dataRowHeight: 56, // Slightly taller data rows
                 headingRowColor: MaterialStateProperty.all(Colors.white),
                 dataRowColor: MaterialStateProperty.all(Colors.white),
                 dividerThickness: 0.5,
                 columns: [
-                  const DataColumn(label: SizedBox(width: 80)),
+                  const DataColumn(label: SizedBox(width: 100)), // Wider first column
                   ...columns.map((col) => DataColumn(
                         label: SizedBox(
-                          width: 60,
+                          width: 80, // Wider column headers
                           child: Text(
                             col,
-                            overflow: TextSpan(text: col).toPlainText().length > 8 
-                                ? TextOverflow.ellipsis 
-                                : TextOverflow.visible,
+                            overflow: TextOverflow.ellipsis, // Always use ellipsis for long names
                             style: GoogleFonts.inter(
                                 fontWeight: FontWeight.w700,
-                                fontSize: 11,
+                                fontSize: 12, // Slightly larger font
                                 color: AppTheme.textMain),
                           ),
                         ),
@@ -552,13 +571,13 @@ class CorrelationPage extends HookWidget {
                   return DataRow(
                     cells: [
                       DataCell(SizedBox(
-                        width: 80,
+                        width: 100, // Wider first column cells
                         child: Text(
                           rowLabel,
                           overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.inter(
                               fontWeight: FontWeight.w700,
-                              fontSize: 11,
+                              fontSize: 12, // Slightly larger font
                               color: AppTheme.textSecondary),
                         ),
                       )),
@@ -566,15 +585,15 @@ class CorrelationPage extends HookWidget {
                         final value = rowData[colLabel];
                         return DataCell(
                           SizedBox(
-                            width: 60,
+                            width: 80, // Wider cells
                             child: Center(
                               child: AnimatedContainer(
                                 duration: const Duration(milliseconds: 300),
-                                width: 44,
-                                height: 32,
+                                width: 50, // Slightly wider color box
+                                height: 36, // Slightly taller color box
                                 decoration: BoxDecoration(
                                   color: _getCorrelationColor(value),
-                                  borderRadius: BorderRadius.circular(6),
+                                  borderRadius: BorderRadius.circular(8), // More rounded corners
                                   border: Border.all(
                                     color: Colors.white.withOpacity(0.5),
                                     width: 1,
@@ -586,7 +605,7 @@ class CorrelationPage extends HookWidget {
                                         ? (value as double).toStringAsFixed(2)
                                         : 'N/A',
                                     style: GoogleFonts.inter(
-                                      fontSize: 10,
+                                      fontSize: 11, // Slightly larger font
                                       fontWeight: FontWeight.w800,
                                       color: _getTextColor(value),
                                     ),
