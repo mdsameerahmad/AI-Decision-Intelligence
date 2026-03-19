@@ -273,25 +273,53 @@ All routes (except `/auth/signup` and `/auth/login`) require a **JWT Bearer Toke
 
 ---
 
-## 🔮 Future-Proofing: How to Switch AI Engines
+## 🔮 Hybrid LLM Strategy: Multi-Switch AI Engines
 
-The platform is designed with a **Hybrid LLM Strategy**, allowing you to switch between different AI providers or local models easily.
+The platform is designed with a flexible **Hybrid LLM Strategy**, allowing you to seamlessly switch between different AI providers or local models based on your needs for development, performance, and resource management. This is controlled by the `LLM_MODE` setting in your `app/config.py` file.
 
-### **How to Use This in the Future**
-If you ever want to switch back to your Colab model or Local model:
+### **1. AI Model Mapping**
+The platform intelligently leverages different models for specific tasks:
 
-- **To use Groq (Current Default)**:
-  - Ensure `LLM_MODE: str = "groq"` in [config.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/config.py).
-  - This provides the fastest and most accurate reasoning for cloud deployment.
+| Feature | Model / Engine Used | Role |
+| :--- | :--- | :--- |
+| **Data Summary** | **Pandas & NumPy** | Statistical profiling and null value detection. |
+| **Correlation Matrix** | **Pandas (Pearson)** | Calculating relationships between numeric variables. |
+| **Suggested Questions** | **Mistral-7B-Instruct-v0.2** (or Groq) | Analyzes column names to suggest analytical queries. |
+| **Chat Code Generation** | **Qwen2.5-Coder-3B** (or Groq) | Converts natural language questions into Pandas code. |
+| **Chat Interpretation** | **Mistral-7B-Instruct-v0.2** (or Groq) | Explains the results of the executed code to the user. |
+| **Trend Prediction** | **Pandas (Rolling Mean)** | Statistical forecasting of future numeric values. |
+| **Strategy Planner** | **Mistral-7B-Instruct-v0.2** (or Groq) | Generates business action plans based on data insights. |
 
-- **To use Colab (Remote Mode)**:
-  - Change `LLM_MODE: str = "remote"` in [config.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/config.py).
-  - Ensure your Colab script is running and update `REMOTE_LLM_URL` with your new Ngrok address.
+### **2. How to Switch LLM Modes**
 
-- **To use Local (No Internet Mode)**:
-  - Change `LLM_MODE: str = "local"` in [config.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/config.py).
-  - **Uncomment** the "Mode 3" sections in [local_llm.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/ai/models/local_llm.py) and [pandas_code_generator.py](file:///d:/Project%20WOrk/ai_analyser/ai-decision-intelligence-platform/app/ai/query_engine/pandas_code_generator.py).
-  - *Note: Requires 16GB+ RAM and a CUDA-capable GPU.*
+The `LLM_MODE` variable in `app/config.py` (or your `.env` file) is the central switch.
+
+#### **Mode 1: `LLM_MODE: "groq"` (Recommended for Cloud/Mobile)**
+*   **Description**: Utilizes the Groq API for all LLM-related tasks, offering extremely fast inference for models like Llama 3. This is ideal for high-performance, scalable cloud deployments.
+*   **Configuration**:
+    *   Set `LLM_MODE: str = "groq"` in `app/config.py` or your `.env` file.
+    *   Ensure `GROQ_API_KEY` is set in your `.env` file.
+    *   `GROQ_MODEL_REASONING` and `GROQ_MODEL_CODE` specify the Groq-hosted models for reasoning and code generation tasks.
+*   **Pros**: High speed, excellent scalability, offloads computational resources.
+*   **Cons**: Requires an active internet connection, Groq API key, and incurs API usage costs.
+
+#### **Mode 2: `LLM_MODE: "remote"` (Colab/Ngrok Model Endpoint)**
+*   **Description**: Connects to a remotely hosted LLM, typically running on platforms like Google Colab and exposed via a tunneling service (e.g., `ngrok`). This allows leveraging powerful models or specific hardware configurations not available locally.
+*   **Configuration**:
+    *   Set `LLM_MODE: str = "remote"` in `app/config.py` or your `.env` file.
+    *   Ensure your remote LLM server (e.g., Colab script) is running and exposed via `ngrok`.
+    *   Update `REMOTE_LLM_URL` in `app/config.py` or your `.env` file with the public `ngrok` URL.
+*   **Pros**: Access to powerful models/hardware without local setup.
+*   **Cons**: Relies on remote server/tunneling service stability, `ngrok` URLs may change frequently (free tier), performance can be affected by network latency.
+
+#### **Mode 3: `LLM_MODE: "local"` (Local Machine Inference)**
+*   **Description**: Loads and runs LLM models (Mistral-7B, Qwen-Coder) directly on your local machine. Suitable for development, privacy-sensitive applications, or offline use.
+*   **Configuration**:
+    *   Set `LLM_MODE: str = "local"` in `app/config.py` or your `.env` file.
+    *   **Uncomment** the "Mode 3" sections in `app/ai/models/local_llm.py` and `app/ai/query_engine/pandas_code_generator.py` to enable local model loading.
+    *   *Note: Requires significant local resources (e.g., 16GB+ RAM and a CUDA-capable GPU for optimal performance).*
+*   **Pros**: No internet connection required for inference, full control over models, no API costs.
+*   **Cons**: High resource consumption, potentially slower inference speeds compared to optimized cloud APIs, more complex local setup.
 
 ---
 
