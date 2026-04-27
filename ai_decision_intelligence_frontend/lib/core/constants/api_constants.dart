@@ -2,7 +2,7 @@
 
 class ApiConstants {
   // Single source of truth → your EC2 backend
-  static const String _remoteUrl = "http://13.126.197.139:8000";
+  static const String _remoteUrl = "https://api.aidecisionapp.qzz.io";
 
   static String get baseUrl {
     return _remoteUrl;
