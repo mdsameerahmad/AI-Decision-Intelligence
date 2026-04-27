@@ -1,0 +1,2001 @@
+Product_Name,Category,Main_Category,Original_Price,Discount_Percent,Discounted_Price,In_Stock,Total_Quantity
+Style Shoes Ultra,Shoes,Clothing,9399,10,8459,True,4
+Max Smartphones Pro,Smartphones,Electronics,4117,0,4117,True,10
+Vogue Gaming Consoles S,Gaming Consoles,Electronics,11437,10,10293,False,0
+Trendy Televisions Special,Televisions,Electronics,35686,0,35686,True,12
+Neo Activewear Edition,Activewear,Clothing,3634,35,2362,True,15
+Sneakers 6222,Sneakers,Clothing,3634,60,1454,False,0
+Trendy Makeup 2024,Makeup,Beauty & Personal Care,38390,0,38390,True,50
+Elite Laptops Special,Laptops,Electronics,13363,60,5345,True,30
+Pro T-Shirts Lite,T-Shirts,Clothing,2677,20,2142,True,8
+Smartphones 3365,Smartphones,Electronics,9976,5,9477,True,2
+Televisions 1944,Televisions,Electronics,2698,0,2698,False,0
+Trendy Shirts 2024,Shirts,Clothing,2690,15,2286,False,0
+Max Smartphones Z,Smartphones,Electronics,6749,35,4387,True,6
+Ultra Televisions Collection,Televisions,Electronics,410,30,287,True,7
+Shoes 2514,Shoes,Clothing,523,0,523,False,0
+Value Dresses Z,Dresses,Clothing,2372,0,2372,True,15
+Trendy Televisions Pro,Televisions,Electronics,1321,10,1189,True,5
+Kurtas 4082,Kurtas,Clothing,7414,5,7043,False,0
+Home Decor 4555,Home Decor,Home & Kitchen,1513,5,1437,True,30
+Value Smartphones 3000,Smartphones,Electronics,786,5,747,True,15
+Premium Cookware Z,Cookware,Home & Kitchen,33121,35,21529,True,8
+Sneakers 2922,Sneakers,Clothing,3674,50,1837,True,9
+Wardrobes 8846,Wardrobes,Furniture,5380,10,4842,True,15
+Tablets 4350,Tablets,Electronics,773,50,386,True,0
+Pro Fitness Gear 3000,Fitness Gear,"Sports, Toys & Others",2428,10,2185,True,3
+Wardrobes 7236,Wardrobes,Furniture,5692,15,4838,True,100
+Style Headphones 5000,Headphones,Electronics,1104,5,1049,True,3
+Neo Headphones Special,Headphones,Electronics,8030,25,6022,True,30
+Super Skincare Special,Skincare,Beauty & Personal Care,2257,60,903,True,200
+Sarees 6246,Sarees,Clothing,3372,20,2698,True,7
+Cookware 7073,Cookware,Home & Kitchen,2254,10,2029,False,0
+Premium Activewear Ultra,Activewear,Clothing,54751,25,41063,True,15
+Dresses 1265,Dresses,Clothing,4842,0,4842,False,0
+Vogue Toys Series,Toys,"Sports, Toys & Others",1246,50,623,True,300
+Pro Office Chairs 3000,Office Chairs,Furniture,14356,15,12203,True,40
+Vogue Dresses Ultra,Dresses,Clothing,1008,15,857,True,3
+Style Home Decor 3000,Home Decor,Home & Kitchen,6465,20,5172,True,25
+Value Sarees Special,Sarees,Clothing,386,25,290,False,0
+Skincare 9037,Skincare,Beauty & Personal Care,877,0,877,True,10
+Luxury Kurtas 5000,Kurtas,Clothing,6365,25,4774,True,2
+Luxury Sneakers Special,Sneakers,Clothing,12869,5,12226,True,5
+Royal Smartphones Pro,Smartphones,Electronics,6157,30,4310,True,50
+Value Televisions Max,Televisions,Electronics,4240,40,2544,True,10
+Sofas 1794,Sofas,Furniture,3331,35,2165,True,7
+Laptops 7756,Laptops,Electronics,721,20,577,True,8
+Style Speakers Ultra,Speakers,Electronics,1933,20,1546,True,80
+Elite Headphones X,Headphones,Electronics,2707,0,2707,True,40
+Classic Gaming Consoles 5000,Gaming Consoles,Electronics,19474,35,12658,True,7
+Style Shoes Special,Shoes,Clothing,7702,5,7317,True,4
+Premium Dining Sets X,Dining Sets,Furniture,498,15,423,True,6
+Trendy Dining Sets X,Dining Sets,Furniture,7509,5,7134,True,200
+Luxury Televisions Elite,Televisions,Electronics,2987,0,2987,True,15
+Max Gaming Consoles X,Gaming Consoles,Electronics,2044,25,1533,True,12
+Luxury Sports Equipment Series,Sports Equipment,"Sports, Toys & Others",10914,0,10914,True,20
+Shoes 3937,Shoes,Clothing,18824,30,13177,False,0
+Ultra Sarees 2024,Sarees,Clothing,16535,10,14882,True,60
+Vogue Smartwatches Elite,Smartwatches,Electronics,1655,0,1655,True,12
+Activewear 5379,Activewear,Clothing,3296,15,2802,False,0
+Smartwatches 2294,Smartwatches,Electronics,7580,0,7580,True,4
+Trendy Office Chairs Collection,Office Chairs,Furniture,17515,5,16639,True,12
+Luxury Toys Ultra,Toys,"Sports, Toys & Others",2643,30,1850,False,0
+Value Shoes Max,Shoes,Clothing,3871,0,3871,True,7
+Value Dresses Pro,Dresses,Clothing,1170,40,702,True,100
+Trendy Sneakers Edition,Sneakers,Clothing,1041,0,1041,True,50
+Premium Skincare X,Skincare,Beauty & Personal Care,14170,5,13462,True,6
+Kitchen Appliances 2354,Kitchen Appliances,Home & Kitchen,28730,30,20111,True,2
+Trendy Televisions 3000,Televisions,Electronics,4487,10,4038,True,4
+Value Smartphones Plus,Smartphones,Electronics,18164,0,18164,True,40
+Beds 1697,Beds,Furniture,7885,10,7096,True,5
+Value Gaming Consoles Special,Gaming Consoles,Electronics,2130,5,2024,False,0
+Ultra Televisions Elite,Televisions,Electronics,7882,40,4729,True,12
+Sports Equipment 1539,Sports Equipment,"Sports, Toys & Others",36389,10,32750,True,40
+Value Makeup 3000,Makeup,Beauty & Personal Care,4703,35,3057,True,4
+Pro Beds 2024,Beds,Furniture,37670,50,18835,True,9
+Shoes 7525,Shoes,Clothing,164,15,139,True,10
+Office Chairs 5903,Office Chairs,Furniture,14344,50,7172,True,15
+Pro Fragrances Edition,Fragrances,Beauty & Personal Care,5518,10,4966,False,0
+Royal Jeans 3000,Jeans,Clothing,3340,60,1336,True,5
+Luxury Gaming Consoles 2024,Gaming Consoles,Electronics,5552,0,5552,True,60
+Speakers 2284,Speakers,Electronics,372,25,279,True,30
+Neo Dresses Pro,Dresses,Clothing,3703,15,3148,True,15
+Pro Gaming Consoles Max,Gaming Consoles,Electronics,7839,10,7055,True,30
+Super Kurtas Edition,Kurtas,Clothing,33653,25,25240,True,9
+Fragrances 6347,Fragrances,Beauty & Personal Care,2512,30,1758,True,4
+Max T-Shirts Collection,T-Shirts,Clothing,1723,0,1723,True,25
+Neo Televisions Edition,Televisions,Electronics,2567,0,2567,True,12
+Style Toys Edition,Toys,"Sports, Toys & Others",16197,30,11338,True,20
+Vogue Shirts Lite,Shirts,Clothing,7555,25,5666,False,0
+Headphones 2204,Headphones,Electronics,2475,60,990,True,150
+Elite Smartphones Edition,Smartphones,Electronics,9603,35,6242,True,15
+Headphones 3527,Headphones,Electronics,5590,60,2236,True,3
+Shoes 6188,Shoes,Clothing,17358,30,12151,True,10
+Ultra Cookware X,Cookware,Home & Kitchen,1978,5,1879,False,0
+T-Shirts 8286,T-Shirts,Clothing,3218,0,3218,True,50
+Max Laptops Plus,Laptops,Electronics,2960,35,1924,True,12
+Elite Office Chairs Series,Office Chairs,Furniture,735,25,551,True,150
+Royal Toys Series,Toys,"Sports, Toys & Others",7241,0,7241,True,6
+Ultra Shirts 5000,Shirts,Clothing,6919,10,6227,True,9
+Vogue Toys 3000,Toys,"Sports, Toys & Others",4960,60,1984,True,150
+Skincare 1202,Skincare,Beauty & Personal Care,3632,15,3087,True,150
+Trendy Smartphones Max,Smartphones,Electronics,783,15,666,False,0
+Activewear 4977,Activewear,Clothing,2852,15,2424,True,80
+Elite Sneakers Edition,Sneakers,Clothing,3156,0,3156,True,3
+Max Dresses Lite,Dresses,Clothing,1736,10,1562,True,100
+Elite Gaming Consoles Max,Gaming Consoles,Electronics,3995,10,3596,True,7
+Max Shoes Series,Shoes,Clothing,8332,0,8332,True,5
+Super Headphones Max,Headphones,Electronics,57218,35,37192,True,6
+Pro T-Shirts Special,T-Shirts,Clothing,6183,10,5565,True,9
+Pro Jeans Collection,Jeans,Clothing,6887,40,4132,True,6
+Max Fitness Gear X,Fitness Gear,"Sports, Toys & Others",4473,40,2684,True,7
+Makeup 6443,Makeup,Beauty & Personal Care,407,0,407,True,4
+Gaming Consoles 7224,Gaming Consoles,Electronics,4761,25,3571,True,7
+Shirts 6399,Shirts,Clothing,5329,15,4530,True,15
+Trendy Smartwatches 2024,Smartwatches,Electronics,121152,50,60576,True,10
+Vogue Fragrances Z,Fragrances,Beauty & Personal Care,3837,0,3837,True,8
+Elite Makeup Edition,Makeup,Beauty & Personal Care,7292,25,5469,True,40
+Sofas 5775,Sofas,Furniture,4710,20,3768,True,150
+Shoes 9044,Shoes,Clothing,1078,5,1024,True,40
+Sarees 4971,Sarees,Clothing,21769,0,21769,True,8
+Max Tablets Edition,Tablets,Electronics,13096,25,9822,True,40
+Vogue Kitchen Appliances Z,Kitchen Appliances,Home & Kitchen,13779,30,9645,True,5
+Royal Dresses S,Dresses,Clothing,1511,10,1360,True,4
+Royal Kitchen Appliances X,Kitchen Appliances,Home & Kitchen,30522,25,22892,True,8
+Shirts 8563,Shirts,Clothing,796,10,716,False,0
+Smartphones 4434,Smartphones,Electronics,10567,30,7397,True,6
+Max Beds Max,Beds,Furniture,84981,0,84981,True,3
+Smartphones 7703,Smartphones,Electronics,1360,50,680,True,4
+Elite Sports Equipment Lite,Sports Equipment,"Sports, Toys & Others",2360,5,2242,False,0
+Style Makeup 2024,Makeup,Beauty & Personal Care,5609,10,5048,True,20
+Home Decor 7176,Home Decor,Home & Kitchen,2561,0,2561,False,0
+Vogue Sofas Special,Sofas,Furniture,656,0,656,True,15
+Royal Laptops Series,Laptops,Electronics,5387,15,4579,True,12
+Super Makeup 5000,Makeup,Beauty & Personal Care,1238,5,1176,True,25
+Fitness Gear 9796,Fitness Gear,"Sports, Toys & Others",9120,40,5472,True,6
+Ultra Laptops Plus,Laptops,Electronics,1491,0,1491,False,0
+Jeans 6816,Jeans,Clothing,36957,10,33261,True,7
+Vogue Laptops Pro,Laptops,Electronics,1780,10,1602,True,30
+Style Kitchen Appliances Edition,Kitchen Appliances,Home & Kitchen,3242,0,3242,True,1
+Kitchen Appliances 6432,Kitchen Appliances,Home & Kitchen,14188,0,14188,True,8
+Headphones 8052,Headphones,Electronics,995,10,896,True,8
+Ultra Jeans Elite,Jeans,Clothing,6623,15,5630,True,15
+Luxury Dresses Ultra,Dresses,Clothing,26954,10,24259,False,0
+Trendy Gaming Consoles Collection,Gaming Consoles,Electronics,610,20,488,True,50
+Makeup 9199,Makeup,Beauty & Personal Care,6264,20,5011,True,6
+Premium T-Shirts Special,T-Shirts,Clothing,6908,0,6908,True,25
+Trendy Televisions Max,Televisions,Electronics,13615,15,11573,True,60
+Luxury Dresses 2024,Dresses,Clothing,987,60,395,True,15
+Neo Activewear Collection,Activewear,Clothing,885,15,752,False,0
+Televisions 9537,Televisions,Electronics,9712,25,7284,True,25
+Classic Beds Plus,Beds,Furniture,7249,10,6524,True,8
+Luxury Toys Collection,Toys,"Sports, Toys & Others",6824,35,4436,True,60
+Max Shoes Pro,Shoes,Clothing,7731,35,5025,False,0
+T-Shirts 2885,T-Shirts,Clothing,2036,20,1629,True,15
+Neo Shirts Plus,Shirts,Clothing,6664,60,2666,True,40
+Elite Headphones Ultra,Headphones,Electronics,7213,0,7213,True,8
+Royal Televisions S,Televisions,Electronics,1947,0,1947,True,7
+Trendy Wardrobes Collection,Wardrobes,Furniture,55720,35,36218,True,10
+Trendy Kurtas S,Kurtas,Clothing,9123,35,5930,True,60
+Style Speakers Series,Speakers,Electronics,1047,0,1047,True,200
+Luxury Televisions Z,Televisions,Electronics,11569,5,10991,True,15
+Trendy Laptops Edition,Laptops,Electronics,1388,0,1388,True,25
+Pro Shoes Z,Shoes,Clothing,13709,5,13024,True,150
+Luxury Televisions Max,Televisions,Electronics,22220,35,14443,True,3
+Super Fragrances S,Fragrances,Beauty & Personal Care,1695,15,1441,True,6
+Pro Skincare Collection,Skincare,Beauty & Personal Care,17240,10,15516,True,30
+Style Laptops Special,Laptops,Electronics,8427,10,7584,True,60
+Style Speakers 3000,Speakers,Electronics,14347,0,14347,True,80
+Vogue Shoes Edition,Shoes,Clothing,58013,5,55112,True,9
+Neo Televisions 5000,Televisions,Electronics,3582,25,2686,True,3
+Tablets 3826,Tablets,Electronics,1850,60,740,False,0
+Sports Equipment 5873,Sports Equipment,"Sports, Toys & Others",1550,40,930,True,6
+Kurtas 2388,Kurtas,Clothing,1706,0,1706,False,0
+Neo Jeans Plus,Jeans,Clothing,4458,50,2229,True,50
+Ultra Cookware S,Cookware,Home & Kitchen,7678,35,4991,True,3
+Elite Home Decor Edition,Home Decor,Home & Kitchen,7061,35,4590,True,60
+Elite Smartwatches Edition,Smartwatches,Electronics,14442,15,12276,True,9
+Classic Headphones S,Headphones,Electronics,5011,10,4510,True,20
+Classic T-Shirts Lite,T-Shirts,Clothing,32604,5,30974,True,3
+Neo T-Shirts Collection,T-Shirts,Clothing,3493,0,3493,False,0
+Value Jeans 5000,Jeans,Clothing,169195,5,160735,True,3
+Activewear 8939,Activewear,Clothing,11114,5,10558,True,500
+Value Sneakers Edition,Sneakers,Clothing,1617,15,1374,True,60
+Toys 9281,Toys,"Sports, Toys & Others",1225,30,858,True,10
+Trendy Headphones Special,Headphones,Electronics,9226,15,7842,True,6
+Value T-Shirts Collection,T-Shirts,Clothing,3685,0,3685,True,300
+Ultra Wardrobes X,Wardrobes,Furniture,12466,60,4986,False,0
+Skincare 4613,Skincare,Beauty & Personal Care,9116,60,3646,True,5
+Max Speakers Ultra,Speakers,Electronics,4482,35,2913,True,15
+Elite Smartwatches Collection,Smartwatches,Electronics,1639,70,492,True,300
+Super T-Shirts Special,T-Shirts,Clothing,688,20,550,True,0
+Ultra T-Shirts Plus,T-Shirts,Clothing,2758,60,1103,True,6
+Royal Gaming Consoles 5000,Gaming Consoles,Electronics,15001,0,15001,True,300
+Super Speakers Pro,Speakers,Electronics,6509,10,5858,True,5
+Sports Equipment 8231,Sports Equipment,"Sports, Toys & Others",976,5,927,True,4
+Trendy T-Shirts Plus,T-Shirts,Clothing,6172,0,6172,True,15
+Skincare 5055,Skincare,Beauty & Personal Care,8131,0,8131,False,0
+Premium Dresses Collection,Dresses,Clothing,1562,25,1172,True,10
+Value Laptops Max,Laptops,Electronics,6018,35,3912,True,500
+Ultra Toys Ultra,Toys,"Sports, Toys & Others",5315,20,4252,True,25
+Luxury Home Decor 5000,Home Decor,Home & Kitchen,1115,0,1115,True,3
+Toys 8015,Toys,"Sports, Toys & Others",7846,35,5100,True,500
+Elite Sports Equipment Z,Sports Equipment,"Sports, Toys & Others",10215,25,7661,True,9
+Skincare 1972,Skincare,Beauty & Personal Care,20142,10,18128,True,7
+Royal Smartwatches Elite,Smartwatches,Electronics,19390,25,14542,True,15
+Elite Jeans 3000,Jeans,Clothing,822,5,781,True,7
+Televisions 5794,Televisions,Electronics,1456,10,1310,True,3
+Max T-Shirts Plus,T-Shirts,Clothing,9625,50,4812,True,0
+Super Laptops Series,Laptops,Electronics,9609,5,9129,True,10
+Office Chairs 5543,Office Chairs,Furniture,9625,15,8181,True,80
+Toys 3078,Toys,"Sports, Toys & Others",399999,50,200000,True,15
+Gaming Consoles 3174,Gaming Consoles,Electronics,10350,30,7245,True,500
+Luxury Cookware 3000,Cookware,Home & Kitchen,21565,0,21565,False,0
+Jeans 7434,Jeans,Clothing,17031,0,17031,True,7
+Vogue T-Shirts Elite,T-Shirts,Clothing,11492,0,11492,False,0
+Trendy Fitness Gear Collection,Fitness Gear,"Sports, Toys & Others",3271,25,2453,True,5
+Super Toys Max,Toys,"Sports, Toys & Others",13217,15,11234,True,7
+Luxury Dresses Elite,Dresses,Clothing,1804,0,1804,True,50
+Neo Activewear Collection,Activewear,Clothing,3622,60,1449,False,0
+Tablets 6362,Tablets,Electronics,2622,20,2098,True,500
+Value Sofas Max,Sofas,Furniture,5481,5,5207,True,6
+Fitness Gear 8511,Fitness Gear,"Sports, Toys & Others",99872,15,84891,True,100
+Luxury Kurtas 5000,Kurtas,Clothing,435,25,326,True,7
+Dresses 9756,Dresses,Clothing,12025,0,12025,True,4
+Trendy Activewear Z,Activewear,Clothing,605,5,575,True,100
+Neo Laptops Lite,Laptops,Electronics,2668,35,1734,True,20
+Vogue Kurtas 2024,Kurtas,Clothing,20297,15,17252,True,5
+Classic Shirts 3000,Shirts,Clothing,5357,20,4286,True,9
+Skincare 1793,Skincare,Beauty & Personal Care,1214,15,1032,True,7
+Style Tablets Collection,Tablets,Electronics,1944,0,1944,True,40
+Value Fitness Gear S,Fitness Gear,"Sports, Toys & Others",11921,0,11921,True,10
+Premium Laptops Series,Laptops,Electronics,1907,15,1621,True,500
+Luxury Smartwatches 2024,Smartwatches,Electronics,6529,0,6529,True,2
+Kurtas 5945,Kurtas,Clothing,5228,0,5228,True,8
+Max Sneakers Max,Sneakers,Clothing,2112,40,1267,True,10
+Max Speakers Max,Speakers,Electronics,79994,70,23998,True,12
+Style Headphones S,Headphones,Electronics,11234,35,7302,True,7
+Style Makeup Lite,Makeup,Beauty & Personal Care,354,40,212,True,40
+Speakers 4836,Speakers,Electronics,6279,5,5965,True,100
+Ultra Kurtas Plus,Kurtas,Clothing,2084,60,834,False,0
+Classic Sarees Max,Sarees,Clothing,14924,0,14924,False,0
+Pro T-Shirts Collection,T-Shirts,Clothing,1759,60,704,True,80
+Luxury Kurtas 3000,Kurtas,Clothing,4245,70,1274,True,15
+Shirts 7919,Shirts,Clothing,9500,30,6650,True,60
+Classic Sports Equipment Max,Sports Equipment,"Sports, Toys & Others",15185,70,4556,False,0
+Ultra Televisions Plus,Televisions,Electronics,1035,20,828,True,9
+Neo Activewear Lite,Activewear,Clothing,3190,5,3030,True,7
+Super Speakers 2024,Speakers,Electronics,2658,15,2259,True,10
+Style Office Chairs 2024,Office Chairs,Furniture,2107,20,1686,True,7
+Vogue Sneakers X,Sneakers,Clothing,48907,0,48907,True,500
+Elite Sofas Collection,Sofas,Furniture,8342,25,6256,True,7
+Pro Beds 2024,Beds,Furniture,957,70,287,True,3
+Kitchen Appliances 8248,Kitchen Appliances,Home & Kitchen,16249,0,16249,True,12
+Laptops 2420,Laptops,Electronics,77760,35,50544,True,2
+Jeans 3293,Jeans,Clothing,18860,50,9430,True,4
+Toys 7291,Toys,"Sports, Toys & Others",684,60,274,False,0
+Trendy Toys 3000,Toys,"Sports, Toys & Others",2626,60,1050,True,10
+Laptops 5059,Laptops,Electronics,25580,20,20464,True,9
+Ultra Televisions Ultra,Televisions,Electronics,1964,60,786,True,50
+Vogue Gaming Consoles Lite,Gaming Consoles,Electronics,8774,30,6142,True,40
+Sports Equipment 1439,Sports Equipment,"Sports, Toys & Others",13489,0,13489,False,0
+Makeup 5942,Makeup,Beauty & Personal Care,1477,15,1255,True,8
+Vogue Makeup Z,Makeup,Beauty & Personal Care,4561,30,3193,True,7
+Dining Sets 5842,Dining Sets,Furniture,79,5,75,True,50
+Super Tablets Ultra,Tablets,Electronics,1301,25,976,True,2
+Ultra Home Decor Ultra,Home Decor,Home & Kitchen,3548,25,2661,True,1
+Vogue Sneakers Max,Sneakers,Clothing,973,0,973,True,50
+Premium Sarees 5000,Sarees,Clothing,41139,20,32911,True,10
+Toys 3162,Toys,"Sports, Toys & Others",768,35,499,False,0
+Value Shoes Series,Shoes,Clothing,2781,15,2364,False,0
+Style Smartphones S,Smartphones,Electronics,5840,0,5840,True,300
+Home Decor 2195,Home Decor,Home & Kitchen,32088,0,32088,False,0
+Ultra Sofas X,Sofas,Furniture,762,10,686,True,30
+Premium Shoes Pro,Shoes,Clothing,22353,50,11176,True,10
+Sports Equipment 7520,Sports Equipment,"Sports, Toys & Others",4993,5,4743,True,12
+Style Tablets Series,Tablets,Electronics,1376,25,1032,True,500
+Trendy Headphones Max,Headphones,Electronics,8985,5,8536,True,500
+Royal Headphones 2024,Headphones,Electronics,6383,10,5745,True,6
+Max Dresses Max,Dresses,Clothing,2258,40,1355,True,60
+Pro Gaming Consoles 2024,Gaming Consoles,Electronics,5396,30,3777,True,5
+Trendy Sarees Max,Sarees,Clothing,2986,0,2986,True,6
+Trendy Activewear Ultra,Activewear,Clothing,5711,15,4854,True,25
+Ultra Televisions Series,Televisions,Electronics,11653,0,11653,True,9
+Vogue Shoes Pro,Shoes,Clothing,38731,15,32921,True,300
+Luxury Gaming Consoles S,Gaming Consoles,Electronics,986,25,740,True,3
+Luxury Jeans 2024,Jeans,Clothing,78868,0,78868,True,12
+Fragrances 3684,Fragrances,Beauty & Personal Care,390,5,370,True,200
+Neo Skincare Elite,Skincare,Beauty & Personal Care,4045,10,3640,True,150
+Elite Headphones Elite,Headphones,Electronics,10587,50,5294,True,5
+T-Shirts 2934,T-Shirts,Clothing,7100,70,2130,True,8
+Gaming Consoles 1480,Gaming Consoles,Electronics,2193,0,2193,True,20
+Trendy Smartphones Elite,Smartphones,Electronics,3759,35,2443,True,5
+Max Kitchen Appliances Max,Kitchen Appliances,Home & Kitchen,2596,10,2336,True,500
+Royal Shoes 5000,Shoes,Clothing,2290,10,2061,False,0
+Value Gaming Consoles S,Gaming Consoles,Electronics,14870,30,10409,False,0
+Max Activewear Plus,Activewear,Clothing,7838,50,3919,True,4
+Dresses 2889,Dresses,Clothing,2002,60,801,True,3
+Royal T-Shirts X,T-Shirts,Clothing,15868,20,12694,True,150
+Value Smartphones X,Smartphones,Electronics,7347,10,6612,True,5
+Classic Laptops 5000,Laptops,Electronics,14176,35,9214,False,0
+Elite Makeup S,Makeup,Beauty & Personal Care,11171,5,10612,True,10
+Fragrances 1579,Fragrances,Beauty & Personal Care,1677,20,1342,True,20
+Luxury Dresses Series,Dresses,Clothing,2379,10,2141,True,3
+Pro Home Decor Series,Home Decor,Home & Kitchen,13018,25,9764,False,0
+Kurtas 6241,Kurtas,Clothing,10895,5,10350,True,300
+Ultra Tablets 5000,Tablets,Electronics,4795,0,4795,True,150
+Style Headphones Pro,Headphones,Electronics,5739,50,2870,True,50
+Super Sofas Pro,Sofas,Furniture,25940,0,25940,True,1
+Fragrances 2129,Fragrances,Beauty & Personal Care,2284,15,1941,True,7
+Cookware 5625,Cookware,Home & Kitchen,10035,5,9533,True,20
+Skincare 6090,Skincare,Beauty & Personal Care,3789,0,3789,False,0
+Royal Fragrances Collection,Fragrances,Beauty & Personal Care,3713,0,3713,False,0
+Pro Televisions Lite,Televisions,Electronics,20558,0,20558,False,0
+Max Speakers Ultra,Speakers,Electronics,14409,40,8645,True,3
+Vogue Headphones Special,Headphones,Electronics,14188,5,13479,True,150
+Kitchen Appliances 4201,Kitchen Appliances,Home & Kitchen,26895,60,10758,True,500
+Makeup 9954,Makeup,Beauty & Personal Care,5064,20,4051,True,3
+T-Shirts 5016,T-Shirts,Clothing,11958,15,10164,True,12
+Trendy Sarees X,Sarees,Clothing,3292,20,2634,True,7
+Neo Tablets X,Tablets,Electronics,7510,15,6384,True,9
+Sports Equipment 1023,Sports Equipment,"Sports, Toys & Others",4161,30,2913,True,5
+Skincare 7164,Skincare,Beauty & Personal Care,5590,5,5310,True,15
+Toys 6038,Toys,"Sports, Toys & Others",10682,10,9614,True,500
+Royal Home Decor Ultra,Home Decor,Home & Kitchen,1701,50,850,True,12
+Premium Makeup 2024,Makeup,Beauty & Personal Care,74809,60,29924,True,3
+Smartphones 2524,Smartphones,Electronics,1332,50,666,True,20
+Pro Activewear Series,Activewear,Clothing,1017,10,915,True,8
+Beds 7102,Beds,Furniture,22206,35,14434,True,80
+Luxury Sports Equipment Max,Sports Equipment,"Sports, Toys & Others",13791,15,11722,True,9
+Royal Cookware 2024,Cookware,Home & Kitchen,11092,15,9428,True,5
+Trendy Skincare Max,Skincare,Beauty & Personal Care,11153,0,11153,True,5
+Premium Home Decor Series,Home Decor,Home & Kitchen,4850,20,3880,True,50
+Elite Gaming Consoles Ultra,Gaming Consoles,Electronics,1535,0,1535,True,6
+Value Cookware 3000,Cookware,Home & Kitchen,5438,10,4894,True,50
+Headphones 7438,Headphones,Electronics,2043,40,1226,True,5
+Makeup 6345,Makeup,Beauty & Personal Care,17505,0,17505,True,7
+Max Skincare Ultra,Skincare,Beauty & Personal Care,4070,0,4070,True,10
+Pro Televisions 2024,Televisions,Electronics,1685,0,1685,True,300
+Home Decor 2785,Home Decor,Home & Kitchen,3245,60,1298,False,0
+Elite Jeans Collection,Jeans,Clothing,8429,15,7165,True,5
+Trendy Sofas Plus,Sofas,Furniture,2368,10,2131,True,8
+Super Cookware Z,Cookware,Home & Kitchen,1692,35,1100,True,4
+Classic Televisions Elite,Televisions,Electronics,6764,40,4058,True,12
+Smartphones 2481,Smartphones,Electronics,6775,10,6098,True,10
+Style Televisions Lite,Televisions,Electronics,2549,30,1784,True,150
+Beds 1660,Beds,Furniture,2671,35,1736,True,300
+Value Skincare 3000,Skincare,Beauty & Personal Care,6662,25,4996,True,8
+Luxury Fitness Gear Ultra,Fitness Gear,"Sports, Toys & Others",750,0,750,True,12
+Gaming Consoles 7492,Gaming Consoles,Electronics,791,50,396,True,150
+Style Shoes Lite,Shoes,Clothing,1936,20,1549,True,60
+Elite T-Shirts X,T-Shirts,Clothing,3734,5,3547,True,0
+Toys 8408,Toys,"Sports, Toys & Others",7382,15,6275,True,7
+Royal Dresses Ultra,Dresses,Clothing,33542,0,33542,False,0
+Ultra Sports Equipment 2024,Sports Equipment,"Sports, Toys & Others",15026,0,15026,True,6
+Premium Headphones Ultra,Headphones,Electronics,4002,35,2601,True,5
+Value Toys Edition,Toys,"Sports, Toys & Others",4807,0,4807,True,2
+Style Smartwatches Max,Smartwatches,Electronics,1338,10,1204,True,25
+Max Fitness Gear Max,Fitness Gear,"Sports, Toys & Others",4810,20,3848,False,0
+Ultra Gaming Consoles Z,Gaming Consoles,Electronics,3386,0,3386,True,2
+Headphones 8265,Headphones,Electronics,7496,60,2998,False,0
+T-Shirts 2506,T-Shirts,Clothing,1681,5,1597,True,60
+Activewear 6432,Activewear,Clothing,9679,5,9195,True,80
+Classic Beds Pro,Beds,Furniture,36140,5,34333,True,10
+Vogue Sarees Series,Sarees,Clothing,4278,5,4064,False,0
+Shirts 7471,Shirts,Clothing,8307,0,8307,True,500
+Trendy Office Chairs Series,Office Chairs,Furniture,12086,30,8460,True,5
+Pro Kurtas S,Kurtas,Clothing,2925,60,1170,True,6
+Classic Speakers 2024,Speakers,Electronics,6594,5,6264,True,7
+Vogue Sneakers Ultra,Sneakers,Clothing,5009,25,3757,False,0
+Classic Smartphones Series,Smartphones,Electronics,5595,30,3916,True,8
+Sports Equipment 8848,Sports Equipment,"Sports, Toys & Others",1804,40,1082,True,200
+Max Dresses Edition,Dresses,Clothing,5087,15,4324,True,20
+Pro Activewear Ultra,Activewear,Clothing,9414,5,8943,True,9
+Super Activewear X,Activewear,Clothing,32502,10,29252,False,0
+Shoes 6883,Shoes,Clothing,17148,30,12004,True,2
+Super Dining Sets Special,Dining Sets,Furniture,80961,35,52625,True,6
+Vogue Laptops 3000,Laptops,Electronics,1817,0,1817,False,0
+Elite Shoes X,Shoes,Clothing,15315,10,13784,True,20
+Pro Beds X,Beds,Furniture,6254,50,3127,True,2
+Beds 5602,Beds,Furniture,84908,35,55190,True,9
+Classic Skincare 5000,Skincare,Beauty & Personal Care,1723,70,517,True,25
+Activewear 4813,Activewear,Clothing,1654,30,1158,True,30
+Sofas 2640,Sofas,Furniture,2261,10,2035,False,0
+Pro Sofas Elite,Sofas,Furniture,312,20,250,True,7
+Super T-Shirts Pro,T-Shirts,Clothing,2488,25,1866,True,3
+T-Shirts 4594,T-Shirts,Clothing,1837,0,1837,False,0
+Super Sofas Edition,Sofas,Furniture,5991,20,4793,True,4
+Value Headphones S,Headphones,Electronics,7684,30,5379,True,300
+Vogue T-Shirts 3000,T-Shirts,Clothing,56478,0,56478,True,10
+Sports Equipment 6878,Sports Equipment,"Sports, Toys & Others",16952,35,11019,False,0
+Sneakers 1462,Sneakers,Clothing,2328,20,1862,True,50
+Fragrances 6761,Fragrances,Beauty & Personal Care,1532,60,613,True,12
+Sarees 3328,Sarees,Clothing,9340,0,9340,True,7
+Pro Sofas Special,Sofas,Furniture,886,5,842,True,60
+Elite Dresses Special,Dresses,Clothing,53289,20,42631,True,100
+Premium Smartphones Ultra,Smartphones,Electronics,22831,5,21689,True,25
+Premium Sofas Special,Sofas,Furniture,2678,30,1875,True,2
+Vogue T-Shirts Z,T-Shirts,Clothing,531,30,372,True,15
+Kurtas 6582,Kurtas,Clothing,28642,0,28642,False,0
+Shoes 6301,Shoes,Clothing,4246,15,3609,True,4
+Elite Jeans 2024,Jeans,Clothing,24631,15,20936,True,6
+T-Shirts 9622,T-Shirts,Clothing,620,10,558,True,100
+Televisions 2188,Televisions,Electronics,2261,50,1130,True,1
+Style Jeans Edition,Jeans,Clothing,4961,40,2977,True,40
+Neo Fragrances Lite,Fragrances,Beauty & Personal Care,5238,30,3667,True,10
+Elite Cookware Series,Cookware,Home & Kitchen,2745,30,1921,True,10
+Smartwatches 8982,Smartwatches,Electronics,11073,15,9412,True,0
+Elite Laptops 5000,Laptops,Electronics,1230,50,615,True,60
+Vogue Shirts S,Shirts,Clothing,4095,30,2866,True,8
+Luxury Shoes Lite,Shoes,Clothing,5762,30,4033,True,15
+Luxury Beds X,Beds,Furniture,9618,40,5771,True,25
+Home Decor 7415,Home Decor,Home & Kitchen,12428,5,11807,True,30
+Activewear 1530,Activewear,Clothing,1142,35,742,True,500
+Neo Sneakers Ultra,Sneakers,Clothing,671,0,671,True,12
+Ultra Televisions Special,Televisions,Electronics,25941,10,23347,True,9
+Luxury Televisions Max,Televisions,Electronics,7590,10,6831,True,500
+Neo Smartphones S,Smartphones,Electronics,1862,60,745,True,25
+Ultra Speakers 3000,Speakers,Electronics,37015,40,22209,True,7
+Max Jeans Z,Jeans,Clothing,5727,30,4009,True,4
+Ultra Skincare 5000,Skincare,Beauty & Personal Care,22826,30,15978,False,0
+Ultra Laptops X,Laptops,Electronics,5380,20,4304,True,8
+Classic T-Shirts Series,T-Shirts,Clothing,71794,60,28718,False,0
+Shoes 7783,Shoes,Clothing,48268,15,41028,True,10
+Trendy Televisions 5000,Televisions,Electronics,3565,10,3208,True,5
+Ultra Sneakers Special,Sneakers,Clothing,17424,0,17424,False,0
+Jeans 4695,Jeans,Clothing,11402,35,7411,True,3
+Ultra Speakers Pro,Speakers,Electronics,29197,30,20438,True,9
+Neo Shoes Elite,Shoes,Clothing,1406,10,1265,True,15
+Smartphones 2215,Smartphones,Electronics,12021,0,12021,True,9
+Trendy Activewear S,Activewear,Clothing,19507,40,11704,True,40
+Kitchen Appliances 9962,Kitchen Appliances,Home & Kitchen,501,0,501,True,60
+Headphones 2525,Headphones,Electronics,1058,30,741,True,50
+Vogue T-Shirts Special,T-Shirts,Clothing,348,60,139,True,2
+Smartwatches 8066,Smartwatches,Electronics,3472,15,2951,False,0
+Fitness Gear 3703,Fitness Gear,"Sports, Toys & Others",12524,5,11898,True,12
+Trendy Shirts S,Shirts,Clothing,34740,30,24318,True,300
+Neo Laptops Z,Laptops,Electronics,5426,35,3527,True,80
+Speakers 7705,Speakers,Electronics,40937,20,32750,True,80
+Luxury Skincare Elite,Skincare,Beauty & Personal Care,819,60,328,True,7
+Max Jeans Ultra,Jeans,Clothing,538,0,538,True,9
+Trendy Cookware Special,Cookware,Home & Kitchen,4584,15,3896,True,10
+Neo Shoes X,Shoes,Clothing,8118,30,5683,True,5
+Max Toys Special,Toys,"Sports, Toys & Others",4722,40,2833,True,2
+Premium Kurtas Z,Kurtas,Clothing,335,0,335,False,0
+Max Fitness Gear Max,Fitness Gear,"Sports, Toys & Others",4388,35,2852,True,6
+Ultra Makeup Lite,Makeup,Beauty & Personal Care,904,20,723,True,6
+Sarees 8715,Sarees,Clothing,11768,10,10591,True,3
+Style Activewear Elite,Activewear,Clothing,7936,0,7936,True,200
+Royal Shirts Edition,Shirts,Clothing,1452,40,871,False,0
+Trendy Home Decor 5000,Home Decor,Home & Kitchen,2526,0,2526,True,25
+Premium Dresses Elite,Dresses,Clothing,1243,5,1181,True,200
+Max Fragrances Ultra,Fragrances,Beauty & Personal Care,4542,5,4315,True,8
+Activewear 2009,Activewear,Clothing,17056,50,8528,True,20
+Luxury Jeans Plus,Jeans,Clothing,1368,25,1026,True,2
+Neo Speakers Series,Speakers,Electronics,9489,35,6168,True,5
+Speakers 4727,Speakers,Electronics,2473,5,2349,True,80
+Value Shoes Edition,Shoes,Clothing,1758,25,1318,True,50
+Kitchen Appliances 7858,Kitchen Appliances,Home & Kitchen,4287,20,3430,True,8
+Shirts 8779,Shirts,Clothing,1283,40,770,True,8
+Pro Shoes Special,Shoes,Clothing,2399,50,1200,True,12
+Trendy Gaming Consoles Pro,Gaming Consoles,Electronics,1038,0,1038,True,0
+Royal Laptops 2024,Laptops,Electronics,63369,25,47527,True,6
+Super Sofas Collection,Sofas,Furniture,5159,0,5159,True,5
+Elite Gaming Consoles Z,Gaming Consoles,Electronics,1984,20,1587,True,6
+Beds 3067,Beds,Furniture,6508,5,6183,True,60
+Ultra Dresses Series,Dresses,Clothing,4258,5,4045,True,7
+Value Tablets 2024,Tablets,Electronics,3697,10,3327,True,5
+Speakers 5225,Speakers,Electronics,10949,25,8212,True,12
+Luxury Sneakers Max,Sneakers,Clothing,13192,10,11873,True,100
+Royal Sneakers Edition,Sneakers,Clothing,2472,30,1730,True,6
+Value Laptops Elite,Laptops,Electronics,2331,10,2098,True,3
+Value T-Shirts X,T-Shirts,Clothing,3446,0,3446,True,8
+Dresses 9561,Dresses,Clothing,247,35,161,True,40
+T-Shirts 2843,T-Shirts,Clothing,687,5,653,True,15
+Elite Televisions Plus,Televisions,Electronics,29130,15,24760,True,60
+T-Shirts 2654,T-Shirts,Clothing,41816,25,31362,False,0
+Fragrances 9775,Fragrances,Beauty & Personal Care,3565,10,3208,True,50
+Kurtas 7732,Kurtas,Clothing,10427,0,10427,False,0
+Style Sneakers Special,Sneakers,Clothing,7385,10,6646,True,12
+Classic Skincare Pro,Skincare,Beauty & Personal Care,269717,60,107887,True,2
+Trendy Kitchen Appliances 2024,Kitchen Appliances,Home & Kitchen,21121,25,15841,True,500
+Style Office Chairs Edition,Office Chairs,Furniture,4173,25,3130,True,8
+Neo Smartphones Ultra,Smartphones,Electronics,1423,25,1067,True,5
+Classic Wardrobes Elite,Wardrobes,Furniture,610,0,610,True,25
+Kitchen Appliances 1331,Kitchen Appliances,Home & Kitchen,6419,10,5777,True,7
+Super Skincare Lite,Skincare,Beauty & Personal Care,1843,30,1290,True,15
+Value Fitness Gear Special,Fitness Gear,"Sports, Toys & Others",776,0,776,True,15
+T-Shirts 2609,T-Shirts,Clothing,2126,5,2020,True,10
+Activewear 4734,Activewear,Clothing,1208,5,1148,True,80
+Luxury Dresses Collection,Dresses,Clothing,44173,15,37547,True,6
+Sarees 6257,Sarees,Clothing,15502,70,4651,False,0
+Trendy Televisions Max,Televisions,Electronics,4877,0,4877,True,12
+Pro Televisions Series,Televisions,Electronics,33742,15,28681,False,0
+T-Shirts 9462,T-Shirts,Clothing,5449,0,5449,True,50
+Smartphones 1920,Smartphones,Electronics,1608,60,643,True,9
+Elite Wardrobes Max,Wardrobes,Furniture,35691,0,35691,True,25
+Royal Sneakers Edition,Sneakers,Clothing,9929,10,8936,True,5
+Value T-Shirts X,T-Shirts,Clothing,1279,30,895,True,300
+Value Smartwatches Z,Smartwatches,Electronics,3847,30,2693,True,8
+Jeans 5087,Jeans,Clothing,1579,15,1342,True,40
+Premium Headphones 5000,Headphones,Electronics,816,10,734,True,1
+Shoes 5488,Shoes,Clothing,16426,10,14783,True,5
+Classic Smartphones Edition,Smartphones,Electronics,58973,5,56024,True,10
+Ultra Office Chairs X,Office Chairs,Furniture,800,0,800,True,100
+Classic Dresses Collection,Dresses,Clothing,10244,15,8707,True,12
+Value Smartphones Special,Smartphones,Electronics,2115,5,2009,True,200
+Neo Shoes 5000,Shoes,Clothing,2616,5,2485,True,10
+Max Tablets Max,Tablets,Electronics,2281,25,1711,True,12
+Trendy Jeans Pro,Jeans,Clothing,1603,60,641,True,4
+Vogue Laptops Z,Laptops,Electronics,5248,20,4198,True,60
+Office Chairs 4688,Office Chairs,Furniture,1673,0,1673,True,6
+Max Televisions Series,Televisions,Electronics,7004,0,7004,True,150
+Value Beds X,Beds,Furniture,4616,60,1846,True,200
+Elite Kitchen Appliances S,Kitchen Appliances,Home & Kitchen,3612,5,3431,False,0
+Premium Office Chairs Ultra,Office Chairs,Furniture,1514,0,1514,False,0
+Super Kitchen Appliances Lite,Kitchen Appliances,Home & Kitchen,2328,20,1862,True,25
+Home Decor 5511,Home Decor,Home & Kitchen,13155,25,9866,True,50
+Trendy Speakers 5000,Speakers,Electronics,9450,25,7088,True,4
+Pro Laptops Collection,Laptops,Electronics,1383,5,1314,True,20
+Royal Smartphones Edition,Smartphones,Electronics,5607,0,5607,True,2
+Premium Dresses 5000,Dresses,Clothing,13087,60,5235,True,12
+Vogue Toys Lite,Toys,"Sports, Toys & Others",562,5,534,False,0
+Ultra Wardrobes Special,Wardrobes,Furniture,9986,25,7490,True,5
+Max Shoes 3000,Shoes,Clothing,2082,30,1457,True,8
+Kitchen Appliances 5278,Kitchen Appliances,Home & Kitchen,10346,25,7760,True,9
+Style Shoes Lite,Shoes,Clothing,1827,10,1644,True,20
+Royal Kitchen Appliances Ultra,Kitchen Appliances,Home & Kitchen,472,5,448,True,3
+Fitness Gear 7620,Fitness Gear,"Sports, Toys & Others",594,20,475,False,0
+Style Televisions 2024,Televisions,Electronics,5245,40,3147,True,5
+Smartphones 9148,Smartphones,Electronics,6907,60,2763,True,15
+Tablets 5250,Tablets,Electronics,1521,0,1521,True,20
+Headphones 7628,Headphones,Electronics,11302,0,11302,True,15
+Premium Shoes Z,Shoes,Clothing,568,60,227,True,40
+Luxury Dresses Ultra,Dresses,Clothing,4522,30,3165,True,8
+Style Televisions Special,Televisions,Electronics,1021,50,510,True,50
+Sneakers 6873,Sneakers,Clothing,2112,0,2112,True,9
+Value Kitchen Appliances S,Kitchen Appliances,Home & Kitchen,5241,20,4193,True,10
+Smartwatches 3967,Smartwatches,Electronics,1610,30,1127,True,25
+Classic Sarees 2024,Sarees,Clothing,2989,25,2242,True,1
+Activewear 3999,Activewear,Clothing,18229,10,16406,True,25
+Headphones 6499,Headphones,Electronics,2328,0,2328,True,20
+Pro Home Decor 5000,Home Decor,Home & Kitchen,14603,20,11682,True,7
+Value Fitness Gear Lite,Fitness Gear,"Sports, Toys & Others",1135,5,1078,True,3
+Neo Headphones 5000,Headphones,Electronics,9812,15,8340,True,3
+Max Smartphones Collection,Smartphones,Electronics,32100,60,12840,True,200
+Beds 8709,Beds,Furniture,198,10,178,True,30
+Style Sneakers Max,Sneakers,Clothing,1749,40,1049,True,4
+Pro Fitness Gear Plus,Fitness Gear,"Sports, Toys & Others",10434,0,10434,True,8
+Office Chairs 7253,Office Chairs,Furniture,3784,25,2838,True,20
+Trendy Activewear Pro,Activewear,Clothing,7983,60,3193,True,80
+Laptops 3470,Laptops,Electronics,2247,0,2247,True,2
+Pro Sneakers 3000,Sneakers,Clothing,5515,0,5515,True,6
+Vogue Shoes Collection,Shoes,Clothing,4025,15,3421,True,100
+Value Headphones S,Headphones,Electronics,22487,0,22487,True,0
+Kitchen Appliances 8988,Kitchen Appliances,Home & Kitchen,6859,30,4801,True,5
+Elite Skincare 3000,Skincare,Beauty & Personal Care,7642,50,3821,True,500
+Premium Sarees Collection,Sarees,Clothing,2885,15,2452,True,20
+Super Headphones S,Headphones,Electronics,2614,5,2483,True,6
+Elite Toys Special,Toys,"Sports, Toys & Others",2808,15,2387,True,3
+Cookware 2442,Cookware,Home & Kitchen,8229,30,5760,True,1
+Trendy Wardrobes Series,Wardrobes,Furniture,2851,0,2851,True,6
+Classic T-Shirts Edition,T-Shirts,Clothing,7182,20,5746,True,100
+Royal Dining Sets Z,Dining Sets,Furniture,73175,25,54881,False,0
+Shirts 1230,Shirts,Clothing,15291,25,11468,False,0
+Wardrobes 9700,Wardrobes,Furniture,3225,5,3064,True,200
+Style Skincare X,Skincare,Beauty & Personal Care,23486,30,16440,True,9
+Pro Home Decor Ultra,Home Decor,Home & Kitchen,2899,0,2899,True,5
+Neo Headphones Lite,Headphones,Electronics,348,0,348,True,12
+Trendy Fitness Gear Lite,Fitness Gear,"Sports, Toys & Others",1329,50,664,True,150
+Value Shoes Pro,Shoes,Clothing,433,30,303,True,60
+Max Home Decor Collection,Home Decor,Home & Kitchen,3120,0,3120,True,3
+Sneakers 9587,Sneakers,Clothing,5047,5,4795,True,30
+Style T-Shirts 2024,T-Shirts,Clothing,43563,0,43563,True,15
+Classic Activewear 5000,Activewear,Clothing,7537,5,7160,True,150
+Fitness Gear 3701,Fitness Gear,"Sports, Toys & Others",3706,5,3521,False,0
+Gaming Consoles 7609,Gaming Consoles,Electronics,14484,0,14484,True,12
+Pro Home Decor 2024,Home Decor,Home & Kitchen,278,15,236,True,100
+Premium Dresses S,Dresses,Clothing,6693,30,4685,False,0
+Luxury Jeans Pro,Jeans,Clothing,13423,20,10738,True,10
+Style T-Shirts Elite,T-Shirts,Clothing,721,25,541,True,3
+Activewear 1796,Activewear,Clothing,21796,0,21796,True,7
+Premium Gaming Consoles Plus,Gaming Consoles,Electronics,7651,60,3060,True,7
+Premium Skincare Pro,Skincare,Beauty & Personal Care,2872,40,1723,True,300
+Trendy Home Decor Collection,Home Decor,Home & Kitchen,11217,35,7291,True,7
+Royal Laptops Elite,Laptops,Electronics,94324,40,56594,True,10
+Elite Makeup Z,Makeup,Beauty & Personal Care,6242,50,3121,True,25
+Style Speakers X,Speakers,Electronics,6804,20,5443,True,5
+Style Jeans Plus,Jeans,Clothing,2712,0,2712,False,0
+Max Sarees 2024,Sarees,Clothing,1632,25,1224,True,40
+Ultra Office Chairs Plus,Office Chairs,Furniture,14502,30,10151,True,100
+Super Smartphones Plus,Smartphones,Electronics,1619,30,1133,True,20
+Vogue Skincare Z,Skincare,Beauty & Personal Care,5408,20,4326,True,25
+Smartwatches 9571,Smartwatches,Electronics,2648,0,2648,False,0
+Televisions 6864,Televisions,Electronics,9184,10,8266,True,300
+Cookware 5839,Cookware,Home & Kitchen,7603,50,3802,True,4
+Royal Wardrobes Special,Wardrobes,Furniture,18985,20,15188,True,50
+Makeup 8875,Makeup,Beauty & Personal Care,2539,20,2031,True,6
+Premium Sneakers X,Sneakers,Clothing,3469,5,3296,True,300
+Ultra Gaming Consoles Special,Gaming Consoles,Electronics,1380,10,1242,False,0
+Ultra Smartphones Max,Smartphones,Electronics,2766,50,1383,True,40
+Fitness Gear 2659,Fitness Gear,"Sports, Toys & Others",8047,25,6035,False,0
+Laptops 4787,Laptops,Electronics,13183,35,8569,True,10
+Max Activewear Elite,Activewear,Clothing,1486,15,1263,True,20
+Ultra Jeans S,Jeans,Clothing,15261,25,11446,True,50
+Kitchen Appliances 5760,Kitchen Appliances,Home & Kitchen,28708,5,27273,True,4
+Style Sneakers 3000,Sneakers,Clothing,8434,30,5904,False,0
+Ultra Shoes Plus,Shoes,Clothing,56524,15,48045,True,150
+Jeans 1751,Jeans,Clothing,1802,15,1532,True,7
+Elite Cookware S,Cookware,Home & Kitchen,977,25,733,True,60
+Classic Headphones Elite,Headphones,Electronics,488,50,244,True,12
+Televisions 2522,Televisions,Electronics,34456,0,34456,True,10
+Neo Sneakers S,Sneakers,Clothing,11536,40,6922,True,7
+Trendy Sofas Collection,Sofas,Furniture,4584,5,4355,True,15
+Trendy Kurtas Special,Kurtas,Clothing,7091,15,6027,True,40
+Jeans 3732,Jeans,Clothing,1141,0,1141,True,9
+Luxury Shirts Pro,Shirts,Clothing,118428,5,112507,True,20
+T-Shirts 3611,T-Shirts,Clothing,5829,15,4955,True,30
+Vogue Activewear Special,Activewear,Clothing,5681,0,5681,True,30
+Beds 8178,Beds,Furniture,12658,15,10759,False,0
+Trendy Sneakers 5000,Sneakers,Clothing,9209,50,4604,True,80
+Value Gaming Consoles 2024,Gaming Consoles,Electronics,6592,0,6592,True,10
+Classic Speakers Plus,Speakers,Electronics,1763,35,1146,True,6
+Headphones 8220,Headphones,Electronics,9095,10,8186,True,6
+Max Televisions 3000,Televisions,Electronics,56909,25,42682,True,10
+Value Headphones Ultra,Headphones,Electronics,28329,5,26913,True,100
+Dresses 6542,Dresses,Clothing,39094,0,39094,True,8
+Luxury Kitchen Appliances Plus,Kitchen Appliances,Home & Kitchen,2535,0,2535,True,40
+Luxury Smartwatches Ultra,Smartwatches,Electronics,1361,0,1361,True,3
+Style Televisions Edition,Televisions,Electronics,4184,0,4184,True,10
+Value Jeans Pro,Jeans,Clothing,5298,25,3974,False,0
+Elite Activewear Special,Activewear,Clothing,20436,50,10218,True,50
+Toys 3709,Toys,"Sports, Toys & Others",546,35,355,True,6
+Classic Shirts 3000,Shirts,Clothing,35990,25,26992,False,0
+Max Gaming Consoles Pro,Gaming Consoles,Electronics,4013,0,4013,True,6
+Royal Headphones Edition,Headphones,Electronics,2829,5,2688,True,9
+Pro Televisions Max,Televisions,Electronics,1322,5,1256,True,50
+Super Televisions Collection,Televisions,Electronics,573,5,544,False,0
+Classic Smartwatches Collection,Smartwatches,Electronics,14367,15,12212,True,6
+Classic Smartphones X,Smartphones,Electronics,5420,20,4336,False,0
+Trendy Shirts Pro,Shirts,Clothing,921,10,829,True,20
+Premium Gaming Consoles Max,Gaming Consoles,Electronics,915,10,824,True,8
+Toys 5990,Toys,"Sports, Toys & Others",3185,40,1911,False,0
+Dresses 4389,Dresses,Clothing,43145,35,28044,True,20
+Classic Sneakers 3000,Sneakers,Clothing,3516,5,3340,True,15
+Premium Headphones Ultra,Headphones,Electronics,698,50,349,True,10
+Skincare 6439,Skincare,Beauty & Personal Care,3580,60,1432,True,12
+Vogue Jeans Special,Jeans,Clothing,3457,10,3111,False,0
+Makeup 6952,Makeup,Beauty & Personal Care,148,10,133,True,60
+Kurtas 2868,Kurtas,Clothing,4592,15,3903,True,15
+Style Jeans Ultra,Jeans,Clothing,3650,60,1460,True,4
+Neo T-Shirts Lite,T-Shirts,Clothing,12181,50,6090,True,50
+Neo Smartwatches Plus,Smartwatches,Electronics,54515,0,54515,True,300
+Elite Laptops Special,Laptops,Electronics,21314,10,19183,True,300
+Luxury Sports Equipment Series,Sports Equipment,"Sports, Toys & Others",3474,20,2779,True,8
+Vogue Jeans Z,Jeans,Clothing,1169,15,994,False,0
+Value Home Decor Edition,Home Decor,Home & Kitchen,139798,0,139798,True,12
+Value T-Shirts Z,T-Shirts,Clothing,5322,40,3193,True,4
+Laptops 2765,Laptops,Electronics,5018,25,3764,False,0
+Shoes 1761,Shoes,Clothing,4775,40,2865,True,5
+Laptops 3018,Laptops,Electronics,6375,40,3825,True,6
+Tablets 8381,Tablets,Electronics,4084,30,2859,True,9
+Vogue Dresses 2024,Dresses,Clothing,2337,15,1986,True,8
+Sofas 1071,Sofas,Furniture,2420,25,1815,True,50
+Premium Toys Series,Toys,"Sports, Toys & Others",4722,0,4722,False,0
+Headphones 8912,Headphones,Electronics,2431,25,1823,True,5
+Kitchen Appliances 3903,Kitchen Appliances,Home & Kitchen,1951,0,1951,True,6
+Elite Sarees 2024,Sarees,Clothing,5659,30,3961,True,12
+Style Cookware 3000,Cookware,Home & Kitchen,3537,5,3360,True,4
+Trendy Televisions Series,Televisions,Electronics,34814,0,34814,True,20
+Shirts 5067,Shirts,Clothing,157,0,157,True,15
+Neo T-Shirts Lite,T-Shirts,Clothing,20364,0,20364,True,30
+Elite T-Shirts 2024,T-Shirts,Clothing,24897,30,17428,True,300
+Luxury Skincare Lite,Skincare,Beauty & Personal Care,333,30,233,True,200
+Toys 9975,Toys,"Sports, Toys & Others",3156,15,2683,True,300
+Sofas 4560,Sofas,Furniture,3040,0,3040,True,6
+Vogue Sarees Lite,Sarees,Clothing,791,0,791,True,4
+Style Sarees 2024,Sarees,Clothing,1793,0,1793,True,7
+Activewear 3913,Activewear,Clothing,1163,0,1163,True,150
+Luxury Fitness Gear 3000,Fitness Gear,"Sports, Toys & Others",48076,50,24038,True,500
+Televisions 6771,Televisions,Electronics,16630,5,15798,True,80
+Vogue Televisions Series,Televisions,Electronics,25735,10,23162,False,0
+Value Shoes Lite,Shoes,Clothing,12591,0,12591,True,300
+Tablets 7920,Tablets,Electronics,1135,5,1078,True,9
+Smartwatches 9564,Smartwatches,Electronics,2492,15,2118,True,0
+Trendy Laptops 2024,Laptops,Electronics,9309,20,7447,True,10
+Premium Smartphones Z,Smartphones,Electronics,1006,5,956,True,2
+Super T-Shirts S,T-Shirts,Clothing,12450,0,12450,True,15
+Kurtas 5105,Kurtas,Clothing,3605,10,3244,True,8
+Premium Sofas Lite,Sofas,Furniture,3027,5,2876,True,10
+Royal Speakers Pro,Speakers,Electronics,12417,0,12417,True,20
+Classic Sneakers Plus,Sneakers,Clothing,8779,60,3512,True,100
+Style Sneakers Ultra,Sneakers,Clothing,3082,25,2312,True,25
+Jeans 7371,Jeans,Clothing,22241,20,17793,True,9
+Super Sneakers Lite,Sneakers,Clothing,1209,10,1088,False,0
+Premium Sports Equipment Edition,Sports Equipment,"Sports, Toys & Others",10974,15,9328,True,150
+Super Cookware 3000,Cookware,Home & Kitchen,10653,20,8522,True,4
+Shoes 1881,Shoes,Clothing,3295,30,2306,False,0
+Max Shoes Z,Shoes,Clothing,7529,30,5270,True,7
+Super Sports Equipment Collection,Sports Equipment,"Sports, Toys & Others",969,0,969,True,2
+T-Shirts 7025,T-Shirts,Clothing,16380,15,13923,True,25
+Dresses 9955,Dresses,Clothing,3875,10,3488,True,100
+Shoes 4218,Shoes,Clothing,2497,50,1248,True,5
+Fragrances 4170,Fragrances,Beauty & Personal Care,19270,25,14452,True,60
+Elite Home Decor Max,Home Decor,Home & Kitchen,1972,20,1578,True,80
+Elite Laptops Plus,Laptops,Electronics,790,0,790,False,0
+Trendy Smartwatches Elite,Smartwatches,Electronics,651,20,521,True,6
+Elite Sofas S,Sofas,Furniture,10833,0,10833,True,150
+Max Activewear X,Activewear,Clothing,933,10,840,True,7
+Luxury Kurtas 2024,Kurtas,Clothing,48234,0,48234,True,15
+Neo Sofas Pro,Sofas,Furniture,329,30,230,True,2
+Headphones 5934,Headphones,Electronics,44711,0,44711,True,2
+Vogue Sneakers 5000,Sneakers,Clothing,6483,10,5835,True,40
+Luxury Sneakers 3000,Sneakers,Clothing,4345,50,2172,False,0
+Elite Sports Equipment Max,Sports Equipment,"Sports, Toys & Others",2426,0,2426,True,6
+Shirts 3611,Shirts,Clothing,8279,15,7037,True,5
+Royal Jeans Edition,Jeans,Clothing,4692,10,4223,True,25
+Pro Laptops Z,Laptops,Electronics,20679,0,20679,True,0
+Neo Smartphones 5000,Smartphones,Electronics,5716,35,3715,False,0
+Super T-Shirts Special,T-Shirts,Clothing,5991,0,5991,True,3
+Beds 1144,Beds,Furniture,3071,15,2610,True,5
+Neo Speakers Collection,Speakers,Electronics,4576,20,3661,True,8
+Style Headphones Ultra,Headphones,Electronics,7352,25,5514,True,10
+Fitness Gear 6258,Fitness Gear,"Sports, Toys & Others",533,25,400,True,8
+Super Home Decor Plus,Home Decor,Home & Kitchen,854,5,811,True,7
+Royal Kurtas Lite,Kurtas,Clothing,12950,0,12950,True,500
+Royal Fitness Gear 5000,Fitness Gear,"Sports, Toys & Others",6153,30,4307,True,25
+Royal Toys Collection,Toys,"Sports, Toys & Others",3879,20,3103,True,1
+Max Sneakers Z,Sneakers,Clothing,5047,40,3028,True,9
+Ultra Gaming Consoles Plus,Gaming Consoles,Electronics,7742,40,4645,True,100
+Super Smartphones X,Smartphones,Electronics,2443,40,1466,True,7
+Pro Kitchen Appliances Z,Kitchen Appliances,Home & Kitchen,1791,15,1522,True,3
+Jeans 7950,Jeans,Clothing,6356,10,5720,False,0
+Shoes 4368,Shoes,Clothing,1381,35,898,True,20
+Luxury Fragrances Series,Fragrances,Beauty & Personal Care,8378,15,7121,False,0
+Ultra Smartwatches 2024,Smartwatches,Electronics,539,0,539,True,2
+Luxury Kurtas 3000,Kurtas,Clothing,18779,40,11267,True,4
+Ultra Shoes Pro,Shoes,Clothing,9108,50,4554,False,0
+Max Jeans Max,Jeans,Clothing,6873,15,5842,True,5
+Pro Headphones Elite,Headphones,Electronics,17678,0,17678,True,12
+Classic Wardrobes Edition,Wardrobes,Furniture,42946,10,38651,False,0
+Premium Beds Edition,Beds,Furniture,18421,35,11974,True,7
+Royal Shoes X,Shoes,Clothing,450,50,225,True,300
+Vogue Skincare Max,Skincare,Beauty & Personal Care,934,0,934,True,80
+Beds 1745,Beds,Furniture,2187,0,2187,True,40
+Sneakers 2189,Sneakers,Clothing,5097,50,2548,True,3
+Royal Sofas Plus,Sofas,Furniture,9658,10,8692,True,4
+Style Fitness Gear Lite,Fitness Gear,"Sports, Toys & Others",1918,20,1534,True,12
+Max Home Decor Collection,Home Decor,Home & Kitchen,6282,60,2513,True,5
+Value Dresses X,Dresses,Clothing,1846,0,1846,True,500
+Royal Jeans Ultra,Jeans,Clothing,2225,25,1669,True,5
+Trendy Beds Lite,Beds,Furniture,791,0,791,True,10
+Beds 3360,Beds,Furniture,1484,10,1336,True,8
+Super Toys 5000,Toys,"Sports, Toys & Others",850,35,552,True,20
+T-Shirts 1182,T-Shirts,Clothing,1386,15,1178,True,4
+Royal Shirts 2024,Shirts,Clothing,19386,70,5816,True,9
+Premium Toys Edition,Toys,"Sports, Toys & Others",1434,20,1147,True,7
+Ultra Shoes Lite,Shoes,Clothing,150947,10,135852,False,0
+Luxury Dresses 5000,Dresses,Clothing,9357,5,8889,True,2
+Style T-Shirts 2024,T-Shirts,Clothing,6266,10,5639,True,200
+Pro Smartwatches Elite,Smartwatches,Electronics,1614,10,1453,True,80
+Elite Dining Sets Pro,Dining Sets,Furniture,12246,0,12246,True,7
+Kitchen Appliances 9992,Kitchen Appliances,Home & Kitchen,2331,10,2098,False,0
+Royal Shoes Max,Shoes,Clothing,5774,15,4908,False,0
+Ultra Kitchen Appliances Elite,Kitchen Appliances,Home & Kitchen,137406,30,96184,True,500
+Luxury Televisions Special,Televisions,Electronics,4349,25,3262,True,12
+Dresses 6851,Dresses,Clothing,21953,30,15367,False,0
+Style Sports Equipment Ultra,Sports Equipment,"Sports, Toys & Others",1975,0,1975,False,0
+Vogue T-Shirts Max,T-Shirts,Clothing,4708,0,4708,True,3
+Sneakers 6206,Sneakers,Clothing,49248,25,36936,True,500
+Neo Headphones Lite,Headphones,Electronics,2181,15,1854,True,2
+Elite Toys 5000,Toys,"Sports, Toys & Others",51988,0,51988,False,0
+Sarees 8017,Sarees,Clothing,12365,35,8037,True,10
+Neo Speakers Ultra,Speakers,Electronics,2372,35,1542,True,300
+Tablets 8145,Tablets,Electronics,11212,20,8970,True,6
+Neo Dresses 2024,Dresses,Clothing,17447,0,17447,True,12
+Neo Dresses Special,Dresses,Clothing,11058,35,7188,True,10
+Neo Headphones Lite,Headphones,Electronics,640,20,512,False,0
+Ultra Toys S,Toys,"Sports, Toys & Others",1915,35,1245,True,3
+Ultra Fragrances Elite,Fragrances,Beauty & Personal Care,3572,30,2500,True,5
+Jeans 3293,Jeans,Clothing,4473,35,2907,True,6
+Headphones 4218,Headphones,Electronics,11042,15,9386,True,40
+Style Home Decor Max,Home Decor,Home & Kitchen,6208,0,6208,True,5
+Shirts 1305,Shirts,Clothing,868,25,651,True,15
+Activewear 1511,Activewear,Clothing,8078,25,6058,True,6
+Shirts 7637,Shirts,Clothing,10898,30,7629,True,100
+Gaming Consoles 4485,Gaming Consoles,Electronics,10202,0,10202,True,300
+Home Decor 5269,Home Decor,Home & Kitchen,20082,0,20082,True,12
+Royal Toys Special,Toys,"Sports, Toys & Others",14569,50,7284,False,0
+Elite Speakers 5000,Speakers,Electronics,8951,30,6266,False,0
+Super Dresses Lite,Dresses,Clothing,4498,50,2249,True,2
+Royal Office Chairs Max,Office Chairs,Furniture,569,30,398,True,6
+Royal Sports Equipment X,Sports Equipment,"Sports, Toys & Others",8614,20,6891,False,0
+Value Shirts S,Shirts,Clothing,6455,25,4841,True,12
+Makeup 3299,Makeup,Beauty & Personal Care,7014,50,3507,True,300
+Elite Skincare 2024,Skincare,Beauty & Personal Care,937,20,750,False,0
+Gaming Consoles 8921,Gaming Consoles,Electronics,1209,25,907,True,30
+Cookware 1662,Cookware,Home & Kitchen,19374,0,19374,True,10
+Classic T-Shirts Ultra,T-Shirts,Clothing,4681,15,3979,False,0
+Neo Sports Equipment Ultra,Sports Equipment,"Sports, Toys & Others",11951,30,8366,True,6
+Pro Shirts 5000,Shirts,Clothing,5112,5,4856,True,10
+Classic Home Decor Pro,Home Decor,Home & Kitchen,5122,0,5122,True,10
+Style Gaming Consoles 3000,Gaming Consoles,Electronics,16686,10,15017,True,30
+Royal Sofas Elite,Sofas,Furniture,2519,5,2393,True,300
+Kurtas 5314,Kurtas,Clothing,5583,0,5583,True,7
+Vogue Toys S,Toys,"Sports, Toys & Others",2702,15,2297,False,0
+Trendy Jeans 5000,Jeans,Clothing,2801,50,1400,True,12
+Value Tablets Max,Tablets,Electronics,3297,15,2802,True,15
+Trendy Dresses Ultra,Dresses,Clothing,6577,0,6577,True,5
+Neo Wardrobes 5000,Wardrobes,Furniture,2644,0,2644,True,50
+Classic Dresses X,Dresses,Clothing,25212,30,17648,True,500
+Elite Dresses Collection,Dresses,Clothing,1540,10,1386,False,0
+Ultra Jeans Elite,Jeans,Clothing,3865,40,2319,True,5
+Elite Beds S,Beds,Furniture,2782,25,2086,True,100
+Luxury Smartwatches Plus,Smartwatches,Electronics,32327,35,21013,True,30
+Trendy Sneakers 3000,Sneakers,Clothing,6362,5,6044,True,10
+Kurtas 8889,Kurtas,Clothing,18845,30,13192,True,15
+Classic Speakers Z,Speakers,Electronics,714,5,678,True,80
+Style Kitchen Appliances Series,Kitchen Appliances,Home & Kitchen,6973,50,3486,True,10
+Premium Smartphones 2024,Smartphones,Electronics,15664,25,11748,False,0
+Elite Activewear 2024,Activewear,Clothing,5484,10,4936,True,12
+Premium Sneakers 2024,Sneakers,Clothing,19687,5,18703,True,15
+Max Home Decor S,Home Decor,Home & Kitchen,2515,0,2515,True,5
+Trendy Office Chairs X,Office Chairs,Furniture,30784,30,21549,True,150
+Shoes 5644,Shoes,Clothing,97846,0,97846,True,25
+Home Decor 4548,Home Decor,Home & Kitchen,3074,20,2459,True,20
+Classic Toys Special,Toys,"Sports, Toys & Others",2761,5,2623,True,3
+Value Jeans Series,Jeans,Clothing,32597,25,24448,True,20
+Super Smartphones S,Smartphones,Electronics,38408,35,24965,True,4
+Royal Shirts Elite,Shirts,Clothing,2497,35,1623,True,3
+Style Kurtas 3000,Kurtas,Clothing,2854,35,1855,True,12
+Makeup 2127,Makeup,Beauty & Personal Care,3416,0,3416,True,9
+Trendy Makeup 2024,Makeup,Beauty & Personal Care,858,0,858,True,15
+Pro T-Shirts Series,T-Shirts,Clothing,1493,30,1045,True,3
+Shirts 2577,Shirts,Clothing,1336,10,1202,True,9
+Vogue Jeans Pro,Jeans,Clothing,1816,15,1544,True,5
+Activewear 9706,Activewear,Clothing,4710,0,4710,True,500
+Ultra T-Shirts Max,T-Shirts,Clothing,6681,5,6347,True,15
+Elite Shoes X,Shoes,Clothing,36984,0,36984,True,30
+Tablets 8069,Tablets,Electronics,1346,50,673,True,7
+Neo Jeans Pro,Jeans,Clothing,17716,5,16830,True,3
+Trendy Toys Ultra,Toys,"Sports, Toys & Others",3731,20,2985,False,0
+Wardrobes 8899,Wardrobes,Furniture,4621,0,4621,True,7
+Sneakers 7246,Sneakers,Clothing,11847,25,8885,True,9
+Super Shoes Plus,Shoes,Clothing,1145,10,1030,True,25
+Max Skincare Special,Skincare,Beauty & Personal Care,8101,50,4050,True,1
+Skincare 2373,Skincare,Beauty & Personal Care,6118,50,3059,True,60
+Royal Skincare Series,Skincare,Beauty & Personal Care,9347,10,8412,True,12
+Premium Office Chairs X,Office Chairs,Furniture,7176,50,3588,True,7
+Ultra Beds X,Beds,Furniture,119907,70,35972,True,3
+Pro Activewear 3000,Activewear,Clothing,2151,40,1291,True,5
+Ultra Kitchen Appliances 2024,Kitchen Appliances,Home & Kitchen,2471,40,1483,True,150
+Vogue Makeup Elite,Makeup,Beauty & Personal Care,2192,5,2082,True,30
+Royal Smartphones Series,Smartphones,Electronics,2393,20,1914,True,6
+Vogue Laptops Elite,Laptops,Electronics,2152,0,2152,True,3
+Shoes 7511,Shoes,Clothing,23117,0,23117,False,0
+Sports Equipment 7770,Sports Equipment,"Sports, Toys & Others",31233,70,9370,False,0
+Royal Toys Special,Toys,"Sports, Toys & Others",2346,10,2111,True,9
+Royal Activewear Special,Activewear,Clothing,1670,30,1169,True,8
+Max T-Shirts 5000,T-Shirts,Clothing,9095,35,5912,False,0
+Headphones 7522,Headphones,Electronics,2404,40,1442,False,0
+Shoes 2951,Shoes,Clothing,11219,70,3366,True,500
+Makeup 8317,Makeup,Beauty & Personal Care,6415,5,6094,True,5
+T-Shirts 3650,T-Shirts,Clothing,687,0,687,True,20
+Royal Sneakers Edition,Sneakers,Clothing,36840,10,33156,True,9
+Fragrances 1852,Fragrances,Beauty & Personal Care,50880,0,50880,True,10
+Style Smartphones X,Smartphones,Electronics,2222,0,2222,True,6
+Cookware 3381,Cookware,Home & Kitchen,2977,10,2679,True,60
+Vogue Sofas Series,Sofas,Furniture,7145,35,4644,True,10
+Max Office Chairs Ultra,Office Chairs,Furniture,7611,20,6089,True,15
+Vogue Tablets Pro,Tablets,Electronics,11599,10,10439,True,7
+Shirts 7564,Shirts,Clothing,67228,25,50421,True,5
+Royal Kurtas Lite,Kurtas,Clothing,3915,5,3719,True,3
+Cookware 1941,Cookware,Home & Kitchen,1746,0,1746,True,30
+Smartwatches 3871,Smartwatches,Electronics,820,35,533,True,5
+Classic Laptops X,Laptops,Electronics,1905,25,1429,True,30
+Style Makeup Lite,Makeup,Beauty & Personal Care,4720,35,3068,False,0
+Super Sarees Ultra,Sarees,Clothing,50793,0,50793,True,9
+Style Speakers Pro,Speakers,Electronics,2514,40,1508,True,10
+Style Fragrances X,Fragrances,Beauty & Personal Care,6591,25,4943,True,8
+Tablets 2422,Tablets,Electronics,4823,20,3858,False,0
+Jeans 7544,Jeans,Clothing,23098,25,17324,True,7
+Trendy Speakers Edition,Speakers,Electronics,131610,40,78966,True,25
+Royal Speakers X,Speakers,Electronics,2471,20,1977,True,25
+Smartphones 2124,Smartphones,Electronics,2608,20,2086,True,7
+Cookware 5661,Cookware,Home & Kitchen,19149,70,5745,True,10
+Fragrances 6703,Fragrances,Beauty & Personal Care,11957,30,8370,True,5
+Value Sneakers Elite,Sneakers,Clothing,54356,15,46203,True,6
+Pro Tablets Collection,Tablets,Electronics,10527,30,7369,True,1
+T-Shirts 1076,T-Shirts,Clothing,3089,10,2780,True,150
+Trendy Wardrobes Plus,Wardrobes,Furniture,10619,5,10088,True,6
+Royal Kurtas Lite,Kurtas,Clothing,20825,20,16660,True,6
+Ultra Shoes Elite,Shoes,Clothing,14317,50,7158,True,7
+T-Shirts 5098,T-Shirts,Clothing,9528,50,4764,True,4
+Trendy Speakers Special,Speakers,Electronics,19718,10,17746,True,20
+Skincare 6565,Skincare,Beauty & Personal Care,22531,20,18025,True,3
+Televisions 8517,Televisions,Electronics,29715,0,29715,True,4
+Vogue Office Chairs X,Office Chairs,Furniture,11452,70,3436,False,0
+Max Jeans Max,Jeans,Clothing,3965,70,1190,True,8
+Super Speakers Ultra,Speakers,Electronics,5963,25,4472,True,30
+Pro Kurtas 3000,Kurtas,Clothing,23648,35,15371,True,15
+Neo Kurtas X,Kurtas,Clothing,1704,30,1193,True,6
+Toys 5314,Toys,"Sports, Toys & Others",7957,20,6366,True,25
+Ultra Sofas Edition,Sofas,Furniture,2955,0,2955,True,4
+Value Toys 3000,Toys,"Sports, Toys & Others",5115,15,4348,True,12
+Elite Shoes Special,Shoes,Clothing,25967,25,19475,True,9
+Pro Gaming Consoles Elite,Gaming Consoles,Electronics,6317,25,4738,True,6
+Luxury Kurtas Z,Kurtas,Clothing,5234,10,4711,True,20
+Pro Sneakers Ultra,Sneakers,Clothing,841,60,336,True,100
+Activewear 5348,Activewear,Clothing,13000,0,13000,True,500
+Pro Smartphones Ultra,Smartphones,Electronics,11404,15,9693,True,20
+Sarees 6833,Sarees,Clothing,82028,30,57420,True,9
+Ultra Jeans Plus,Jeans,Clothing,3303,30,2312,False,0
+Fragrances 9071,Fragrances,Beauty & Personal Care,6552,25,4914,False,0
+Super Sofas Pro,Sofas,Furniture,6814,5,6473,True,10
+Cookware 7081,Cookware,Home & Kitchen,38303,0,38303,True,8
+Classic Sarees Elite,Sarees,Clothing,4353,25,3265,True,200
+Super Wardrobes Elite,Wardrobes,Furniture,7082,20,5666,True,8
+Super Shoes 2024,Shoes,Clothing,10860,0,10860,True,8
+Super Sarees Series,Sarees,Clothing,6280,30,4396,True,8
+Royal Sneakers Pro,Sneakers,Clothing,2758,15,2344,True,80
+Trendy Activewear S,Activewear,Clothing,6342,25,4756,True,25
+Ultra Shoes Collection,Shoes,Clothing,19897,40,11938,True,20
+Premium Home Decor X,Home Decor,Home & Kitchen,1297,0,1297,True,8
+Trendy Shoes Plus,Shoes,Clothing,5857,0,5857,True,60
+Vogue Fragrances Elite,Fragrances,Beauty & Personal Care,1983,35,1289,True,2
+Max Shoes Ultra,Shoes,Clothing,23299,20,18639,True,100
+Vogue Sofas 3000,Sofas,Furniture,680,30,476,True,12
+Classic T-Shirts Series,T-Shirts,Clothing,2383,40,1430,True,9
+Luxury Kurtas 5000,Kurtas,Clothing,8046,35,5230,True,12
+Trendy Activewear Elite,Activewear,Clothing,37713,60,15085,True,25
+Vogue Headphones 2024,Headphones,Electronics,4524,20,3619,True,1
+Sofas 4744,Sofas,Furniture,2394,15,2035,True,100
+Activewear 5422,Activewear,Clothing,56845,10,51160,True,10
+Smartwatches 8081,Smartwatches,Electronics,750,0,750,True,8
+Tablets 4212,Tablets,Electronics,283,20,226,True,4
+Luxury Dresses 2024,Dresses,Clothing,8731,5,8294,True,9
+Premium Toys S,Toys,"Sports, Toys & Others",2566,50,1283,True,12
+Elite Shirts 3000,Shirts,Clothing,1306,20,1045,True,9
+Fragrances 5915,Fragrances,Beauty & Personal Care,12375,20,9900,False,0
+Value Home Decor Pro,Home Decor,Home & Kitchen,6765,10,6088,True,9
+Luxury Speakers S,Speakers,Electronics,2367,0,2367,True,500
+Value Home Decor Elite,Home Decor,Home & Kitchen,933,0,933,True,20
+Style Jeans Plus,Jeans,Clothing,15318,15,13020,False,0
+Neo Cookware Elite,Cookware,Home & Kitchen,11474,0,11474,True,4
+Royal Activewear Elite,Activewear,Clothing,4331,20,3465,True,9
+Trendy Wardrobes Plus,Wardrobes,Furniture,54351,50,27176,True,8
+Style Headphones Z,Headphones,Electronics,1226,50,613,True,15
+Style Fitness Gear S,Fitness Gear,"Sports, Toys & Others",678,25,508,True,100
+Tablets 5663,Tablets,Electronics,2004,0,2004,True,3
+Style Fitness Gear Special,Fitness Gear,"Sports, Toys & Others",4644,40,2786,True,3
+Skincare 8322,Skincare,Beauty & Personal Care,6761,50,3380,False,0
+Activewear 7243,Activewear,Clothing,3601,0,3601,True,6
+Classic Toys 2024,Toys,"Sports, Toys & Others",7787,30,5451,True,25
+Fitness Gear 6527,Fitness Gear,"Sports, Toys & Others",968,5,920,True,15
+Vogue Cookware Edition,Cookware,Home & Kitchen,32192,35,20925,True,80
+Dining Sets 2168,Dining Sets,Furniture,4428,70,1328,True,4
+Neo Cookware Ultra,Cookware,Home & Kitchen,21059,0,21059,True,4
+Style Smartphones Lite,Smartphones,Electronics,7693,50,3846,True,15
+Dresses 7479,Dresses,Clothing,8923,25,6692,True,300
+Classic Jeans 5000,Jeans,Clothing,10335,60,4134,True,9
+Sneakers 9535,Sneakers,Clothing,8818,15,7495,True,7
+Sneakers 7782,Sneakers,Clothing,11363,40,6818,True,20
+Value Kurtas X,Kurtas,Clothing,27736,0,27736,True,300
+Pro Home Decor Elite,Home Decor,Home & Kitchen,6362,10,5726,True,80
+Sports Equipment 2311,Sports Equipment,"Sports, Toys & Others",12386,0,12386,False,0
+Trendy Headphones Plus,Headphones,Electronics,4385,60,1754,True,1
+Classic Speakers Pro,Speakers,Electronics,32040,35,20826,True,4
+Trendy Smartphones Max,Smartphones,Electronics,2045,40,1227,True,20
+Vogue Makeup 2024,Makeup,Beauty & Personal Care,51216,50,25608,True,60
+Trendy Dresses Lite,Dresses,Clothing,4677,0,4677,True,7
+Luxury Fragrances Lite,Fragrances,Beauty & Personal Care,767,10,690,True,6
+Elite Televisions 2024,Televisions,Electronics,5820,0,5820,True,50
+Elite Laptops X,Laptops,Electronics,2033,0,2033,True,2
+Neo Home Decor 3000,Home Decor,Home & Kitchen,14697,5,13962,True,8
+Fragrances 8654,Fragrances,Beauty & Personal Care,2109,15,1793,True,12
+Sofas 9856,Sofas,Furniture,2759,5,2621,True,15
+T-Shirts 9987,T-Shirts,Clothing,422,0,422,True,40
+Luxury Tablets S,Tablets,Electronics,2737,0,2737,True,8
+Classic Fitness Gear Series,Fitness Gear,"Sports, Toys & Others",211,0,211,True,20
+Style Sofas Lite,Sofas,Furniture,629,60,252,True,15
+Jeans 8891,Jeans,Clothing,13242,30,9269,True,15
+Super Headphones Max,Headphones,Electronics,13686,60,5474,True,25
+Neo Makeup Series,Makeup,Beauty & Personal Care,8567,15,7282,True,6
+Max Tablets X,Tablets,Electronics,1402,5,1332,True,3
+Value Jeans 2024,Jeans,Clothing,4631,35,3010,True,4
+Classic Shoes X,Shoes,Clothing,4904,10,4414,True,6
+Classic Activewear Special,Activewear,Clothing,1093,5,1038,True,12
+Super Fitness Gear Series,Fitness Gear,"Sports, Toys & Others",34787,5,33048,True,80
+T-Shirts 4788,T-Shirts,Clothing,15416,0,15416,True,30
+Activewear 9981,Activewear,Clothing,3697,5,3512,True,50
+Trendy Tablets Series,Tablets,Electronics,5103,10,4593,False,0
+Elite T-Shirts Edition,T-Shirts,Clothing,6461,25,4846,True,9
+Headphones 4614,Headphones,Electronics,347,0,347,True,9
+Trendy Jeans Ultra,Jeans,Clothing,3573,0,3573,True,5
+Super T-Shirts Elite,T-Shirts,Clothing,2030,35,1320,True,3
+Luxury Fitness Gear Elite,Fitness Gear,"Sports, Toys & Others",1340,0,1340,True,20
+Value Smartphones Max,Smartphones,Electronics,3419,10,3077,True,500
+Max Dining Sets Plus,Dining Sets,Furniture,51000,40,30600,True,5
+Vogue T-Shirts Collection,T-Shirts,Clothing,11335,0,11335,True,2
+Vogue Fitness Gear Special,Fitness Gear,"Sports, Toys & Others",2345,0,2345,True,50
+Premium Skincare 2024,Skincare,Beauty & Personal Care,10373,15,8817,True,6
+Royal Headphones X,Headphones,Electronics,30386,5,28867,True,60
+Ultra Sneakers Lite,Sneakers,Clothing,16393,20,13114,True,30
+Luxury Dresses Collection,Dresses,Clothing,5325,35,3461,True,300
+Toys 4814,Toys,"Sports, Toys & Others",2125,0,2125,True,9
+Premium Dining Sets Special,Dining Sets,Furniture,12213,20,9770,False,0
+Trendy T-Shirts Lite,T-Shirts,Clothing,8218,15,6985,True,10
+Smartwatches 9165,Smartwatches,Electronics,15777,0,15777,True,20
+Headphones 8597,Headphones,Electronics,11252,25,8439,True,10
+Premium Skincare 3000,Skincare,Beauty & Personal Care,19283,5,18319,True,5
+Super Jeans 2024,Jeans,Clothing,2457,15,2088,True,12
+Super Shoes Edition,Shoes,Clothing,27315,0,27315,True,12
+Classic Shoes S,Shoes,Clothing,6371,15,5415,True,60
+Value Sarees Elite,Sarees,Clothing,73161,5,69503,True,40
+Smartphones 1206,Smartphones,Electronics,2012,40,1207,False,0
+Super Cookware Ultra,Cookware,Home & Kitchen,47068,0,47068,True,4
+Classic Speakers Ultra,Speakers,Electronics,6373,10,5736,True,40
+Headphones 1549,Headphones,Electronics,2113,15,1796,False,0
+Luxury Dresses Plus,Dresses,Clothing,2627,30,1839,True,150
+Pro Laptops Special,Laptops,Electronics,3249,20,2599,True,200
+Max Kitchen Appliances 3000,Kitchen Appliances,Home & Kitchen,8553,25,6415,True,2
+Luxury Televisions Pro,Televisions,Electronics,9723,35,6320,True,60
+Televisions 9534,Televisions,Electronics,2337,40,1402,False,0
+Classic Makeup Lite,Makeup,Beauty & Personal Care,4774,10,4297,False,0
+Premium Beds Z,Beds,Furniture,79821,20,63857,True,15
+Tablets 4866,Tablets,Electronics,46555,40,27933,True,4
+Neo Fragrances X,Fragrances,Beauty & Personal Care,8689,70,2607,True,40
+Max Smartphones Plus,Smartphones,Electronics,5177,50,2588,True,0
+Pro Skincare X,Skincare,Beauty & Personal Care,5760,10,5184,True,5
+Tablets 8786,Tablets,Electronics,10940,0,10940,True,15
+Elite Headphones 5000,Headphones,Electronics,1304,15,1108,False,0
+Speakers 5075,Speakers,Electronics,3526,30,2468,False,0
+Ultra Smartwatches 3000,Smartwatches,Electronics,563,15,479,True,30
+Shoes 1983,Shoes,Clothing,8280,15,7038,True,25
+Style Smartphones 2024,Smartphones,Electronics,11429,40,6857,True,9
+Smartphones 2759,Smartphones,Electronics,2629,10,2366,True,0
+Pro Cookware 3000,Cookware,Home & Kitchen,38130,40,22878,True,4
+Speakers 6690,Speakers,Electronics,1001,10,901,True,12
+Beds 8187,Beds,Furniture,734,10,661,True,25
+Smartwatches 1349,Smartwatches,Electronics,6597,15,5607,True,9
+Neo Laptops 2024,Laptops,Electronics,19222,35,12494,True,40
+Premium Activewear Special,Activewear,Clothing,43989,0,43989,False,0
+Shirts 5828,Shirts,Clothing,2714,0,2714,True,3
+Classic Activewear Z,Activewear,Clothing,20028,60,8011,True,5
+Royal Jeans 5000,Jeans,Clothing,4687,0,4687,True,80
+Classic Kitchen Appliances Elite,Kitchen Appliances,Home & Kitchen,3937,20,3150,True,40
+Shirts 3627,Shirts,Clothing,15543,20,12434,False,0
+Elite Headphones Collection,Headphones,Electronics,11506,15,9780,True,4
+Max Shirts 5000,Shirts,Clothing,635,25,476,True,500
+Super Fitness Gear Edition,Fitness Gear,"Sports, Toys & Others",33593,5,31913,True,5
+Smartphones 1306,Smartphones,Electronics,29635,20,23708,True,1
+Neo Cookware Ultra,Cookware,Home & Kitchen,2185,10,1966,True,500
+Ultra Skincare Edition,Skincare,Beauty & Personal Care,8243,25,6182,True,7
+Style Shirts Special,Shirts,Clothing,9366,0,9366,True,25
+Jeans 3525,Jeans,Clothing,6915,20,5532,True,5
+Neo Fitness Gear Series,Fitness Gear,"Sports, Toys & Others",2410,0,2410,True,15
+Ultra Laptops Plus,Laptops,Electronics,2058,5,1955,True,150
+Ultra Jeans Pro,Jeans,Clothing,4766,0,4766,True,7
+T-Shirts 3126,T-Shirts,Clothing,22632,0,22632,True,25
+Premium Sneakers Z,Sneakers,Clothing,9989,40,5993,True,5
+Pro Jeans Plus,Jeans,Clothing,3044,5,2892,False,0
+Style Fragrances Edition,Fragrances,Beauty & Personal Care,13437,50,6718,True,8
+Royal Laptops Elite,Laptops,Electronics,121,60,48,True,6
+Pro Laptops Max,Laptops,Electronics,21938,20,17550,True,7
+Pro Sarees Special,Sarees,Clothing,513,0,513,True,5
+Laptops 2310,Laptops,Electronics,3076,10,2768,True,150
+Style Gaming Consoles Pro,Gaming Consoles,Electronics,1149,35,747,True,9
+Luxury Shoes Series,Shoes,Clothing,916,10,824,True,6
+Dresses 1955,Dresses,Clothing,22285,0,22285,True,10
+Beds 5355,Beds,Furniture,2683,20,2146,False,0
+Luxury Toys Max,Toys,"Sports, Toys & Others",7731,40,4639,True,40
+Shirts 2276,Shirts,Clothing,4636,35,3013,True,500
+Jeans 9511,Jeans,Clothing,9161,0,9161,True,9
+Luxury Sarees Ultra,Sarees,Clothing,5445,25,4084,True,100
+Pro Headphones Z,Headphones,Electronics,930,5,884,False,0
+Pro Sneakers S,Sneakers,Clothing,17993,0,17993,True,5
+Royal Skincare Series,Skincare,Beauty & Personal Care,2593,50,1296,True,30
+Shoes 6864,Shoes,Clothing,651,5,618,True,12
+Luxury Kitchen Appliances Series,Kitchen Appliances,Home & Kitchen,2824,5,2683,True,25
+Activewear 3733,Activewear,Clothing,34668,0,34668,True,100
+Televisions 7579,Televisions,Electronics,14881,50,7440,True,10
+Style T-Shirts S,T-Shirts,Clothing,3132,35,2036,True,150
+Vogue Televisions Collection,Televisions,Electronics,3129,25,2347,True,40
+Wardrobes 6163,Wardrobes,Furniture,3244,30,2271,True,10
+Neo Jeans 5000,Jeans,Clothing,73303,0,73303,True,20
+Style T-Shirts Series,T-Shirts,Clothing,8096,15,6882,True,7
+Headphones 6299,Headphones,Electronics,8618,10,7756,True,500
+Vogue T-Shirts Z,T-Shirts,Clothing,18806,0,18806,True,25
+Royal Shoes Elite,Shoes,Clothing,6721,15,5713,True,2
+Classic Office Chairs Collection,Office Chairs,Furniture,3519,50,1760,True,7
+Tablets 1003,Tablets,Electronics,3817,0,3817,True,20
+Sports Equipment 5660,Sports Equipment,"Sports, Toys & Others",4490,5,4266,True,2
+Royal Laptops 2024,Laptops,Electronics,4695,0,4695,True,1
+Home Decor 5945,Home Decor,Home & Kitchen,12689,5,12055,True,10
+Pro Headphones Z,Headphones,Electronics,5272,50,2636,True,8
+Headphones 1355,Headphones,Electronics,12772,15,10856,True,9
+Activewear 5521,Activewear,Clothing,4437,15,3771,True,6
+Home Decor 9376,Home Decor,Home & Kitchen,5458,35,3548,True,5
+Vogue Dresses 2024,Dresses,Clothing,367,0,367,True,30
+Classic Kurtas 5000,Kurtas,Clothing,16217,15,13784,True,12
+Max Dresses 5000,Dresses,Clothing,7731,15,6571,True,5
+Beds 5093,Beds,Furniture,18034,20,14427,True,7
+Super Headphones Lite,Headphones,Electronics,114,70,34,True,20
+Trendy Wardrobes Z,Wardrobes,Furniture,74419,35,48372,True,3
+Shoes 6319,Shoes,Clothing,4110,10,3699,True,4
+Activewear 3832,Activewear,Clothing,20811,40,12487,True,3
+Luxury Skincare Plus,Skincare,Beauty & Personal Care,1275,0,1275,True,60
+Max Activewear Pro,Activewear,Clothing,10929,0,10929,True,40
+Fitness Gear 7251,Fitness Gear,"Sports, Toys & Others",1253,0,1253,True,40
+Premium Sarees 3000,Sarees,Clothing,2190,10,1971,True,30
+Value Wardrobes Series,Wardrobes,Furniture,59327,15,50428,True,25
+Value Kurtas Plus,Kurtas,Clothing,3846,25,2884,False,0
+Televisions 4714,Televisions,Electronics,6537,50,3268,True,25
+Shoes 1187,Shoes,Clothing,15270,15,12980,True,2
+Style Televisions Edition,Televisions,Electronics,9386,15,7978,True,20
+Royal Headphones Pro,Headphones,Electronics,5992,0,5992,True,50
+Vogue Skincare 2024,Skincare,Beauty & Personal Care,7919,0,7919,True,12
+Luxury Dining Sets Ultra,Dining Sets,Furniture,112086,20,89669,True,8
+Style Kitchen Appliances Edition,Kitchen Appliances,Home & Kitchen,4572,15,3886,True,7
+Kurtas 9269,Kurtas,Clothing,6400,40,3840,True,25
+Trendy Cookware Lite,Cookware,Home & Kitchen,19311,0,19311,True,30
+Skincare 3425,Skincare,Beauty & Personal Care,20739,0,20739,True,100
+Ultra Toys Special,Toys,"Sports, Toys & Others",23057,15,19598,True,8
+Premium Home Decor Edition,Home Decor,Home & Kitchen,11304,5,10739,True,50
+Trendy Sarees Series,Sarees,Clothing,1115,0,1115,True,15
+Shoes 3136,Shoes,Clothing,41194,30,28836,True,100
+Smartphones 8879,Smartphones,Electronics,1110,0,1110,True,12
+Classic Sports Equipment Edition,Sports Equipment,"Sports, Toys & Others",7303,20,5842,False,0
+Pro Home Decor Ultra,Home Decor,Home & Kitchen,1848,5,1756,True,15
+Max Gaming Consoles Series,Gaming Consoles,Electronics,4533,0,4533,True,40
+Vogue Smartwatches Max,Smartwatches,Electronics,7555,10,6800,True,500
+Trendy Sneakers Series,Sneakers,Clothing,7483,35,4864,True,3
+Pro Sofas 3000,Sofas,Furniture,8528,10,7675,True,2
+Style Wardrobes X,Wardrobes,Furniture,40151,30,28106,True,300
+Smartphones 3773,Smartphones,Electronics,8886,0,8886,True,12
+Makeup 8245,Makeup,Beauty & Personal Care,3587,35,2332,False,0
+Classic Kurtas Pro,Kurtas,Clothing,17256,5,16393,True,10
+T-Shirts 4825,T-Shirts,Clothing,23130,25,17348,True,3
+Neo Tablets 2024,Tablets,Electronics,999,20,799,True,50
+Shoes 2405,Shoes,Clothing,10713,50,5356,True,40
+Premium Smartphones Ultra,Smartphones,Electronics,12260,10,11034,False,0
+Activewear 3419,Activewear,Clothing,3347,0,3347,True,7
+Televisions 5713,Televisions,Electronics,29466,0,29466,True,80
+Luxury T-Shirts Plus,T-Shirts,Clothing,4054,40,2432,True,3
+Classic Wardrobes X,Wardrobes,Furniture,5801,20,4641,True,100
+Luxury Dining Sets Z,Dining Sets,Furniture,3935,35,2558,True,6
+Royal Activewear Elite,Activewear,Clothing,5028,5,4777,True,20
+Vogue Kitchen Appliances 2024,Kitchen Appliances,Home & Kitchen,1185,10,1066,True,300
+Style Kurtas X,Kurtas,Clothing,758,0,758,True,25
+Style Laptops Pro,Laptops,Electronics,39161,60,15664,True,9
+Premium Laptops Lite,Laptops,Electronics,1638,25,1228,True,30
+Luxury Tablets Elite,Tablets,Electronics,1358,50,679,False,0
+Style Sarees X,Sarees,Clothing,300,5,285,True,7
+Style Sneakers Elite,Sneakers,Clothing,2147,25,1610,True,500
+Style Gaming Consoles 5000,Gaming Consoles,Electronics,882,25,662,True,40
+Shoes 1312,Shoes,Clothing,41656,10,37490,True,25
+Style Jeans Edition,Jeans,Clothing,18313,40,10988,True,8
+Trendy T-Shirts Plus,T-Shirts,Clothing,2014,60,806,False,0
+Gaming Consoles 8940,Gaming Consoles,Electronics,92111,50,46056,True,2
+Kitchen Appliances 9709,Kitchen Appliances,Home & Kitchen,17657,30,12360,False,0
+Pro Headphones Collection,Headphones,Electronics,3230,5,3068,True,50
+Luxury T-Shirts X,T-Shirts,Clothing,191,5,181,True,12
+Royal Gaming Consoles Lite,Gaming Consoles,Electronics,96840,60,38736,False,0
+Trendy Sneakers S,Sneakers,Clothing,809,0,809,True,2
+Style Jeans 5000,Jeans,Clothing,580,30,406,False,0
+Max Shoes Ultra,Shoes,Clothing,18619,30,13033,True,6
+Smartphones 9212,Smartphones,Electronics,117508,25,88131,False,0
+Premium Office Chairs Elite,Office Chairs,Furniture,29796,70,8939,True,3
+Sarees 1482,Sarees,Clothing,10257,10,9231,True,500
+Smartphones 5590,Smartphones,Electronics,10676,10,9608,True,6
+Neo Sofas Edition,Sofas,Furniture,14943,0,14943,True,200
+Ultra Televisions Edition,Televisions,Electronics,13216,15,11234,True,9
+Style Tablets Ultra,Tablets,Electronics,7102,5,6747,True,500
+Vogue Speakers 2024,Speakers,Electronics,5642,10,5078,True,15
+Max Beds 3000,Beds,Furniture,4542,40,2725,True,300
+Elite Smartphones Z,Smartphones,Electronics,1849,50,924,True,0
+Vogue Activewear Z,Activewear,Clothing,3421,0,3421,True,40
+Smartwatches 6062,Smartwatches,Electronics,546,10,491,True,150
+Royal Office Chairs 2024,Office Chairs,Furniture,4336,50,2168,True,4
+Super Sneakers 2024,Sneakers,Clothing,1363,0,1363,True,3
+Vogue Shirts S,Shirts,Clothing,1174,0,1174,True,9
+Royal Home Decor Plus,Home Decor,Home & Kitchen,6226,0,6226,True,300
+Value Cookware 2024,Cookware,Home & Kitchen,30097,20,24078,False,0
+Laptops 6221,Laptops,Electronics,16259,0,16259,True,12
+Skincare 7783,Skincare,Beauty & Personal Care,640,60,256,True,4
+Smartphones 5970,Smartphones,Electronics,1361,15,1157,True,0
+Value Smartphones Elite,Smartphones,Electronics,16741,15,14230,True,60
+Pro Sports Equipment Plus,Sports Equipment,"Sports, Toys & Others",1374,5,1305,True,3
+Premium Skincare Elite,Skincare,Beauty & Personal Care,3680,15,3128,True,20
+Vogue Kurtas Ultra,Kurtas,Clothing,10073,25,7555,True,200
+Pro Kurtas X,Kurtas,Clothing,1399,30,979,True,5
+Luxury Sneakers Special,Sneakers,Clothing,5651,30,3956,True,25
+Value T-Shirts Special,T-Shirts,Clothing,870,20,696,True,3
+Headphones 7126,Headphones,Electronics,2255,50,1128,False,0
+Trendy Smartphones Special,Smartphones,Electronics,7467,35,4854,True,5
+Elite Beds Z,Beds,Furniture,621,30,435,True,40
+Trendy Cookware X,Cookware,Home & Kitchen,8736,0,8736,False,0
+Sarees 7767,Sarees,Clothing,4803,0,4803,True,10
+Style Home Decor Z,Home Decor,Home & Kitchen,10105,0,10105,True,20
+Sports Equipment 2083,Sports Equipment,"Sports, Toys & Others",6592,25,4944,True,5
+Classic Headphones Special,Headphones,Electronics,29027,10,26124,False,0
+Value Skincare Collection,Skincare,Beauty & Personal Care,5799,10,5219,False,0
+Speakers 8005,Speakers,Electronics,2820,50,1410,True,25
+Premium Kurtas Edition,Kurtas,Clothing,5777,50,2888,True,5
+Shirts 7457,Shirts,Clothing,9985,50,4992,True,30
+Luxury Office Chairs Pro,Office Chairs,Furniture,5251,10,4726,True,4
+Classic Sofas Collection,Sofas,Furniture,5194,30,3636,True,9
+Wardrobes 1694,Wardrobes,Furniture,1978,5,1879,False,0
+Beds 5025,Beds,Furniture,2081,0,2081,True,40
+Trendy Smartwatches Pro,Smartwatches,Electronics,796,0,796,True,6
+Royal Shirts Pro,Shirts,Clothing,47908,10,43117,True,100
+Classic Headphones Edition,Headphones,Electronics,978,15,831,True,150
+Shirts 5684,Shirts,Clothing,2002,40,1201,True,5
+Trendy Fragrances Lite,Fragrances,Beauty & Personal Care,1937,0,1937,True,20
+Premium Wardrobes 2024,Wardrobes,Furniture,15772,30,11040,False,0
+Style Activewear Collection,Activewear,Clothing,3358,20,2686,False,0
+Royal Home Decor Plus,Home Decor,Home & Kitchen,24951,5,23703,True,30
+Vogue Home Decor 2024,Home Decor,Home & Kitchen,2053,15,1745,False,0
+Neo Speakers Collection,Speakers,Electronics,7082,5,6728,True,20
+Classic Tablets Z,Tablets,Electronics,1663,20,1330,True,7
+Televisions 2477,Televisions,Electronics,80120,15,68102,True,8
+Luxury Sarees S,Sarees,Clothing,1052,0,1052,True,4
+Kitchen Appliances 3024,Kitchen Appliances,Home & Kitchen,7371,0,7371,False,0
+Luxury Shoes Collection,Shoes,Clothing,11232,20,8986,True,12
+Ultra Smartwatches Edition,Smartwatches,Electronics,8438,50,4219,True,30
+Kitchen Appliances 9383,Kitchen Appliances,Home & Kitchen,3873,10,3486,True,6
+Elite Jeans Edition,Jeans,Clothing,4162,30,2913,True,7
+Premium Kitchen Appliances S,Kitchen Appliances,Home & Kitchen,5216,25,3912,True,8
+Kitchen Appliances 3459,Kitchen Appliances,Home & Kitchen,4070,50,2035,True,1
+Elite T-Shirts S,T-Shirts,Clothing,17251,40,10351,True,8
+Sports Equipment 1840,Sports Equipment,"Sports, Toys & Others",87227,20,69782,True,60
+Max Dresses Collection,Dresses,Clothing,2387,25,1790,True,150
+Elite Shoes Plus,Shoes,Clothing,830,50,415,True,12
+Shoes 4323,Shoes,Clothing,4393,10,3954,True,10
+Super Skincare Elite,Skincare,Beauty & Personal Care,140957,10,126861,True,2
+Classic Shoes Special,Shoes,Clothing,1733,0,1733,True,100
+Premium Tablets Special,Tablets,Electronics,41500,40,24900,True,1
+Vogue Laptops Special,Laptops,Electronics,43634,35,28362,True,300
+Classic T-Shirts Max,T-Shirts,Clothing,2399,0,2399,False,0
+Premium Sofas Ultra,Sofas,Furniture,10324,20,8259,True,8
+Gaming Consoles 5556,Gaming Consoles,Electronics,40925,15,34786,True,200
+Royal Laptops Z,Laptops,Electronics,3010,0,3010,False,0
+Elite Shirts Pro,Shirts,Clothing,3782,70,1135,True,15
+Premium Sofas 2024,Sofas,Furniture,2313,0,2313,True,15
+T-Shirts 5889,T-Shirts,Clothing,1317,0,1317,True,6
+Ultra Laptops Pro,Laptops,Electronics,2119,20,1695,False,0
+Elite Home Decor S,Home Decor,Home & Kitchen,1004,30,703,False,0
+Vogue Laptops S,Laptops,Electronics,5151,0,5151,True,40
+Skincare 6901,Skincare,Beauty & Personal Care,1811,25,1358,True,0
+Skincare 2525,Skincare,Beauty & Personal Care,6678,20,5342,True,300
+Sarees 6289,Sarees,Clothing,652,0,652,False,0
+Trendy Shirts Max,Shirts,Clothing,7576,0,7576,False,0
+Jeans 2063,Jeans,Clothing,14562,20,11650,True,6
+Elite Dresses Plus,Dresses,Clothing,369,5,351,True,2
+Max Cookware 3000,Cookware,Home & Kitchen,8013,50,4006,True,4
+Royal Fragrances Z,Fragrances,Beauty & Personal Care,24308,35,15800,True,500
+Vogue T-Shirts Pro,T-Shirts,Clothing,1023,70,307,True,7
+Luxury Home Decor Max,Home Decor,Home & Kitchen,43344,5,41177,True,4
+Luxury Shoes Lite,Shoes,Clothing,8496,60,3398,True,4
+Value Beds 3000,Beds,Furniture,1971,15,1675,True,30
+Vogue Jeans 5000,Jeans,Clothing,4583,10,4125,False,0
+Tablets 9132,Tablets,Electronics,10182,0,10182,True,6
+Style Laptops Special,Laptops,Electronics,5439,0,5439,True,1
+Elite Headphones Ultra,Headphones,Electronics,9927,30,6949,True,6
+Fragrances 4171,Fragrances,Beauty & Personal Care,1489,15,1266,False,0
+Premium Wardrobes Collection,Wardrobes,Furniture,6141,5,5834,True,4
+Ultra Activewear Z,Activewear,Clothing,784,25,588,True,9
+Shirts 7793,Shirts,Clothing,4264,5,4051,True,6
+Neo Smartwatches 5000,Smartwatches,Electronics,1522,20,1218,True,12
+Style Speakers Z,Speakers,Electronics,1894,10,1705,True,6
+Pro T-Shirts Lite,T-Shirts,Clothing,24576,40,14746,True,300
+Ultra T-Shirts Lite,T-Shirts,Clothing,20359,40,12215,False,0
+Royal Shirts 3000,Shirts,Clothing,10878,15,9246,True,15
+Tablets 2865,Tablets,Electronics,1191,10,1072,True,8
+Neo Office Chairs Edition,Office Chairs,Furniture,3266,10,2939,True,8
+Gaming Consoles 1477,Gaming Consoles,Electronics,23852,35,15504,True,9
+T-Shirts 4178,T-Shirts,Clothing,5924,10,5332,True,40
+Neo Wardrobes Special,Wardrobes,Furniture,100480,0,100480,True,10
+Sarees 1582,Sarees,Clothing,8216,0,8216,True,80
+Classic Cookware 2024,Cookware,Home & Kitchen,6325,15,5376,True,300
+Value Shoes 3000,Shoes,Clothing,3297,15,2802,True,8
+Value Laptops Series,Laptops,Electronics,5862,40,3517,True,15
+Headphones 1917,Headphones,Electronics,4042,5,3840,True,3
+Sneakers 5904,Sneakers,Clothing,12371,10,11134,False,0
+Style Gaming Consoles 3000,Gaming Consoles,Electronics,17091,35,11109,True,9
+Premium Activewear Z,Activewear,Clothing,1774,40,1064,True,5
+Neo Shoes 5000,Shoes,Clothing,873,10,786,True,100
+Elite Fragrances Elite,Fragrances,Beauty & Personal Care,453,15,385,True,5
+Makeup 6556,Makeup,Beauty & Personal Care,9537,5,9060,True,10
+Beds 9753,Beds,Furniture,1174,50,587,False,0
+Kurtas 7382,Kurtas,Clothing,300,0,300,True,30
+Ultra Tablets Lite,Tablets,Electronics,8166,50,4083,True,8
+Wardrobes 6152,Wardrobes,Furniture,125930,25,94448,True,100
+Fitness Gear 5448,Fitness Gear,"Sports, Toys & Others",4889,20,3911,True,15
+Classic Sneakers Ultra,Sneakers,Clothing,14656,0,14656,True,9
+Value Office Chairs Lite,Office Chairs,Furniture,5481,15,4659,True,3
+Max Kurtas S,Kurtas,Clothing,4333,10,3900,True,10
+Super Sports Equipment Pro,Sports Equipment,"Sports, Toys & Others",16275,0,16275,False,0
+Sofas 2517,Sofas,Furniture,3379,25,2534,True,20
+Premium Office Chairs Special,Office Chairs,Furniture,6976,60,2790,True,80
+Cookware 3524,Cookware,Home & Kitchen,7486,20,5989,True,12
+Classic Home Decor Lite,Home Decor,Home & Kitchen,2067,30,1447,True,4
+Shoes 3347,Shoes,Clothing,17894,0,17894,True,1
+Home Decor 2609,Home Decor,Home & Kitchen,3925,10,3532,True,7
+Activewear 9456,Activewear,Clothing,1845,0,1845,False,0
+Elite Sneakers Z,Sneakers,Clothing,9898,25,7424,True,50
+Shirts 8526,Shirts,Clothing,1532,50,766,True,7
+Value Shoes Plus,Shoes,Clothing,5111,25,3833,True,12
+Premium T-Shirts Max,T-Shirts,Clothing,4869,0,4869,True,9
+Premium Dining Sets Plus,Dining Sets,Furniture,20216,10,18194,True,9
+Style Dining Sets Lite,Dining Sets,Furniture,9133,20,7306,True,6
+Super Smartwatches Lite,Smartwatches,Electronics,4770,10,4293,True,4
+Pro Televisions 3000,Televisions,Electronics,14267,40,8560,True,5
+Max Fitness Gear Elite,Fitness Gear,"Sports, Toys & Others",30027,35,19518,True,2
+Super Jeans Collection,Jeans,Clothing,10176,25,7632,True,5
+Max Televisions 2024,Televisions,Electronics,4994,10,4495,True,0
+Ultra Tablets X,Tablets,Electronics,895,5,850,True,20
+Laptops 9422,Laptops,Electronics,1234,0,1234,True,7
+Royal Skincare 5000,Skincare,Beauty & Personal Care,3314,10,2983,True,500
+Max Headphones 2024,Headphones,Electronics,2231,10,2008,True,5
+Kitchen Appliances 5641,Kitchen Appliances,Home & Kitchen,3864,25,2898,True,8
+Elite Home Decor Max,Home Decor,Home & Kitchen,5304,25,3978,True,8
+Neo Makeup Collection,Makeup,Beauty & Personal Care,9810,0,9810,True,0
+Premium Smartphones Special,Smartphones,Electronics,4496,10,4046,True,80
+Wardrobes 1826,Wardrobes,Furniture,9275,0,9275,True,2
+Premium Kitchen Appliances Max,Kitchen Appliances,Home & Kitchen,5358,0,5358,True,300
+Elite Tablets Collection,Tablets,Electronics,378,40,227,True,150
+Max Office Chairs 3000,Office Chairs,Furniture,1453,0,1453,True,12
+Smartwatches 9740,Smartwatches,Electronics,4086,10,3677,True,15
+Super Home Decor Collection,Home Decor,Home & Kitchen,1022,0,1022,True,25
+Ultra Kitchen Appliances Collection,Kitchen Appliances,Home & Kitchen,10748,50,5374,True,8
+Max Home Decor Collection,Home Decor,Home & Kitchen,36046,20,28837,True,25
+Pro Smartwatches 2024,Smartwatches,Electronics,24028,5,22827,True,2
+T-Shirts 5227,T-Shirts,Clothing,3734,15,3174,True,2
+T-Shirts 7423,T-Shirts,Clothing,34219,30,23953,True,10
+Style Sneakers 3000,Sneakers,Clothing,5978,60,2391,True,15
+Speakers 6320,Speakers,Electronics,3179,5,3020,False,0
+Premium T-Shirts Max,T-Shirts,Clothing,2220,50,1110,True,4
+Neo Gaming Consoles Special,Gaming Consoles,Electronics,3325,50,1662,True,60
+Elite Activewear Lite,Activewear,Clothing,2975,50,1488,True,6
+T-Shirts 3087,T-Shirts,Clothing,6150,25,4612,False,0
+Trendy Shirts Plus,Shirts,Clothing,6071,25,4553,True,7
+Style Sofas Max,Sofas,Furniture,4947,10,4452,True,9
+Home Decor 9728,Home Decor,Home & Kitchen,8696,30,6087,True,5
+Vogue Jeans Series,Jeans,Clothing,23166,20,18533,True,12
+Pro Home Decor S,Home Decor,Home & Kitchen,16933,25,12700,True,60
+Dining Sets 7288,Dining Sets,Furniture,715,15,608,True,10
+Pro Fitness Gear Series,Fitness Gear,"Sports, Toys & Others",178,30,125,True,12
+Toys 8132,Toys,"Sports, Toys & Others",16601,40,9961,True,80
+Neo Jeans Ultra,Jeans,Clothing,834,0,834,False,0
+Style Gaming Consoles Max,Gaming Consoles,Electronics,3679,40,2207,True,12
+Office Chairs 8972,Office Chairs,Furniture,1076,20,861,False,0
+Vogue Shirts Collection,Shirts,Clothing,473,40,284,True,100
+Ultra Fitness Gear Collection,Fitness Gear,"Sports, Toys & Others",9962,15,8468,True,15
+Trendy Home Decor Max,Home Decor,Home & Kitchen,13220,10,11898,True,6
+Style Cookware Edition,Cookware,Home & Kitchen,2329,50,1164,True,6
+Style Tablets Pro,Tablets,Electronics,170,5,162,True,60
+Value Speakers 2024,Speakers,Electronics,2422,40,1453,True,2
+Shoes 1003,Shoes,Clothing,8200,15,6970,True,500
+Makeup 3444,Makeup,Beauty & Personal Care,721,15,613,True,4
+Max Dresses Edition,Dresses,Clothing,6254,5,5941,True,50
+Classic Headphones Z,Headphones,Electronics,4830,20,3864,True,9
+Neo Skincare Lite,Skincare,Beauty & Personal Care,10464,10,9418,True,12
+Style Skincare Lite,Skincare,Beauty & Personal Care,5756,0,5756,True,100
+Gaming Consoles 8122,Gaming Consoles,Electronics,1391,5,1321,False,0
+Kitchen Appliances 6640,Kitchen Appliances,Home & Kitchen,23345,0,23345,True,12
+Gaming Consoles 1133,Gaming Consoles,Electronics,4010,60,1604,True,2
+Royal Fragrances Edition,Fragrances,Beauty & Personal Care,4756,60,1902,True,0
+Tablets 5819,Tablets,Electronics,1465,10,1318,True,6
+Royal T-Shirts Pro,T-Shirts,Clothing,2769,30,1938,False,0
+Royal Fitness Gear 5000,Fitness Gear,"Sports, Toys & Others",1560,10,1404,True,4
+Max Televisions X,Televisions,Electronics,3935,25,2951,True,4
+Luxury T-Shirts Edition,T-Shirts,Clothing,45607,35,29645,True,9
+Luxury Wardrobes Edition,Wardrobes,Furniture,828,60,331,True,25
+Trendy Smartphones Z,Smartphones,Electronics,605,10,544,False,0
+Classic Laptops 2024,Laptops,Electronics,33360,35,21684,True,5
+Trendy Shirts 5000,Shirts,Clothing,3754,5,3566,True,3
+Speakers 3527,Speakers,Electronics,2065,70,620,True,300
+Value Toys 2024,Toys,"Sports, Toys & Others",19043,0,19043,True,6
+Ultra Office Chairs X,Office Chairs,Furniture,2242,20,1794,True,80
+Classic Smartphones Series,Smartphones,Electronics,52913,25,39685,True,100
+Sports Equipment 3224,Sports Equipment,"Sports, Toys & Others",11895,25,8921,True,50
+Style Skincare Series,Skincare,Beauty & Personal Care,2613,0,2613,False,0
+Shoes 7974,Shoes,Clothing,81396,50,40698,True,60
+Classic Cookware Series,Cookware,Home & Kitchen,2242,0,2242,True,50
+Classic Tablets Edition,Tablets,Electronics,12930,25,9698,True,20
+Elite Sofas Series,Sofas,Furniture,7271,5,6907,False,0
+Vogue Home Decor Special,Home Decor,Home & Kitchen,26765,5,25427,True,6
+Sneakers 4878,Sneakers,Clothing,37517,20,30014,True,4
+Tablets 5411,Tablets,Electronics,5137,10,4623,True,12
+Royal Sneakers 5000,Sneakers,Clothing,1850,0,1850,True,15
+Premium T-Shirts Special,T-Shirts,Clothing,8960,0,8960,True,8
+Smartphones 2854,Smartphones,Electronics,2042,10,1838,True,10
+Luxury Laptops Max,Laptops,Electronics,67507,30,47255,True,8
+Luxury Speakers Elite,Speakers,Electronics,5885,50,2942,True,25
+Ultra Home Decor Max,Home Decor,Home & Kitchen,3065,0,3065,True,150
+Style Dresses Max,Dresses,Clothing,6265,10,5638,False,0
+Royal Activewear Lite,Activewear,Clothing,855,0,855,False,0
+Neo Shirts X,Shirts,Clothing,1393,0,1393,True,4
+Royal Headphones Special,Headphones,Electronics,23462,25,17596,True,20
+Neo Sofas Series,Sofas,Furniture,2098,20,1678,True,40
+Super Sofas Lite,Sofas,Furniture,1263,0,1263,True,300
+Premium Smartphones Lite,Smartphones,Electronics,9899,5,9404,True,7
+T-Shirts 5267,T-Shirts,Clothing,23017,0,23017,True,500
+Classic Cookware S,Cookware,Home & Kitchen,12547,40,7528,True,3
+Style Jeans Lite,Jeans,Clothing,17988,60,7195,True,20
+Headphones 1447,Headphones,Electronics,1842,0,1842,True,2
+Ultra Fragrances 2024,Fragrances,Beauty & Personal Care,776,5,737,True,150
+Value Sarees Elite,Sarees,Clothing,34694,40,20816,True,12
+Vogue Smartphones Elite,Smartphones,Electronics,3239,50,1620,True,25
+Max Shirts X,Shirts,Clothing,3556,10,3200,True,80
+Speakers 3860,Speakers,Electronics,27701,0,27701,True,5
+Tablets 3476,Tablets,Electronics,10155,0,10155,True,2
+Neo T-Shirts S,T-Shirts,Clothing,8913,20,7130,True,100
+Luxury Sarees Ultra,Sarees,Clothing,82215,10,73994,False,0
+Super Speakers Pro,Speakers,Electronics,2135,0,2135,True,4
+Ultra T-Shirts 2024,T-Shirts,Clothing,16461,20,13169,True,10
+Value Shoes 2024,Shoes,Clothing,5307,0,5307,True,20
+Laptops 7765,Laptops,Electronics,6987,35,4542,False,0
+Toys 4898,Toys,"Sports, Toys & Others",35940,5,34143,False,0
+Luxury Laptops S,Laptops,Electronics,9535,0,9535,True,2
+Luxury Shirts 5000,Shirts,Clothing,9921,20,7937,False,0
+Max Shirts Plus,Shirts,Clothing,19868,10,17881,True,150
+Classic Toys Edition,Toys,"Sports, Toys & Others",3066,60,1226,True,500
+Classic Dresses Ultra,Dresses,Clothing,1655,20,1324,True,20
+Luxury Office Chairs Edition,Office Chairs,Furniture,1267,5,1204,True,5
+Elite Jeans Series,Jeans,Clothing,382,30,267,True,150
+Super Shoes Collection,Shoes,Clothing,71372,5,67803,True,12
+Neo Toys Pro,Toys,"Sports, Toys & Others",1174,50,587,False,0
+Royal Speakers 5000,Speakers,Electronics,3696,10,3326,True,200
+Smartphones 8074,Smartphones,Electronics,3438,20,2750,True,40
+Style Cookware Elite,Cookware,Home & Kitchen,7348,0,7348,True,40
+Max Wardrobes Plus,Wardrobes,Furniture,14229,15,12095,True,30
+Vogue Activewear Edition,Activewear,Clothing,15081,40,9049,True,5
+Style Shoes Ultra,Shoes,Clothing,2309,35,1501,True,6
+Kitchen Appliances 4193,Kitchen Appliances,Home & Kitchen,3965,5,3767,False,0
+Style Activewear S,Activewear,Clothing,7115,5,6759,True,6
+Premium Beds X,Beds,Furniture,3566,35,2318,True,9
+Smartphones 1195,Smartphones,Electronics,39820,50,19910,True,50
+Royal Dresses Plus,Dresses,Clothing,9329,0,9329,True,50
+Neo Home Decor Ultra,Home Decor,Home & Kitchen,12809,15,10888,False,0
+Smartwatches 5127,Smartwatches,Electronics,11665,10,10498,True,50
+Premium Kitchen Appliances Max,Kitchen Appliances,Home & Kitchen,22654,50,11327,True,80
+Vogue Jeans Z,Jeans,Clothing,6235,0,6235,True,25
+Sneakers 2995,Sneakers,Clothing,913,0,913,True,6
+Shoes 2965,Shoes,Clothing,8285,30,5800,True,7
+Vogue Home Decor 2024,Home Decor,Home & Kitchen,2113,0,2113,True,7
+Super Laptops S,Laptops,Electronics,2478,15,2106,True,4
+Kitchen Appliances 4018,Kitchen Appliances,Home & Kitchen,10560,15,8976,True,7
+Classic Jeans Max,Jeans,Clothing,24646,10,22181,True,5
+Max Sofas Series,Sofas,Furniture,5066,10,4559,True,10
+Style Smartphones 3000,Smartphones,Electronics,7362,20,5890,True,150
+Super Televisions Max,Televisions,Electronics,45047,0,45047,True,4
+Premium Smartphones Edition,Smartphones,Electronics,6738,20,5390,True,40
+Premium Sports Equipment Elite,Sports Equipment,"Sports, Toys & Others",145041,35,94277,True,30
+Shirts 5336,Shirts,Clothing,10278,35,6681,False,0
+Ultra Toys Special,Toys,"Sports, Toys & Others",499,0,499,True,200
+Dresses 4287,Dresses,Clothing,13120,0,13120,True,15
+Elite Speakers Special,Speakers,Electronics,8088,5,7684,False,0
+Royal Kitchen Appliances Series,Kitchen Appliances,Home & Kitchen,26351,10,23716,True,40
+Style Smartwatches Plus,Smartwatches,Electronics,11822,10,10640,True,6
+Dining Sets 5243,Dining Sets,Furniture,4116,25,3087,True,30
+Ultra Kitchen Appliances Max,Kitchen Appliances,Home & Kitchen,1003,0,1003,True,2
+Max Skincare Collection,Skincare,Beauty & Personal Care,3755,0,3755,True,80
+Classic Beds 2024,Beds,Furniture,1631,10,1468,True,10
+Premium Headphones Pro,Headphones,Electronics,2317,30,1622,False,0
+Max Dining Sets 2024,Dining Sets,Furniture,10591,0,10591,True,6
+Makeup 7411,Makeup,Beauty & Personal Care,43194,25,32396,True,25
+Royal Activewear Special,Activewear,Clothing,8231,5,7819,True,50
+Trendy Fragrances Max,Fragrances,Beauty & Personal Care,1041,50,520,True,10
+Premium Office Chairs Edition,Office Chairs,Furniture,8783,50,4392,True,20
+Toys 8898,Toys,"Sports, Toys & Others",23347,5,22180,True,10
+Royal Jeans 5000,Jeans,Clothing,2230,5,2118,True,150
+Max Shirts Edition,Shirts,Clothing,4140,10,3726,True,12
+Style Sports Equipment Max,Sports Equipment,"Sports, Toys & Others",5022,5,4771,True,80
+Value Shirts 3000,Shirts,Clothing,1776,25,1332,True,60
+Classic Cookware Lite,Cookware,Home & Kitchen,11445,40,6867,True,9
+Elite Activewear Pro,Activewear,Clothing,4211,25,3158,True,6
+Laptops 4129,Laptops,Electronics,8501,40,5101,True,9
+Trendy Sarees Plus,Sarees,Clothing,1554,10,1399,False,0
+Neo Home Decor Special,Home Decor,Home & Kitchen,2790,0,2790,True,6
+Style Dresses Collection,Dresses,Clothing,12603,30,8822,True,12
+Beds 3292,Beds,Furniture,3035,10,2732,True,60
+Premium Laptops Ultra,Laptops,Electronics,46520,25,34890,True,8
+Ultra Shoes Lite,Shoes,Clothing,2931,5,2784,True,25
+Value Sofas Collection,Sofas,Furniture,6599,0,6599,True,6
+Sarees 1268,Sarees,Clothing,16563,70,4969,True,4
+Premium T-Shirts 3000,T-Shirts,Clothing,780,0,780,True,50
+Sneakers 1701,Sneakers,Clothing,499,70,150,True,3
+Pro Wardrobes Collection,Wardrobes,Furniture,678,60,271,True,7
+Smartphones 9791,Smartphones,Electronics,25437,35,16534,False,0
+Vogue Makeup Ultra,Makeup,Beauty & Personal Care,2405,25,1804,True,8
+Wardrobes 1604,Wardrobes,Furniture,137070,20,109656,True,500
+Toys 9010,Toys,"Sports, Toys & Others",2366,40,1420,True,500
+Classic Gaming Consoles Pro,Gaming Consoles,Electronics,6264,5,5951,True,6
+Style Toys 2024,Toys,"Sports, Toys & Others",36583,15,31096,True,2
+Style Fitness Gear Pro,Fitness Gear,"Sports, Toys & Others",66870,25,50152,True,30
+Laptops 2594,Laptops,Electronics,71865,10,64678,True,10
+Elite Shoes Max,Shoes,Clothing,23705,15,20149,True,4
+Dining Sets 2742,Dining Sets,Furniture,18655,10,16790,True,30
+Vogue Cookware Ultra,Cookware,Home & Kitchen,10645,20,8516,True,2
+Pro Sneakers Series,Sneakers,Clothing,13554,40,8132,True,100
+Value Fitness Gear Edition,Fitness Gear,"Sports, Toys & Others",2407,0,2407,False,0
+Style Tablets 2024,Tablets,Electronics,1701,50,850,True,4
+Super Sarees Z,Sarees,Clothing,4906,25,3680,False,0
+Kitchen Appliances 3841,Kitchen Appliances,Home & Kitchen,3950,40,2370,True,500
+Ultra Smartphones Elite,Smartphones,Electronics,2734,20,2187,True,30
+Trendy Laptops S,Laptops,Electronics,12184,35,7920,True,60
+Royal Kitchen Appliances S,Kitchen Appliances,Home & Kitchen,17060,0,17060,True,9
+Vogue Dining Sets Pro,Dining Sets,Furniture,5528,35,3593,True,8
+Super Office Chairs Edition,Office Chairs,Furniture,33637,0,33637,True,6
+Kurtas 1256,Kurtas,Clothing,1117,50,558,True,10
+Sarees 2322,Sarees,Clothing,3831,70,1149,True,15
+Elite Sneakers Max,Sneakers,Clothing,1941,5,1844,True,20
+Fitness Gear 5648,Fitness Gear,"Sports, Toys & Others",435,0,435,True,6
+Super Dining Sets Special,Dining Sets,Furniture,4425,35,2876,True,300
+Pro Kitchen Appliances 2024,Kitchen Appliances,Home & Kitchen,4206,5,3996,True,5
+Royal Kurtas Collection,Kurtas,Clothing,35245,40,21147,True,500
+Elite Shirts Pro,Shirts,Clothing,11188,0,11188,True,1
+Luxury T-Shirts Special,T-Shirts,Clothing,1301,0,1301,True,10
+Ultra Shoes Lite,Shoes,Clothing,54880,60,21952,True,8
+Premium Speakers Ultra,Speakers,Electronics,24099,25,18074,True,10
+Royal Headphones Plus,Headphones,Electronics,10502,40,6301,True,15
+Value Activewear Ultra,Activewear,Clothing,3671,10,3304,False,0
+Style Shirts Z,Shirts,Clothing,1416,25,1062,True,9
+Pro Office Chairs Plus,Office Chairs,Furniture,3037,20,2430,True,40
+Dresses 8772,Dresses,Clothing,20292,20,16234,True,30
+Elite Gaming Consoles Pro,Gaming Consoles,Electronics,57099,25,42824,True,80
+Neo Speakers Lite,Speakers,Electronics,36637,20,29310,True,6
+Max T-Shirts 3000,T-Shirts,Clothing,2610,15,2218,True,20
+Super Toys Collection,Toys,"Sports, Toys & Others",1150,5,1092,True,15
+Luxury Gaming Consoles Pro,Gaming Consoles,Electronics,5918,35,3847,True,8
+Fragrances 3881,Fragrances,Beauty & Personal Care,495,5,470,True,10
+Premium Jeans Special,Jeans,Clothing,7500,30,5250,True,7
+Ultra Headphones Ultra,Headphones,Electronics,4067,5,3864,False,0
+Skincare 6340,Skincare,Beauty & Personal Care,2688,25,2016,True,6
+Luxury T-Shirts 3000,T-Shirts,Clothing,620,30,434,True,4
+Ultra Fragrances 3000,Fragrances,Beauty & Personal Care,9607,0,9607,True,30
+Pro T-Shirts Series,T-Shirts,Clothing,2465,0,2465,True,25
+Headphones 7152,Headphones,Electronics,1077,0,1077,True,500
+Sneakers 2204,Sneakers,Clothing,118,20,94,True,40
+Classic Skincare Pro,Skincare,Beauty & Personal Care,4754,40,2852,True,2
+Beds 3374,Beds,Furniture,49341,0,49341,True,100
+Vogue Wardrobes Collection,Wardrobes,Furniture,42711,30,29898,True,100
+Neo Laptops 2024,Laptops,Electronics,2720,10,2448,True,10
+Pro Dresses 5000,Dresses,Clothing,2252,15,1914,True,15
+Makeup 4313,Makeup,Beauty & Personal Care,9063,50,4532,True,500
+Premium Skincare Pro,Skincare,Beauty & Personal Care,1346,10,1211,True,12
+Ultra Sneakers Collection,Sneakers,Clothing,7295,15,6201,True,150
+Elite Sports Equipment 3000,Sports Equipment,"Sports, Toys & Others",13340,0,13340,True,3
+Max Shoes S,Shoes,Clothing,24285,0,24285,True,5
+Cookware 3784,Cookware,Home & Kitchen,4326,5,4110,True,10
+Royal Shirts Ultra,Shirts,Clothing,3781,0,3781,False,0
+Value Headphones Special,Headphones,Electronics,1574,25,1180,True,60
+Televisions 4546,Televisions,Electronics,1682,15,1430,True,500
+Value Tablets Collection,Tablets,Electronics,3671,20,2937,True,8
+Luxury Cookware Series,Cookware,Home & Kitchen,7944,0,7944,False,0
+Smartphones 5041,Smartphones,Electronics,16159,5,15351,True,60
+Trendy Dresses Ultra,Dresses,Clothing,1734,25,1300,True,20
+Dining Sets 3440,Dining Sets,Furniture,34306,60,13722,True,5
+Cookware 1083,Cookware,Home & Kitchen,3464,0,3464,True,12
+Premium Dresses Pro,Dresses,Clothing,4793,50,2396,True,40
+Sarees 9261,Sarees,Clothing,1865,20,1492,False,0
+Royal Laptops Edition,Laptops,Electronics,211,20,169,False,0
+Super Sofas Plus,Sofas,Furniture,15550,15,13218,True,7
+Pro Toys Max,Toys,"Sports, Toys & Others",12842,0,12842,False,0
+Premium Activewear Series,Activewear,Clothing,3418,0,3418,True,25
+Shirts 3174,Shirts,Clothing,5376,20,4301,True,9
+Pro Kitchen Appliances Max,Kitchen Appliances,Home & Kitchen,9636,10,8672,True,7
+Style Home Decor Lite,Home Decor,Home & Kitchen,646,50,323,True,40
+Classic Laptops X,Laptops,Electronics,2477,10,2229,False,0
+Toys 8598,Toys,"Sports, Toys & Others",13837,0,13837,True,5
+Shoes 7641,Shoes,Clothing,965,30,676,True,12
+Value T-Shirts 5000,T-Shirts,Clothing,7217,5,6856,True,7
+Luxury Sneakers X,Sneakers,Clothing,845,20,676,True,20
+Wardrobes 2158,Wardrobes,Furniture,9036,30,6325,True,4
+Luxury Makeup 3000,Makeup,Beauty & Personal Care,4704,50,2352,False,0
+Max Kitchen Appliances Series,Kitchen Appliances,Home & Kitchen,604,35,393,True,7
+Shoes 9887,Shoes,Clothing,22398,25,16798,True,0
+Pro Smartwatches Max,Smartwatches,Electronics,1896,25,1422,True,4
+Neo Fitness Gear Pro,Fitness Gear,"Sports, Toys & Others",1719,60,688,True,300
+Style T-Shirts 5000,T-Shirts,Clothing,6395,5,6075,True,100
+Fragrances 2818,Fragrances,Beauty & Personal Care,21934,0,21934,True,6
+Classic Laptops Pro,Laptops,Electronics,1316,5,1250,True,50
+Elite Headphones Max,Headphones,Electronics,5339,0,5339,True,20
+Super Tablets Z,Tablets,Electronics,8605,25,6454,True,500
+Neo Smartwatches Ultra,Smartwatches,Electronics,12132,25,9099,True,8
+Style Beds Special,Beds,Furniture,6198,20,4958,True,30
+Sneakers 4437,Sneakers,Clothing,3058,0,3058,True,3
+Wardrobes 4693,Wardrobes,Furniture,1680,30,1176,True,9
+Max Sports Equipment Series,Sports Equipment,"Sports, Toys & Others",5511,10,4960,False,0
+Ultra Fragrances 5000,Fragrances,Beauty & Personal Care,1223,25,917,True,12
+Classic Skincare Plus,Skincare,Beauty & Personal Care,110,20,88,True,7
+Royal Speakers Lite,Speakers,Electronics,8692,10,7823,True,4
+Neo Shoes Max,Shoes,Clothing,15958,0,15958,True,30
+Classic Dresses Max,Dresses,Clothing,228,0,228,True,25
+Elite Headphones Lite,Headphones,Electronics,1326,40,796,False,0
+Sofas 2260,Sofas,Furniture,11020,50,5510,True,500
+Max Shirts Plus,Shirts,Clothing,71491,25,53618,True,1
+Classic Shirts 2024,Shirts,Clothing,5063,0,5063,True,7
+Smartwatches 9530,Smartwatches,Electronics,1913,10,1722,True,200
+Sports Equipment 1371,Sports Equipment,"Sports, Toys & Others",3885,30,2720,True,7
+Style Tablets 2024,Tablets,Electronics,29435,35,19133,False,0
+Trendy Shoes Collection,Shoes,Clothing,2128,0,2128,True,12
+Activewear 1351,Activewear,Clothing,1743,0,1743,True,60
+Ultra Sarees X,Sarees,Clothing,2631,30,1842,True,4
+Skincare 4806,Skincare,Beauty & Personal Care,1427,10,1284,True,300
+Dresses 9513,Dresses,Clothing,5779,5,5490,True,50
+Trendy Home Decor 3000,Home Decor,Home & Kitchen,40728,0,40728,True,5
+Super Smartphones 3000,Smartphones,Electronics,7499,20,5999,True,30
+Style Smartphones Collection,Smartphones,Electronics,3549,40,2129,True,8
+Vogue Shoes 2024,Shoes,Clothing,3372,60,1349,True,9
+Kurtas 6021,Kurtas,Clothing,646,20,517,True,50
+Max Shoes Ultra,Shoes,Clothing,15532,15,13202,True,500
+Max Kitchen Appliances Pro,Kitchen Appliances,Home & Kitchen,4453,0,4453,True,4
+Max T-Shirts Collection,T-Shirts,Clothing,3897,20,3118,True,9
+Shoes 3634,Shoes,Clothing,312896,10,281606,True,10
+Shirts 5673,Shirts,Clothing,7266,20,5813,True,8
+Elite Shoes 2024,Shoes,Clothing,1854,10,1669,True,8
+Ultra Sofas Pro,Sofas,Furniture,2831,5,2689,True,2
+Fitness Gear 3072,Fitness Gear,"Sports, Toys & Others",21929,0,21929,False,0
+Neo Jeans S,Jeans,Clothing,5709,10,5138,True,9
+Luxury Cookware Pro,Cookware,Home & Kitchen,760,0,760,True,5
+Neo Sneakers 2024,Sneakers,Clothing,16278,0,16278,True,60
+Royal Sofas S,Sofas,Furniture,2067,70,620,True,60
+Ultra Laptops X,Laptops,Electronics,56267,15,47827,True,10
+Classic Laptops 2024,Laptops,Electronics,20063,20,16050,True,7
+T-Shirts 6246,T-Shirts,Clothing,2755,50,1378,True,20
+Luxury Jeans 3000,Jeans,Clothing,26053,70,7816,True,7
+Max Televisions Special,Televisions,Electronics,5382,20,4306,True,6
+Sarees 3409,Sarees,Clothing,14931,35,9705,True,40
+Beds 8243,Beds,Furniture,9253,10,8328,True,2
+Ultra Activewear Special,Activewear,Clothing,1640,5,1558,True,3
+Activewear 3284,Activewear,Clothing,2134,10,1921,True,0
+Ultra Skincare Lite,Skincare,Beauty & Personal Care,18799,25,14099,True,5
+Vogue Toys Ultra,Toys,"Sports, Toys & Others",3189,25,2392,True,3
+Ultra Tablets 3000,Tablets,Electronics,2916,10,2624,False,0
+Style Dining Sets Z,Dining Sets,Furniture,1424,0,1424,True,7
+Pro Dresses Elite,Dresses,Clothing,8546,25,6410,True,4
+Ultra Beds Collection,Beds,Furniture,71960,0,71960,True,6
+Ultra Jeans Edition,Jeans,Clothing,1230,20,984,True,300
+Neo Gaming Consoles Pro,Gaming Consoles,Electronics,5085,30,3560,True,12
+Speakers 6915,Speakers,Electronics,30899,30,21629,True,8
+Luxury Headphones Series,Headphones,Electronics,4443,30,3110,True,100
+Neo Sofas X,Sofas,Furniture,8872,50,4436,True,9
+Neo Office Chairs Lite,Office Chairs,Furniture,1238,15,1052,True,8
+Sarees 2435,Sarees,Clothing,8599,30,6019,False,0
+Classic Speakers Series,Speakers,Electronics,3863,25,2897,True,8
+Skincare 5728,Skincare,Beauty & Personal Care,17748,0,17748,True,7
+Luxury Tablets Series,Tablets,Electronics,23068,0,23068,True,25
+Beds 7786,Beds,Furniture,142774,5,135635,True,7
+Vogue Kurtas Max,Kurtas,Clothing,10468,15,8898,True,15
+Max Beds Special,Beds,Furniture,7526,25,5644,True,3
+Kitchen Appliances 9606,Kitchen Appliances,Home & Kitchen,6344,40,3806,True,5
+Shirts 2083,Shirts,Clothing,3113,0,3113,True,9
+Shirts 7156,Shirts,Clothing,7651,0,7651,False,0
+Trendy Shirts Elite,Shirts,Clothing,3356,60,1342,True,8
+Royal Sofas Collection,Sofas,Furniture,6134,0,6134,True,25
+Smartphones 3243,Smartphones,Electronics,27322,15,23224,False,0
+Value Fitness Gear Edition,Fitness Gear,"Sports, Toys & Others",1332,20,1066,True,4
+Classic Shirts Pro,Shirts,Clothing,21686,20,17349,True,2
+Fitness Gear 5947,Fitness Gear,"Sports, Toys & Others",27305,0,27305,True,7
+Televisions 5979,Televisions,Electronics,4226,0,4226,True,5
+Luxury Wardrobes Collection,Wardrobes,Furniture,312,0,312,True,5
+Super Laptops X,Laptops,Electronics,2236,20,1789,True,50
+Max Jeans Special,Jeans,Clothing,26600,20,21280,True,1
+Style Makeup Lite,Makeup,Beauty & Personal Care,4783,5,4544,True,15
+Classic Shoes Ultra,Shoes,Clothing,1344,25,1008,True,8
+Super Jeans Elite,Jeans,Clothing,2556,40,1534,True,12
+Ultra Dresses 5000,Dresses,Clothing,14697,0,14697,True,15
+Vogue Skincare Series,Skincare,Beauty & Personal Care,10030,15,8526,True,7
+T-Shirts 8799,T-Shirts,Clothing,3612,25,2709,True,7
+Makeup 2959,Makeup,Beauty & Personal Care,3059,5,2906,True,40
+Luxury Activewear X,Activewear,Clothing,2961,5,2813,True,100
+Kitchen Appliances 3668,Kitchen Appliances,Home & Kitchen,1485,25,1114,True,5
+Elite Dining Sets 3000,Dining Sets,Furniture,40238,50,20119,True,3
+Luxury T-Shirts 2024,T-Shirts,Clothing,3241,35,2107,True,150
+Premium Kurtas Elite,Kurtas,Clothing,23978,20,19182,True,8
+Style Televisions 5000,Televisions,Electronics,35607,30,24925,True,15
+Max Dresses Max,Dresses,Clothing,18041,10,16237,True,8
+Super Laptops S,Laptops,Electronics,2812,25,2109,False,0
+Shirts 3738,Shirts,Clothing,8328,15,7079,True,15
+Value Kitchen Appliances 3000,Kitchen Appliances,Home & Kitchen,4775,0,4775,True,12
+Gaming Consoles 5932,Gaming Consoles,Electronics,1522,30,1065,True,5
+Luxury Toys 5000,Toys,"Sports, Toys & Others",7512,20,6010,False,0
+Vogue Sneakers 5000,Sneakers,Clothing,1064,10,958,True,50
+Headphones 1211,Headphones,Electronics,23076,50,11538,True,20
+Max Toys 5000,Toys,"Sports, Toys & Others",2693,0,2693,True,3
+Office Chairs 7750,Office Chairs,Furniture,6400,10,5760,True,15
+Elite Cookware Plus,Cookware,Home & Kitchen,7121,0,7121,True,30
+Royal Wardrobes Ultra,Wardrobes,Furniture,3519,35,2287,True,50
+Sports Equipment 9612,Sports Equipment,"Sports, Toys & Others",10565,30,7395,True,20
+Kitchen Appliances 2867,Kitchen Appliances,Home & Kitchen,2658,10,2392,False,0
+Ultra Televisions Plus,Televisions,Electronics,15295,25,11471,False,0
+Shirts 1284,Shirts,Clothing,856,10,770,True,25
+Max Shirts 5000,Shirts,Clothing,5807,30,4065,True,1
+Classic Smartphones 3000,Smartphones,Electronics,61279,15,52087,True,9
+Max Tablets X,Tablets,Electronics,1342,10,1208,True,8
+Beds 2943,Beds,Furniture,2042,50,1021,True,25
+Value Jeans 2024,Jeans,Clothing,9611,5,9130,True,6
+Max Jeans 2024,Jeans,Clothing,6223,0,6223,True,20
+Ultra Sarees Series,Sarees,Clothing,7773,20,6218,True,200
+Super Shirts Plus,Shirts,Clothing,9307,60,3723,True,50
+Super Beds Special,Beds,Furniture,11245,10,10120,True,200
+Sarees 1696,Sarees,Clothing,20852,0,20852,True,500
+Premium Smartwatches Pro,Smartwatches,Electronics,8395,10,7556,True,1
+Max Toys Pro,Toys,"Sports, Toys & Others",3601,15,3061,True,20
+Style Activewear X,Activewear,Clothing,11813,0,11813,True,9
+Sofas 3028,Sofas,Furniture,58246,25,43684,True,80
+Wardrobes 4365,Wardrobes,Furniture,4147,70,1244,True,6
+Pro Home Decor S,Home Decor,Home & Kitchen,1388,15,1180,True,500
+Premium Shirts Max,Shirts,Clothing,20781,10,18703,True,20
+Luxury Sneakers Elite,Sneakers,Clothing,4214,10,3793,True,50
+Sofas 6698,Sofas,Furniture,292,0,292,True,3
+Value Home Decor Ultra,Home Decor,Home & Kitchen,14827,50,7414,True,5
+Ultra Dining Sets Plus,Dining Sets,Furniture,2457,10,2211,True,40
+Sneakers 1229,Sneakers,Clothing,4380,10,3942,False,0
+Luxury Toys Z,Toys,"Sports, Toys & Others",7587,25,5690,True,60
+Kurtas 3814,Kurtas,Clothing,6312,15,5365,True,1
+Cookware 9800,Cookware,Home & Kitchen,12393,25,9295,False,0
+Luxury Activewear Plus,Activewear,Clothing,2797,0,2797,True,8
+Sneakers 9260,Sneakers,Clothing,9601,35,6241,True,20
+Smartphones 8777,Smartphones,Electronics,3516,60,1406,True,30
+Vogue Jeans S,Jeans,Clothing,12875,25,9656,True,8
+Ultra Fitness Gear S,Fitness Gear,"Sports, Toys & Others",10966,60,4386,False,0
+Cookware 7219,Cookware,Home & Kitchen,1460,0,1460,True,3
+Royal Kitchen Appliances Ultra,Kitchen Appliances,Home & Kitchen,20219,15,17186,True,15
+Super Kurtas 3000,Kurtas,Clothing,2455,20,1964,True,12
+Ultra Activewear 2024,Activewear,Clothing,14088,20,11270,True,40
+Neo Kurtas Lite,Kurtas,Clothing,7943,10,7149,True,12
+Premium Smartwatches Max,Smartwatches,Electronics,53757,10,48381,True,9
+Ultra Shoes Edition,Shoes,Clothing,3685,0,3685,True,9
+Vogue Sarees Lite,Sarees,Clothing,3129,10,2816,True,1
+Value Skincare Collection,Skincare,Beauty & Personal Care,4805,0,4805,True,8
+Trendy Tablets Lite,Tablets,Electronics,3322,30,2325,True,500
+Sneakers 8011,Sneakers,Clothing,13940,0,13940,True,100
+Ultra Smartphones Special,Smartphones,Electronics,603,0,603,True,7
+Fitness Gear 7020,Fitness Gear,"Sports, Toys & Others",1252,20,1002,True,15
+Style Headphones Special,Headphones,Electronics,1230,20,984,True,80
+Trendy Smartphones Collection,Smartphones,Electronics,16949,50,8474,True,10
+Style Beds Max,Beds,Furniture,45542,20,36434,True,1
+Trendy Tablets Edition,Tablets,Electronics,4302,10,3872,False,0
+Ultra Sneakers S,Sneakers,Clothing,3957,35,2572,True,12
+Pro T-Shirts 3000,T-Shirts,Clothing,5397,20,4318,True,500
+Value Kitchen Appliances Edition,Kitchen Appliances,Home & Kitchen,22315,0,22315,True,30
+Value Sports Equipment Series,Sports Equipment,"Sports, Toys & Others",1476,20,1181,False,0
+Makeup 5563,Makeup,Beauty & Personal Care,6717,50,3358,True,5
+Activewear 5472,Activewear,Clothing,17507,10,15756,True,50
+Laptops 7557,Laptops,Electronics,9452,5,8979,False,0
+Style Tablets Edition,Tablets,Electronics,6305,0,6305,True,20
+Televisions 9379,Televisions,Electronics,18105,0,18105,True,25
+Super Beds Collection,Beds,Furniture,147,15,125,True,1
+Max Shoes Special,Shoes,Clothing,11894,20,9515,True,60
+Style Shirts 2024,Shirts,Clothing,2105,0,2105,True,50
+Luxury Beds Pro,Beds,Furniture,456,50,228,True,6
+Smartwatches 9161,Smartwatches,Electronics,9577,30,6704,True,30
+Elite Fragrances Edition,Fragrances,Beauty & Personal Care,29388,20,23510,True,6
+Neo Wardrobes 2024,Wardrobes,Furniture,4121,40,2473,True,2
+Vogue Dining Sets Plus,Dining Sets,Furniture,17006,0,17006,True,5
+Kitchen Appliances 9518,Kitchen Appliances,Home & Kitchen,40077,15,34065,True,5
+Activewear 8635,Activewear,Clothing,27227,25,20420,True,8
+Style Shoes Special,Shoes,Clothing,41545,40,24927,True,9
+Max Sneakers 3000,Sneakers,Clothing,12931,35,8405,True,12
+Sarees 9856,Sarees,Clothing,5435,5,5163,True,10
+Super Smartwatches Pro,Smartwatches,Electronics,614,60,246,True,7
+Speakers 2951,Speakers,Electronics,3579,0,3579,True,1
+Neo Dresses Edition,Dresses,Clothing,1646,50,823,True,20
+Premium Televisions Pro,Televisions,Electronics,82852,60,33141,True,9
+Style Toys Lite,Toys,"Sports, Toys & Others",3920,0,3920,False,0
+Sofas 3689,Sofas,Furniture,5783,30,4048,True,100
+Elite Sofas Lite,Sofas,Furniture,10092,0,10092,True,40
+Televisions 8986,Televisions,Electronics,5215,10,4694,True,80
+Sneakers 9037,Sneakers,Clothing,44630,15,37936,True,12
+Style Beds Special,Beds,Furniture,2193,20,1754,True,4
+Value Wardrobes S,Wardrobes,Furniture,6346,50,3173,True,30
+Trendy Sports Equipment Elite,Sports Equipment,"Sports, Toys & Others",1877,25,1408,True,5
+Trendy Cookware 5000,Cookware,Home & Kitchen,886,15,753,True,10
+Gaming Consoles 5660,Gaming Consoles,Electronics,2224,35,1446,True,3
+Premium Headphones Pro,Headphones,Electronics,4696,60,1878,True,60
+Neo Sneakers 5000,Sneakers,Clothing,2820,0,2820,False,0
+Office Chairs 1440,Office Chairs,Furniture,2003,70,601,True,150
+Toys 6591,Toys,"Sports, Toys & Others",792,0,792,True,100
+Trendy Home Decor 5000,Home Decor,Home & Kitchen,4423,35,2875,True,10
+Fitness Gear 7749,Fitness Gear,"Sports, Toys & Others",697,5,662,True,40
+Style Cookware Ultra,Cookware,Home & Kitchen,13235,0,13235,True,20
+Style Sofas Lite,Sofas,Furniture,5485,15,4662,True,60
+Luxury Sofas Max,Sofas,Furniture,741,25,556,True,9
+Sneakers 2875,Sneakers,Clothing,3296,10,2966,True,50
+Premium Wardrobes 3000,Wardrobes,Furniture,1853,0,1853,True,10
+Style T-Shirts Series,T-Shirts,Clothing,7462,20,5970,True,300
+Trendy Speakers Elite,Speakers,Electronics,28146,50,14073,True,10
+Classic Jeans X,Jeans,Clothing,430,10,387,True,10
+Televisions 7188,Televisions,Electronics,5722,0,5722,True,50
+Neo Dresses Plus,Dresses,Clothing,4001,15,3401,True,60
+Sports Equipment 2639,Sports Equipment,"Sports, Toys & Others",11794,0,11794,True,15
+Pro Sneakers 3000,Sneakers,Clothing,6501,40,3901,True,5
+Super Tablets 3000,Tablets,Electronics,1854,40,1112,True,10
+Max Sarees 5000,Sarees,Clothing,3255,20,2604,True,500
+Kurtas 4305,Kurtas,Clothing,1751,10,1576,True,40
+Value Speakers Max,Speakers,Electronics,19958,35,12973,True,60
+Shoes 9779,Shoes,Clothing,5066,20,4053,False,0
+Max Shirts Pro,Shirts,Clothing,58345,40,35007,True,10
+Vogue Shoes Edition,Shoes,Clothing,4554,25,3416,True,25
+Laptops 2506,Laptops,Electronics,1962,35,1275,True,80
+T-Shirts 2552,T-Shirts,Clothing,689,20,551,True,2
+Max Activewear Max,Activewear,Clothing,473,10,426,True,80
+Royal Headphones Special,Headphones,Electronics,628,60,251,True,15
+Neo Kitchen Appliances Max,Kitchen Appliances,Home & Kitchen,6973,20,5578,False,0
+Max Smartphones Lite,Smartphones,Electronics,9546,20,7637,False,0
+Royal Dresses 3000,Dresses,Clothing,631,5,599,True,7
+Trendy Sports Equipment Elite,Sports Equipment,"Sports, Toys & Others",15774,25,11830,True,12
+Classic T-Shirts S,T-Shirts,Clothing,2630,20,2104,False,0
+Sports Equipment 9457,Sports Equipment,"Sports, Toys & Others",5964,0,5964,True,5
+Makeup 9178,Makeup,Beauty & Personal Care,40074,0,40074,True,60
+Value Jeans Collection,Jeans,Clothing,15811,20,12649,True,4
+Style Televisions Series,Televisions,Electronics,3476,35,2259,True,6
+Fitness Gear 1981,Fitness Gear,"Sports, Toys & Others",1547,20,1238,True,10
+Neo Beds Collection,Beds,Furniture,300,5,285,True,12
+Elite Shoes Lite,Shoes,Clothing,1935,25,1451,True,50
+Fragrances 7721,Fragrances,Beauty & Personal Care,3745,0,3745,True,10
+Value Headphones Max,Headphones,Electronics,1365,15,1160,True,50
+Value Kurtas Series,Kurtas,Clothing,4155,0,4155,True,20
+Max Dresses S,Dresses,Clothing,5445,0,5445,True,4
+Vogue Activewear Ultra,Activewear,Clothing,3679,0,3679,True,5
+Ultra Sports Equipment 2024,Sports Equipment,"Sports, Toys & Others",2117,10,1905,True,9
+Pro Fragrances Lite,Fragrances,Beauty & Personal Care,6135,0,6135,False,0
+Royal Smartwatches Series,Smartwatches,Electronics,8753,10,7878,False,0
+Premium Makeup Z,Makeup,Beauty & Personal Care,1194,15,1015,True,15
+Elite Smartwatches X,Smartwatches,Electronics,30847,15,26220,True,8
+Super Sports Equipment Elite,Sports Equipment,"Sports, Toys & Others",4335,10,3902,True,5
+Elite Toys Pro,Toys,"Sports, Toys & Others",5050,40,3030,True,6
+Office Chairs 8960,Office Chairs,Furniture,12373,0,12373,False,0
+Jeans 1906,Jeans,Clothing,6673,15,5672,False,0
+Sports Equipment 2375,Sports Equipment,"Sports, Toys & Others",17012,0,17012,True,12
+Max Fitness Gear Max,Fitness Gear,"Sports, Toys & Others",7157,0,7157,True,5
+Sports Equipment 7668,Sports Equipment,"Sports, Toys & Others",2223,20,1778,True,25
+Makeup 2479,Makeup,Beauty & Personal Care,7884,20,6307,True,80
+Value Smartphones 2024,Smartphones,Electronics,1114,50,557,True,6
+Vogue Kurtas Plus,Kurtas,Clothing,5674,20,4539,True,12
+Value Headphones Elite,Headphones,Electronics,4719,60,1888,True,500
+Ultra Toys Ultra,Toys,"Sports, Toys & Others",3759,0,3759,True,8
+Super Gaming Consoles 3000,Gaming Consoles,Electronics,4169,0,4169,True,20
+Vogue Toys Edition,Toys,"Sports, Toys & Others",427,0,427,True,3
+Dresses 4865,Dresses,Clothing,2414,0,2414,True,20
+Jeans 4571,Jeans,Clothing,5560,20,4448,True,3
+Elite Sports Equipment Z,Sports Equipment,"Sports, Toys & Others",6066,25,4550,True,500
+Skincare 8200,Skincare,Beauty & Personal Care,1295,0,1295,True,30
+Value Jeans Pro,Jeans,Clothing,25540,60,10216,False,0
+Neo Televisions Plus,Televisions,Electronics,1598,40,959,True,30
+Trendy Headphones Special,Headphones,Electronics,17377,5,16508,True,15
+Max Smartwatches 2024,Smartwatches,Electronics,8586,0,8586,True,10
+Luxury Jeans 5000,Jeans,Clothing,2127,0,2127,True,80
+Speakers 1345,Speakers,Electronics,49538,0,49538,True,500
+Vogue Smartwatches Pro,Smartwatches,Electronics,1044,0,1044,True,12
+Activewear 1895,Activewear,Clothing,16277,15,13835,False,0
+Super Cookware Ultra,Cookware,Home & Kitchen,18094,5,17189,True,15
+Trendy Kurtas Lite,Kurtas,Clothing,2061,10,1855,False,0
+Luxury Kitchen Appliances 5000,Kitchen Appliances,Home & Kitchen,30115,70,9035,True,10
+Smartwatches 2999,Smartwatches,Electronics,3560,25,2670,False,0
+Pro Skincare Collection,Skincare,Beauty & Personal Care,7172,60,2869,True,0
+Trendy Fragrances Elite,Fragrances,Beauty & Personal Care,6912,0,6912,True,6
+Value Home Decor Ultra,Home Decor,Home & Kitchen,4138,10,3724,True,12
+Value Shirts S,Shirts,Clothing,14138,20,11310,False,0
+Laptops 6196,Laptops,Electronics,13823,0,13823,True,10
+Shoes 7656,Shoes,Clothing,507,0,507,True,500
+Smartwatches 5489,Smartwatches,Electronics,26856,25,20142,True,8
+Tablets 9055,Tablets,Electronics,568,25,426,True,10
+Trendy Beds 3000,Beds,Furniture,18862,10,16976,True,4
+Speakers 2644,Speakers,Electronics,21318,15,18120,True,2
+Speakers 5275,Speakers,Electronics,1193,10,1074,True,50
+Neo Speakers Series,Speakers,Electronics,2889,0,2889,False,0
+Value Kitchen Appliances 3000,Kitchen Appliances,Home & Kitchen,1170,10,1053,True,50
+Premium Fitness Gear Pro,Fitness Gear,"Sports, Toys & Others",3726,0,3726,True,4
+Elite Sofas Collection,Sofas,Furniture,3302,0,3302,False,0
+Activewear 3229,Activewear,Clothing,13577,60,5431,True,6
+Pro Smartphones Lite,Smartphones,Electronics,27065,20,21652,True,6
+Ultra Shoes Plus,Shoes,Clothing,30242,30,21169,True,1
+Royal Sneakers 2024,Sneakers,Clothing,2373,10,2136,True,4
+Laptops 7722,Laptops,Electronics,3754,10,3379,True,7
+Headphones 6233,Headphones,Electronics,552,5,524,False,0
+Value Sofas 2024,Sofas,Furniture,1728,0,1728,True,500
+Style T-Shirts 3000,T-Shirts,Clothing,17273,0,17273,True,7
+Shirts 4254,Shirts,Clothing,40249,35,26162,True,4
+Neo Fragrances S,Fragrances,Beauty & Personal Care,990,25,742,True,5
+Trendy Sneakers Ultra,Sneakers,Clothing,2281,20,1825,False,0
+Premium Beds Ultra,Beds,Furniture,4761,15,4047,False,0
+Headphones 8576,Headphones,Electronics,7093,50,3546,True,100
+Luxury Fragrances S,Fragrances,Beauty & Personal Care,1720,0,1720,True,500
+Vogue Sofas Series,Sofas,Furniture,8552,5,8124,True,6
+Elite Sarees Max,Sarees,Clothing,2661,10,2395,True,10
+Televisions 3787,Televisions,Electronics,4836,35,3143,True,1
+Tablets 2922,Tablets,Electronics,10024,70,3007,True,25
+Royal Tablets Series,Tablets,Electronics,4969,5,4721,True,9
+Activewear 8433,Activewear,Clothing,2794,50,1397,True,7
+Sarees 9096,Sarees,Clothing,4273,40,2564,True,5
+Luxury T-Shirts Z,T-Shirts,Clothing,4393,5,4173,True,25
+Value Dresses Elite,Dresses,Clothing,3046,10,2741,True,9
+Classic Jeans Edition,Jeans,Clothing,3520,10,3168,True,5
+Value Dresses Z,Dresses,Clothing,39373,60,15749,True,30
+Value Shoes Lite,Shoes,Clothing,10217,0,10217,False,0
+Televisions 4102,Televisions,Electronics,3356,35,2181,True,80
+Trendy Speakers 2024,Speakers,Electronics,12193,10,10974,True,4
+Max Kitchen Appliances Ultra,Kitchen Appliances,Home & Kitchen,3193,30,2235,True,50
+Pro Makeup 5000,Makeup,Beauty & Personal Care,22644,15,19247,True,25
+Style Laptops Collection,Laptops,Electronics,7967,20,6374,False,0
+Classic T-Shirts 2024,T-Shirts,Clothing,4286,40,2572,True,30
+Sneakers 7513,Sneakers,Clothing,8819,35,5732,True,10
+Luxury Laptops Edition,Laptops,Electronics,639,40,383,False,0
+Dresses 5198,Dresses,Clothing,1139,0,1139,True,4
+Royal Laptops Pro,Laptops,Electronics,1044,30,731,True,25
+Pro Dresses Special,Dresses,Clothing,5934,0,5934,True,8
+Shirts 1745,Shirts,Clothing,46857,10,42171,True,500
+Royal Kurtas Edition,Kurtas,Clothing,89615,20,71692,True,7
+Trendy Tablets 5000,Tablets,Electronics,11294,10,10165,True,500
+Royal Beds Pro,Beds,Furniture,9449,15,8032,True,150
+Max Shirts S,Shirts,Clothing,474,70,142,False,0
+Neo Headphones Collection,Headphones,Electronics,2434,0,2434,True,60
+Neo Televisions Series,Televisions,Electronics,1770,25,1328,True,500
+Ultra Kurtas 3000,Kurtas,Clothing,2198,10,1978,True,6
+Elite Headphones Special,Headphones,Electronics,3960,0,3960,True,9
+Shirts 5603,Shirts,Clothing,2667,0,2667,True,12
+Home Decor 8046,Home Decor,Home & Kitchen,376,60,150,False,0
+Max Jeans Elite,Jeans,Clothing,13028,50,6514,True,1
+Trendy Shirts S,Shirts,Clothing,1222,50,611,True,6
+Classic Jeans 2024,Jeans,Clothing,6725,70,2018,True,7
+Style Laptops Collection,Laptops,Electronics,73049,0,73049,True,10
+Elite Jeans Pro,Jeans,Clothing,1491,10,1342,False,0
+Premium Cookware Special,Cookware,Home & Kitchen,184,25,138,True,100
+Luxury Activewear Collection,Activewear,Clothing,3397,15,2887,False,0
+Classic Office Chairs Pro,Office Chairs,Furniture,20616,10,18554,True,3
+Luxury Home Decor Special,Home Decor,Home & Kitchen,62846,10,56561,True,25
+Ultra Activewear 2024,Activewear,Clothing,996,20,797,True,25
+Ultra Kurtas Z,Kurtas,Clothing,9398,20,7518,True,500
+Smartphones 3959,Smartphones,Electronics,2691,0,2691,True,0
+Wardrobes 9335,Wardrobes,Furniture,4293,15,3649,True,6
+Laptops 4479,Laptops,Electronics,153312,20,122650,True,200
+Premium Toys S,Toys,"Sports, Toys & Others",698,20,558,True,300
+Ultra Sports Equipment Ultra,Sports Equipment,"Sports, Toys & Others",6853,0,6853,True,40
+Laptops 2545,Laptops,Electronics,9051,30,6336,True,50
+Sports Equipment 1425,Sports Equipment,"Sports, Toys & Others",20214,0,20214,False,0
+Style Smartphones Plus,Smartphones,Electronics,5597,10,5037,True,12
+Vogue T-Shirts Plus,T-Shirts,Clothing,7354,35,4780,True,6
+Kitchen Appliances 3519,Kitchen Appliances,Home & Kitchen,2961,20,2369,True,5
+Classic Kitchen Appliances Special,Kitchen Appliances,Home & Kitchen,6991,5,6641,True,60
+Max Toys X,Toys,"Sports, Toys & Others",3154,30,2208,True,4
+Premium Shoes Collection,Shoes,Clothing,11055,20,8844,True,10
+Luxury T-Shirts 2024,T-Shirts,Clothing,3048,35,1981,True,300
+Premium Toys Lite,Toys,"Sports, Toys & Others",8045,30,5632,False,0
+Premium Office Chairs Max,Office Chairs,Furniture,4744,25,3558,True,500
+Vogue Makeup Edition,Makeup,Beauty & Personal Care,21300,15,18105,True,500
+Max Fragrances S,Fragrances,Beauty & Personal Care,4609,0,4609,True,15
+Super Office Chairs Edition,Office Chairs,Furniture,492,5,467,True,5
+Value Sneakers Z,Sneakers,Clothing,25415,10,22874,True,7
+Super Shoes Edition,Shoes,Clothing,1518,20,1214,True,9
+Super Dresses 2024,Dresses,Clothing,2106,15,1790,True,7
+Classic Shoes Series,Shoes,Clothing,2272,5,2158,True,7
+Wardrobes 6080,Wardrobes,Furniture,29418,0,29418,True,500
+Smartwatches 3151,Smartwatches,Electronics,307,15,261,True,5
+Ultra Dresses 5000,Dresses,Clothing,291169,5,276611,True,40
+Classic Shirts Collection,Shirts,Clothing,19447,30,13613,True,0
+Activewear 8805,Activewear,Clothing,6587,0,6587,False,0
+Vogue Televisions Series,Televisions,Electronics,4588,20,3670,True,200
+Trendy Smartphones 5000,Smartphones,Electronics,7142,60,2857,True,7
+Trendy Smartphones Series,Smartphones,Electronics,9702,0,9702,True,5
+Royal Sofas 3000,Sofas,Furniture,11400,15,9690,True,25
+Sneakers 4673,Sneakers,Clothing,10146,0,10146,True,30
+Luxury Dresses 2024,Dresses,Clothing,5536,25,4152,True,30
+Shirts 9638,Shirts,Clothing,3813,20,3050,True,7
+Royal Home Decor Max,Home Decor,Home & Kitchen,4048,10,3643,True,6
+Trendy Speakers Max,Speakers,Electronics,3825,20,3060,True,500
+Wardrobes 8825,Wardrobes,Furniture,21515,50,10758,True,200
+Elite Gaming Consoles Lite,Gaming Consoles,Electronics,10660,0,10660,False,0
+Sports Equipment 9570,Sports Equipment,"Sports, Toys & Others",108,0,108,True,80
+Vogue Activewear Pro,Activewear,Clothing,11559,40,6935,True,10
+Premium Headphones Plus,Headphones,Electronics,6347,20,5078,True,9
+Trendy Home Decor Plus,Home Decor,Home & Kitchen,4809,50,2404,True,5
+Luxury T-Shirts Elite,T-Shirts,Clothing,2974,20,2379,True,9
+Vogue Kitchen Appliances Max,Kitchen Appliances,Home & Kitchen,21246,35,13810,True,12
+Makeup 1266,Makeup,Beauty & Personal Care,16888,15,14355,False,0
+Style Smartphones Collection,Smartphones,Electronics,1804,30,1263,True,10
+Elite Televisions Edition,Televisions,Electronics,8365,50,4182,True,50
+Trendy Headphones Lite,Headphones,Electronics,1393,20,1114,True,30
+Luxury Smartphones Collection,Smartphones,Electronics,820,0,820,True,20
+Sarees 8371,Sarees,Clothing,2182,5,2073,True,150
+Max Sneakers 3000,Sneakers,Clothing,15119,0,15119,False,0
+Smartphones 4066,Smartphones,Electronics,17012,5,16161,False,0
+Ultra Activewear Elite,Activewear,Clothing,9601,5,9121,True,50
+T-Shirts 2742,T-Shirts,Clothing,12647,20,10118,True,15
+Premium Speakers X,Speakers,Electronics,9639,20,7711,True,7
+Premium Televisions S,Televisions,Electronics,2140,15,1819,True,4
+Classic Skincare Edition,Skincare,Beauty & Personal Care,8639,25,6479,False,0
+Laptops 8974,Laptops,Electronics,13948,0,13948,True,10
+Value Shirts 5000,Shirts,Clothing,13137,0,13137,True,100
+Luxury Sofas Edition,Sofas,Furniture,23114,0,23114,True,15
+Home Decor 2435,Home Decor,Home & Kitchen,12374,15,10518,True,25
+Premium Activewear Z,Activewear,Clothing,7781,0,7781,False,0
+Premium Beds Z,Beds,Furniture,19807,5,18817,True,25
+Sarees 4428,Sarees,Clothing,4760,10,4284,True,9
+Elite Sneakers Ultra,Sneakers,Clothing,1566,35,1018,True,12
+Style Beds Z,Beds,Furniture,3986,0,3986,True,60
+Super Sofas Collection,Sofas,Furniture,1871,25,1403,True,8
